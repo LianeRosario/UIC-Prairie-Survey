@@ -212,6 +212,70 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "solidago gram
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "sporobolus asper", "sporobolus compositus", species))
 ```
 
+```{r rename-lateriflora}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "arenaria lateriflora", "moehringia lateriflora", species))
+```
+
+```{r rename-leucantha}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "baptisia leucantha", "baptisia alba var. macrophylla", species))
+```
+
+```{r rename-leucanthemum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "chrysanthemum leucanthemum", "leucanthemum vulgare", species))
+```
+
+```{r rename-varia}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "coronilla varia", "securigera varia", species))
+```
+
+```{r rename-fraxinus}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "fraxinus pennsylvanica subintegerrima", "fraxinus pennsylvanica", species))
+```
+
+```{r rename-cristata}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "koeleria cristata", "koeleria macrantha", species))
+```
+
+```{r rename-melilotus}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "melilotus alba", "melilotus officinalis", species))
+```
+
+```{r rename-longistipata}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "oenothera tetragona longistipata", "oenothera fruticosa", species))
+```
+
+```{r rename-implicatum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "panicum implicatum", "dichanthelium acuminatum", species))
+```
+
+```{r rename-tenuiflora}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "psoralea tenuiflora", "psoralidium tenuiflorum", species))
+```
+
+```{r rename-scirpus}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "scirpus lineatus", "scirpus pendulus", species))
+```
+
+```{r rename-pauperculus}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "senecio pauperculus", "packera paupercula", species))
+```
+
+```{r rename-deamii}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "silphium integrifolium deamii", "silphium integrifolium", species))
+```
+
+```{r rename-terebinthinaceum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "silphium terebinthinaceum x laciniatum", "silphium terebinthinaceum", species))
+```
+
+```{r rename-hispida}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "stachys tenuifolia hispida", "stachys tenuifolia", species))
+```
+
+```{r rename-ciliata}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "valeriana ciliata", "valeriana edulis var. ciliata", species))
+```
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
@@ -258,6 +322,10 @@ usace_data <- usace_data %>%
 
 ```{r fix-rigidus-name}
 usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+```
+
+```{r fix-tenuiflorum-name}
+usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
