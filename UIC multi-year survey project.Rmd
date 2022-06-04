@@ -22,11 +22,11 @@ library(dplyr)
 ## Loading in and tidying the Woodworth Survey
 
 ```{r load-1979-survey-data, message = F}
-survey_1979 <- read_excel("data/Woodworth Original Species.xls",
+survey_1979 <- read_excel("data/Woodworth Original Species UPDATED.xls",
                          sheet = 1,
-                         range = cell_cols(1:2))
+                         range = cell_cols(1:3))
   
-colnames(survey_1979) <- c("species", "percent_cover")
+colnames(survey_1979) <- c("species", "percent_cover", "plot")
 ```
 
 
@@ -210,4 +210,71 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "solidago gram
 
 ```{r rename-asper}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "sporobolus asper", "sporobolus compositus", species))
+```
+
+## Loading in and tidying conservatism data
+
+##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
+
+```{r load-conservatism-data, message = F}
+usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+                         skip = 11) %>%
+  janitor:: clean_names()
+```
+
+##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
+
+```{r remove-usace-columns}
+usace_data <- usace_data %>%
+  select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
+```
+
+
+##### Below the columns were renamed for simplicity.
+
+```{r rename-usace-columns}
+colnames(usace_data) <- c("species", "c_value")
+```
+
+
+##### The code below changes the species names to lowercase for tidying purposes.
+
+```{r lowercase-usace-names}
+usace_data$species = tolower(usace_data$species)
+
+usace_data$c_value = tolower(usace_data$c_value)
+```
+
+
+##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
+
+```{r coerce-usace-c-value}
+usace_data <- usace_data %>%
+  mutate(c_value = as.numeric(c_value))
+```
+
+
+##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
+
+```{r fix-rigidus-name}
+usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+```
+
+
+## Merging survey with conservatism values
+
+##### The code below joins the 1979 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
+
+```{r merge-survey-with-c-values}
+survey_1979 <- merge(x = survey_1979, y = usace_data, by = c("species"), all.x = TRUE)
+```
+
+
+##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
+
+```{r convert-merged-cvalue-numeric}
+survey_1979 <- survey_1979 %>%
+  mutate(c_value = as.numeric(c_value))
+
+view(survey_1979)
 ```
