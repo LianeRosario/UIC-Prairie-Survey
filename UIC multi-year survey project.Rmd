@@ -659,6 +659,33 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+## Split species name into genus and species
+
+```{r split-on-species}
+
+# liane, note that each of these works but there is an warning 
+# the extra argument from this separate function help page may help:
+# https://tidyr.tidyverse.org/reference/separate.html
+survey_1979 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
+
+survey_1980 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
+
+usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
+```
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1979 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
