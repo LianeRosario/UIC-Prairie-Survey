@@ -60,6 +60,16 @@ survey_1979$richness <- c(1)
 survey_1979$species = tolower(survey_1979$species)
 ```
 
+## Split species name into genus and species
+
+```{r split-on-species}
+survey_1979 <- survey_1979 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
+```
+
 
 ## Converting old species names to new ones
 
@@ -310,6 +320,16 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+## Split species name into genus and species
+
+```{r split-on-species-usace-1979}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
+```
+
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
@@ -388,6 +408,16 @@ survey_1980$richness <- c(1)
 
 ```{r lowercase-species-names-1980}
 survey_1980$species = tolower(survey_1980$species)
+```
+
+## Split species name into genus and species
+
+```{r split-on-species-1980}
+survey_1980 <- survey_1980 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
 ```
 
 ## Converting old species names to new ones
@@ -639,6 +669,16 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+## Split species name into genus and species
+
+```{r split-on-species-usace}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          fill = "right")
+```
+
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
@@ -659,33 +699,6 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
-## Split species name into genus and species
-
-```{r split-on-species}
-
-# liane, note that each of these works but there is an warning 
-# the extra argument from this separate function help page may help:
-# https://tidyr.tidyverse.org/reference/separate.html
-survey_1979 %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
-
-survey_1980 %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
-
-usace_data %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
-```
-
-
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1979 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
@@ -700,5 +713,9 @@ survey_1980 <- merge(x = survey_1980, y = usace_data, by = c("species"), all.x =
 ```{r convert-merged-cvalue-numeric-1980}
 survey_1980 <- survey_1980 %>%
   mutate(c_value = as.numeric(c_value))
+
+view(survey_1979)
+
+view(survey_1980)
 ```
 
