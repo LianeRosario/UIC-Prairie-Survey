@@ -60,17 +60,6 @@ survey_1979$richness <- c(1)
 survey_1979$species = tolower(survey_1979$species)
 ```
 
-## Split species name into genus and species
-
-```{r split-on-species}
-survey_1979 <- survey_1979 %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
-```
-
-
 ## Converting old species names to new ones
 
 ##### The old species name shows first and after the comma is the new species name.
@@ -287,6 +276,42 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "stachys tenui
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "valeriana ciliata", "valeriana edulis var. ciliata", species))
 ```
 
+```{r rename-solidago-sp}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "solidago sp.", "solidago rigida", species))
+```
+
+```{r rename-petalostemum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "petalostemum candidum", "dalea candida", species))
+```
+
+```{r rename-polygonum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "polygonum sp.", "fallopia convolvulus", species))
+```
+
+```{r rename-panicum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "panicum implicatum", "dichanthelium acuminatum", species))
+```
+
+```{r rename-aspera}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "liatris sp.", "liatris aspera", species))
+```
+
+```{r rename-lineatus}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus lineatus", "scirpus pendulus", species))
+```
+
+```{r rename-stricta}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "carex sp.", "carex stricta", species))
+```
+
+```{r rename-alba}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agrostis alba", "agrostis gigantea", species))
+```
+
+```{r rename-subulatum}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron repens subulatum", "elymus repens", species))
+```
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
@@ -319,17 +344,6 @@ usace_data$species = tolower(usace_data$species)
 
 usace_data$c_value = tolower(usace_data$c_value)
 ```
-
-## Split species name into genus and species
-
-```{r split-on-species-usace-1979}
-usace_data <- usace_data %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
-```
-
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
@@ -408,16 +422,6 @@ survey_1980$richness <- c(1)
 
 ```{r lowercase-species-names-1980}
 survey_1980$species = tolower(survey_1980$species)
-```
-
-## Split species name into genus and species
-
-```{r split-on-species-1980}
-survey_1980 <- survey_1980 %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
 ```
 
 ## Converting old species names to new ones
@@ -636,6 +640,34 @@ survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "stachys tenui
 survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "valeriana ciliata", "valeriana edulis var. ciliata", species))
 ```
 
+```{r rename-candidum-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "petalostemum candidum", "dalea candida", species))
+```
+
+```{r rename-alba-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "agrostis alba", "agrostis gigantea", species))
+```
+
+```{r rename-subulatum-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "agropyron repens subulatum", "elymus repens", species))
+```
+
+```{r rename-scoparius-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "andropogon scoparius", "schizachyrium scoparium", species))
+```
+
+```{r rename-lineatus-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "juncus lineatus", "scirpus pendulus", species))
+```
+
+```{r rename-glaberrima-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "phlox glaberrima interior", "phlox glaberrima ssp. interior", species))
+```
+
+```{r rename-prenanthes-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "prenanthes aspera", "nabalus asperus", species))
+```
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
@@ -667,16 +699,6 @@ colnames(usace_data) <- c("species", "c_value")
 usace_data$species = tolower(usace_data$species)
 
 usace_data$c_value = tolower(usace_data$c_value)
-```
-
-## Split species name into genus and species
-
-```{r split-on-species-usace}
-usace_data <- usace_data %>% 
-  separate(col = species, 
-          into = c("genus", "species"),
-          sep = " ",
-          fill = "right")
 ```
 
 
@@ -713,9 +735,373 @@ survey_1980 <- merge(x = survey_1980, y = usace_data, by = c("species"), all.x =
 ```{r convert-merged-cvalue-numeric-1980}
 survey_1980 <- survey_1980 %>%
   mutate(c_value = as.numeric(c_value))
-
-view(survey_1979)
-
-view(survey_1980)
 ```
 
+
+
+-------------------------------------------------------
+
+
+
+
+## Loading in and tidying the 1981 Woodworth Survey
+
+```{r load-1981-survey-data, message = F}
+survey_1981 <- read_excel("data/Woodworth Original Species UPDATED.xls",
+                         sheet = 3,
+                         range = cell_cols(1:3))
+  
+colnames(survey_1981) <- c("species", "percent_cover", "plot")
+```
+
+
+##### The code below removes blank or extra rows from the original excel file.
+
+```{r remove-extra-rows-1981}
+survey_1981 <- survey_1981 %>%
+  filter(complete.cases(.))
+```
+
+
+##### Below the code adds a 1 to species that are native and a 0 to species that are non-native.
+
+```{r create-native-column-1981}
+survey_1981 <- survey_1981 %>%
+  mutate(native = if_else(species == toupper(species), 0, 1))
+```
+
+
+##### This code adds a 1 count for each species so that total richness for each plot may be summed later by adding all of the 1's together by plot.
+
+```{r create-richness-column-1981}
+survey_1981$richness <- c(1)
+```
+
+
+##### The code below changes the species names to lowercase for tidying purposes
+
+```{r lowercase-species-names-1981}
+survey_1981$species = tolower(survey_1981$species)
+```
+
+## Converting old species names to new ones
+
+##### The old species name shows first and after the comma is the new species name.
+
+```{r rename-repens- 1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "agropyron repens", "elymus repens", species))
+```
+
+```{r rename-eliator-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "ambrosia artemisiifolia elatior", "ambrosia artemisiifolia", species))
+```
+
+```{r rename-sibiricum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "apocynum sibiricum", "apocynum cannabinum", species))
+```
+
+```{r rename-ericoides-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster ericoides", "symphyotrichum ericoides", species))
+```
+
+```{r rename-laevis-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster laevis", "symphyotrichum laeve", species))
+```
+
+```{r rename-angliae-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster novae-angliae", "symphyotrichum novae-angliae", species))
+```
+
+```{r rename-pilosus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster pilosus", "symphyotrichum pilosum", species))
+```
+
+```{r rename-simplex-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster simplex", "symphyotrichum lanceolatum", species))
+```
+
+```{r rename-hieracifolia-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "erechtites hieracifolia", "senecio hieraciifolius", species))
+```
+
+```{r rename-festuca-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "festuca elatior", "schedonorus arundinaceus", species))
+```
+
+```{r rename-strictum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "geum aleppicum strictum", "geum aleppicum", species))
+```
+
+```{r rename-rigidus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "helianthus rigidus", "helianthus pauciflorus", species))
+```
+
+```{r rename-littoralis-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "juncus balticus littoralis", "juncus balticus ssp. littoralis", species))
+```
+
+```{r rename-europaea-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "oxalis europaea", "oxalis stricta", species))
+```
+
+```{r rename-leibergii-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "panicum leibergii", "dichanthelium leibergii", species))
+```
+
+```{r rename-stipulaceum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "polygonum amphibium stipulaceum", "persicaria amphibia", species))
+```
+
+```{r rename-convolvulus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "polygonum convolvulus", "fallopia convolvulus", species))
+```
+
+```{r rename-lanceolata-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "prunella vulgaris lanceolata", "prunella vulgaris ssp. lanceolata", species))
+```
+
+```{r rename-stellata-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "smilacina stellata", "maianthemum stellatum", species))
+```
+
+```{r rename-sepium-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "convolvulus sepium", "calystegia sepium", species))
+```
+
+```{r rename-canadensis-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "sambucus canadensis", "sambucus nigra ssp. canadensis", species))
+```
+
+```{r rename-spartea-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "stipa spartea", "heserostipa spartea", species))
+```
+
+```{r rename-leucophaea-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "baptisia leucophaea", "baptisia bracteata", species))
+```
+
+```{r rename-plantaginea-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "cacalia plantaginea", "arnoglossum plantagineum", species))
+```
+
+```{r rename-pinnatifidum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "chrysanthemum leucanthemum pinnatifidum", "leucanthemum vulgare", species))
+```
+
+```{r rename-puburulenta-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "gentiana puburulenta", "gentiana puberulenta", species))
+```
+
+```{r rename-purpureum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "petalostemum purpureum", "dalea purpurea", species))
+```
+
+```{r rename-fulgida-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "phlox pilosa fulgida", "phlox pilosa ssp. fulgida", species))
+```
+
+```{r rename-subglabrata-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "physalis subglabrata", "physalis longifolia", species))
+```
+
+```{r rename-pensylvanicum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "polygonum pensylvanicum", "persicaria pensylvanica", species))
+```
+
+```{r rename-arguta-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "potentilla arguta", "drymocallis arguta", species))
+```
+
+```{r rename-fernaldiana-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "rorippa palustris fernaldiana", "rorippa palustris", species))
+```
+
+```{r rename-leonardii-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "scutellaria parvula leonardii", "scutellaria parvula", species))
+```
+
+```{r rename-aureus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "senecio aureus", "packera aurea", species))
+```
+
+```{r rename-graminifolia-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "solidago graminifolia", "euthamia gymnospermoides", species))
+```
+
+```{r rename-nutallii-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "solidago graminifolia nuttallii", "euthamia graminifolia", species))
+```
+
+```{r rename-asper-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "sporobolus asper", "sporobolus compositus", species))
+```
+
+```{r rename-lateriflora-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "arenaria lateriflora", "moehringia lateriflora", species))
+```
+
+```{r rename-leucantha-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "baptisia leucantha", "baptisia alba var. macrophylla", species))
+```
+
+```{r rename-leucanthemum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "chrysanthemum leucanthemum", "leucanthemum vulgare", species))
+```
+
+```{r rename-varia-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "coronilla varia", "securigera varia", species))
+```
+
+```{r rename-fraxinus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "fraxinus pennsylvanica subintegerrima", "fraxinus pennsylvanica", species))
+```
+
+```{r rename-cristata-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "koeleria cristata", "koeleria macrantha", species))
+```
+
+```{r rename-melilotus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "melilotus alba", "melilotus officinalis", species))
+```
+
+```{r rename-longistipata-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "oenothera tetragona longistipata", "oenothera fruticosa", species))
+```
+
+```{r rename-implicatum-1981}
+survey_1981 <- survey_1981%>% mutate(species = ifelse(species == "panicum implicatum", "dichanthelium acuminatum", species))
+```
+
+```{r rename-tenuiflora-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "psoralea tenuiflora", "psoralidium tenuiflorum", species))
+```
+
+```{r rename-scirpus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "scirpus lineatus", "scirpus pendulus", species))
+```
+
+```{r rename-pauperculus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "senecio pauperculus", "packera paupercula", species))
+```
+
+```{r rename-deamii-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "silphium integrifolium deamii", "silphium integrifolium", species))
+```
+
+```{r rename-terebinthinaceum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "silphium terebinthinaceum x laciniatum", "silphium terebinthinaceum", species))
+```
+
+```{r rename-hispida-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "stachys tenuifolia hispida", "stachys tenuifolia", species))
+```
+
+```{r rename-ciliata-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "valeriana ciliata", "valeriana edulis var. ciliata", species))
+```
+
+```{r rename-candidum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "petalostemum candidum", "dalea candida", species))
+```
+
+```{r rename-alba-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "agrostis alba", "agrostis gigantea", species))
+```
+
+```{r rename-subulatum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "agropyron repens subulatum", "elymus repens", species))
+```
+
+```{r rename-scoparius-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "andropogon scoparius", "schizachyrium scoparium", species))
+```
+
+```{r rename-lineatus-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "juncus lineatus", "scirpus pendulus", species))
+```
+
+```{r rename-glaberrima-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "phlox glaberrima interior", "phlox glaberrima ssp. interior", species))
+```
+
+```{r rename-prenanthes-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "prenanthes aspera", "nabalus asperus", species))
+```
+
+```{r rename-maculatum-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "eupatorium maculatum", "eutrochium maculatum", species))
+```
+
+```{r rename-persicaria-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "polygonum persicaria", "persicaria maculosa", species))
+```
+
+## Loading in and tidying conservatism data
+
+##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
+
+```{r load-conservatism-data-1981, message = F}
+usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+                         skip = 11) %>%
+  janitor:: clean_names()
+```
+
+##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
+
+```{r remove-usace-columns-1981}
+usace_data <- usace_data %>%
+  select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
+```
+
+
+##### Below the columns were renamed for simplicity.
+
+```{r rename-usace-columns-1981}
+colnames(usace_data) <- c("species", "c_value")
+```
+
+
+##### The code below changes the species names to lowercase for tidying purposes.
+
+```{r lowercase-usace-names-1981}
+usace_data$species = tolower(usace_data$species)
+
+usace_data$c_value = tolower(usace_data$c_value)
+```
+
+##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
+
+```{r coerce-usace-c-value-1981}
+usace_data <- usace_data %>%
+  mutate(c_value = as.numeric(c_value))
+```
+
+
+##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
+
+```{r fix-rigidus-name-1981}
+usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+```
+
+```{r fix-tenuiflorum-name-1981}
+usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+```
+
+
+## Merging survey with conservatism values
+
+##### The code below joins the 1979 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
+
+```{r merge-survey-with-c-values-1981}
+survey_1981 <- merge(x = survey_1981, y = usace_data, by = c("species"), all.x = TRUE)
+```
+
+
+##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
+
+```{r convert-merged-cvalue-numeric-1981}
+survey_1981 <- survey_1981 %>%
+  mutate(c_value = as.numeric(c_value))
+
+view(survey_1981)
+```
