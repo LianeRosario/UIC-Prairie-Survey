@@ -2592,6 +2592,34 @@ survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "agropyron tra
 survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "lysimachia quadriflolia", "lysimachia quadrifolia", species))
 ```
 
+```{r rename-smallii-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "eleocharis smallii", "eleocharis palustris", species))
+```
+
+```{r rename-shrevei-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "iris virginica shrevei", "iris virginica var. shrevei", species))
+```
+
+```{r rename-sieboldii-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "malus sieboldii", "malus toringa", species))
+```
+
+```{r rename-mentha-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "mentha arvensis villosa", "mentha arvensis", species))
+```
+
+```{r rename-coccineum-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "polygonum coccineum", "persicaria amphibia", species))
+```
+
+```{r rename-typhina-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "rhus typhina", "rhus hirta", species))
+```
+
+```{r rename-homotricha-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "stachys palustris homotricha", "stachys pilosa", species))
+```
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
