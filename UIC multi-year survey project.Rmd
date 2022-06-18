@@ -312,6 +312,23 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agrostis alba
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron repens subulatum", "elymus repens", species))
 ```
 
+```{r rename-agropyron-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron sp.", "elymus repens", species))
+```
+
+```{r rename-aster-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum pilosum", species))
+```
+
+```{r rename-galium-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "galium sp.", "galium obtusum", species))
+```
+
+```{r rename-juncus-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus sp.", "juncus balticus ssp. littoralis", species))
+```
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
@@ -735,6 +752,8 @@ survey_1980 <- merge(x = survey_1980, y = usace_data, by = c("species"), all.x =
 ```{r convert-merged-cvalue-numeric-1980}
 survey_1980 <- survey_1980 %>%
   mutate(c_value = as.numeric(c_value))
+
+view(survey_1980)
 ```
 
 
@@ -2686,7 +2705,5 @@ survey_1995 <- merge(x = survey_1995, y = usace_data, by = c("species"), all.x =
 ```{r convert-merged-cvalue-numeric-1995}
 survey_1995 <- survey_1995 %>%
   mutate(c_value = as.numeric(c_value))
-
-view(survey_1995)
 ```
 
