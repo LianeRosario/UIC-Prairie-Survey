@@ -329,6 +329,20 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus sp.", 
 ```
 
 
+
+## Separate Species Column
+```{r separate-1979-species}
+survey_1979 <- survey_1979 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+
+view(survey_1979)
+```
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
@@ -381,12 +395,29 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+## Separate usace columns
+
+```{r separate-usace-columns}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+
+view(usace_data)
+```
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1979 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values}
-survey_1979 <- merge(x = survey_1979, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1979 <- survey_1979 %>%
+  inner_join(usace_data, by = c("genus"))
+
+view(survey_1979)
 ```
 
 
