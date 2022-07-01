@@ -415,7 +415,7 @@ view(usace_data)
 
 ```{r merge-survey-with-c-values}
 survey_1979 <- survey_1979 %>%
-  inner_join(usace_data, by = c("genus"))
+  left_join(usace_data, by = c("genus"))
 
 view(survey_1979)
 ```
