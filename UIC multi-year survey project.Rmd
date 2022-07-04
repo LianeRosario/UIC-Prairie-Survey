@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+
 ```{r load-packages, echo = F, message = F}
 library(readxl)
 library(tidyverse)
@@ -18,6 +19,7 @@ library(readr)
 library(dplyr)
 library(stringr)
 ```
+
 
 
 ## Loading in and tidying the 1979 Woodworth Survey
@@ -59,6 +61,8 @@ survey_1979$richness <- c(1)
 ```{r lowercase-species-names}
 survey_1979$species = tolower(survey_1979$species)
 ```
+
+
 
 ## Converting old species names to new ones
 
@@ -276,32 +280,16 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "stachys tenui
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "valeriana ciliata", "valeriana edulis var. ciliata", species))
 ```
 
-```{r rename-solidago-sp}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "solidago sp.", "solidago rigida", species))
-```
-
 ```{r rename-petalostemum}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "petalostemum candidum", "dalea candida", species))
-```
-
-```{r rename-polygonum}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "polygonum sp.", "fallopia convolvulus", species))
 ```
 
 ```{r rename-panicum}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "panicum implicatum", "dichanthelium acuminatum", species))
 ```
 
-```{r rename-aspera}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "liatris sp.", "liatris aspera", species))
-```
-
 ```{r rename-lineatus}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus lineatus", "scirpus pendulus", species))
-```
-
-```{r rename-stricta}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "carex sp.", "carex stricta", species))
 ```
 
 ```{r rename-alba}
@@ -312,25 +300,10 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agrostis alba
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron repens subulatum", "elymus repens", species))
 ```
 
-```{r rename-agropyron-sp-1979}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron sp.", "elymus repens", species))
-```
-
-```{r rename-aster-sp-1979}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum pilosum", species))
-```
-
-```{r rename-galium-sp-1979}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "galium sp.", "galium obtusum", species))
-```
-
-```{r rename-juncus-sp-1979}
-survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus sp.", "juncus balticus ssp. littoralis", species))
-```
-
 
 
 ## Separate Species Column
+
 ```{r separate-1979-species}
 survey_1979 <- survey_1979 %>% 
   separate(col = species, 
@@ -338,9 +311,8 @@ survey_1979 <- survey_1979 %>%
           sep = " ",
           extra = "merge",
           fill = "right")
-
-view(survey_1979)
 ```
+
 
 
 ## Loading in and tidying conservatism data
@@ -349,9 +321,10 @@ view(survey_1979)
 
 ```{r load-conservatism-data, message = F}
 usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
-                         skip = 11) %>%
+                         skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -376,6 +349,7 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value}
@@ -395,7 +369,8 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
-## Separate usace columns
+
+## Separate Usace Species Column
 
 ```{r separate-usace-columns}
 usace_data <- usace_data %>% 
@@ -404,9 +379,8 @@ usace_data <- usace_data %>%
           sep = " ",
           extra = "merge",
           fill = "right")
-
-view(usace_data)
 ```
+
 
 
 ## Merging survey with conservatism values
@@ -415,9 +389,7 @@ view(usace_data)
 
 ```{r merge-survey-with-c-values}
 survey_1979 <- survey_1979 %>%
-  left_join(usace_data, by = c("genus"))
-
-view(survey_1979)
+  left_join(usace_data, by = c("genus", "species"))
 ```
 
 
@@ -429,7 +401,9 @@ survey_1979 <- survey_1979 %>%
 ```
 
 
+
 -------------------------------------------------
+
 
 
 ## Loading in and tidying the 1980 Woodworth Survey
@@ -471,6 +445,8 @@ survey_1980$richness <- c(1)
 ```{r lowercase-species-names-1980}
 survey_1980$species = tolower(survey_1980$species)
 ```
+
+
 
 ## Converting old species names to new ones
 
@@ -716,15 +692,31 @@ survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "phlox glaberr
 survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "prenanthes aspera", "nabalus asperus", species))
 ```
 
+
+
+## Separate Species Column
+
+```{r separate-1980-species}
+survey_1980 <- survey_1980 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-for-1980-survey, message = F}
 usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
-                         skip = 11) %>%
+                         skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -769,12 +761,27 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+
+## Separate Usace Species Column
+
+```{r separate-usace-columns-1980}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1980 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values-1980}
-survey_1980 <- merge(x = survey_1980, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1980 <- survey_1980 %>%
+  left_join(usace_data, by = c("genus", "species"))
 ```
 
 
@@ -783,14 +790,11 @@ survey_1980 <- merge(x = survey_1980, y = usace_data, by = c("species"), all.x =
 ```{r convert-merged-cvalue-numeric-1980}
 survey_1980 <- survey_1980 %>%
   mutate(c_value = as.numeric(c_value))
-
-view(survey_1980)
 ```
 
 
 
--------------------------------------------------------
-
+-------------------------------------------------
 
 
 
@@ -833,6 +837,8 @@ survey_1981$richness <- c(1)
 ```{r lowercase-species-names-1981}
 survey_1981$species = tolower(survey_1981$species)
 ```
+
+
 
 ## Converting old species names to new ones
 
@@ -1086,15 +1092,31 @@ survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "eupatorium ma
 survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "polygonum persicaria", "persicaria maculosa", species))
 ```
 
+
+
+## Separate Species Column
+
+```{r separate-1981-species}
+survey_1981 <- survey_1981 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1981, message = F}
 usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
-                         skip = 11) %>%
+                         skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -1119,6 +1141,7 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1981}
@@ -1138,12 +1161,27 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+
+## Separate Usace Species Column
+
+```{r separate-usace-columns-1981}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1981 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values-1981}
-survey_1981 <- merge(x = survey_1981, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1981 <- survey_1981 %>%
+  left_join(usace_data, by = c("genus", "species"))
 ```
 
 
@@ -1156,8 +1194,7 @@ survey_1981 <- survey_1981 %>%
 
 
 
--------------------------------------------------------
-
+-------------------------------------------------
 
 
 
@@ -1200,6 +1237,9 @@ survey_1982$richness <- c(1)
 ```{r lowercase-species-names-1982}
 survey_1982$species = tolower(survey_1982$species)
 ```
+
+
+
 
 ## Converting old species names to new ones
 
@@ -1469,15 +1509,31 @@ survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "lilium philad
 survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "viola pedata lineariloba", "viola pedata", species))
 ```
 
+
+
+## Separate Species Column
+
+```{r separate-1982-species}
+survey_1982 <- survey_1982 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1982, message = F}
 usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
-                         skip = 11) %>%
+                         skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -1502,6 +1558,7 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1982}
@@ -1521,12 +1578,27 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+
+## Separate Usace Species Column
+
+```{r separate-usace-columns-1982}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1982 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values-1982}
-survey_1982 <- merge(x = survey_1982, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1982 <- survey_1982 %>%
+  left_join(usace_data, by = c("genus", "species"))
 ```
 
 
@@ -1538,8 +1610,8 @@ survey_1982 <- survey_1982 %>%
 ```
 
 
--------------------------------------------------------
 
+-------------------------------------------------
 
 
 
@@ -1582,6 +1654,8 @@ survey_1984$richness <- c(1)
 ```{r lowercase-species-names-1984}
 survey_1984$species = tolower(survey_1984$species)
 ```
+
+
 
 ## Converting old species names to new ones
 
@@ -1859,15 +1933,31 @@ survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "agropyron tra
 survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "lysimachia quadriflolia", "lysimachia quadrifolia", species))
 ```
 
+
+
+## Separate Species Column
+
+```{r separate-1984-species}
+survey_1984 <- survey_1984 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1984, message = F}
 usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
-                         skip = 11) %>%
+                         skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -1892,6 +1982,7 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1984}
@@ -1911,12 +2002,27 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+
+## Separate Usace Species Column
+
+```{r separate-usace-columns-1984}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1984 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values-1984}
-survey_1984 <- merge(x = survey_1984, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1984 <- survey_1984 %>%
+  left_join(usace_data, by = c("genus", "species"))
 ```
 
 
@@ -1929,8 +2035,7 @@ survey_1984 <- survey_1984 %>%
 
 
 
--------------------------------------------------------
-
+-------------------------------------------------
 
 
 
@@ -1973,6 +2078,8 @@ survey_1987$richness <- c(1)
 ```{r lowercase-species-names-1987}
 survey_1987$species = tolower(survey_1987$species)
 ```
+
+
 
 ## Converting old species names to new ones
 
@@ -2250,15 +2357,31 @@ survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "agropyron tra
 survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "lysimachia quadriflolia", "lysimachia quadrifolia", species))
 ```
 
+
+
+## Separate Species Column
+
+```{r separate-1987-species}
+survey_1987 <- survey_1987 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1987, message = F}
 usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
-                         skip = 11) %>%
+                         skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -2283,6 +2406,7 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1987}
@@ -2302,12 +2426,27 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+
+## Separate Usace Species Column
+
+```{r separate-usace-columns-1987}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1987 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values-1987}
-survey_1987 <- merge(x = survey_1987, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1987 <- survey_1987 %>%
+  left_join(usace_data, by = c("genus", "species"))
 ```
 
 
@@ -2320,9 +2459,7 @@ survey_1987 <- survey_1987 %>%
 
 
 
-
--------------------------------------------------------
-
+-------------------------------------------------
 
 
 
@@ -2365,6 +2502,8 @@ survey_1995$richness <- c(1)
 ```{r lowercase-species-names-1995}
 survey_1995$species = tolower(survey_1995$species)
 ```
+
+
 
 ## Converting old species names to new ones
 
@@ -2670,6 +2809,21 @@ survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "rhus typhina"
 survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "stachys palustris homotricha", "stachys pilosa", species))
 ```
 
+
+
+# Separate Species Column
+
+```{r separate-1995-species}
+survey_1995 <- survey_1995 %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Loading in and tidying conservatism data
 
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
@@ -2679,6 +2833,7 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11) %>%
   janitor:: clean_names()
 ```
+
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
@@ -2703,6 +2858,7 @@ usace_data$species = tolower(usace_data$species)
 usace_data$c_value = tolower(usace_data$c_value)
 ```
 
+
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1995}
@@ -2722,12 +2878,29 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 ```
 
 
+
+#Separate Usace Species Column
+
+```{r separate-usace-columns-1995}
+usace_data <- usace_data %>% 
+  separate(col = species, 
+          into = c("genus", "species"),
+          sep = " ",
+          extra = "merge",
+          fill = "right")
+```
+
+
+
 ## Merging survey with conservatism values
 
 ##### The code below joins the 1995 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
 ```{r merge-survey-with-c-values-1995}
-survey_1995 <- merge(x = survey_1995, y = usace_data, by = c("species"), all.x = TRUE)
+survey_1995 <- survey_1995 %>%
+  left_join(usace_data, by = c("genus", "species"))
+
+view(survey_1995)
 ```
 
 
