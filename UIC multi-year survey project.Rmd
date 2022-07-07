@@ -379,6 +379,8 @@ usace_data <- usace_data %>%
           sep = " ",
           extra = "merge",
           fill = "right")
+
+view(usace_data)
 ```
 
 
@@ -390,6 +392,16 @@ usace_data <- usace_data %>%
 ```{r merge-survey-with-c-values}
 survey_1979 <- survey_1979 %>%
   left_join(usace_data, by = c("genus", "species"))
+```
+
+
+## test
+```{r}
+survey_1979 %>%
+  group_by(genus) %>%
+  mutate(c_value = ifelse(is.na(c_value), mean(usace_data$c_value, na.rm = TRUE))) 
+
+view(survey_1979)
 ```
 
 
