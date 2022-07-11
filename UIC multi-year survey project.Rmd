@@ -740,6 +740,10 @@ survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "prenanthes as
 survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum sp.", species))
 ```
 
+```{r rename-prenanthes-sp-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
+```
+
 
 
 ## Separate Species Column
@@ -1180,6 +1184,13 @@ survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "eupatorium ma
 survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "polygonum persicaria", "persicaria maculosa", species))
 ```
 
+```{r rename-aster-sp-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum sp.", species))
+```
+
+```{r rename-prenanthes-sp-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
+```
 
 
 ## Separate Species Column
@@ -1200,7 +1211,7 @@ survey_1981 <- survey_1981 %>%
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1981, message = F}
-usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+usace_data_1981 <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
@@ -1209,7 +1220,7 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
 ```{r remove-usace-columns-1981}
-usace_data <- usace_data %>%
+usace_data_1981 <- usace_data_1981 %>%
   select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
 ```
 
@@ -1217,23 +1228,23 @@ usace_data <- usace_data %>%
 ##### Below the columns were renamed for simplicity.
 
 ```{r rename-usace-columns-1981}
-colnames(usace_data) <- c("species", "c_value")
+colnames(usace_data_1981) <- c("species", "c_value")
 ```
 
 
 ##### The code below changes the species names to lowercase for tidying purposes.
 
 ```{r lowercase-usace-names-1981}
-usace_data$species = tolower(usace_data$species)
+usace_data_1981$species = tolower(usace_data_1981$species)
 
-usace_data$c_value = tolower(usace_data$c_value)
+usace_data_1981$c_value = tolower(usace_data_1981$c_value)
 ```
 
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1981}
-usace_data <- usace_data %>%
+usace_data_1981 <- usace_data_1981 %>%
   mutate(c_value = as.numeric(c_value))
 ```
 
@@ -1241,19 +1252,21 @@ usace_data <- usace_data %>%
 ##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
 
 ```{r fix-rigidus-name-1981}
-usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+usace_data_1981$species[usace_data_1981$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
 ```
 
 ```{r fix-tenuiflorum-name-1981}
-usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+usace_data_1981$species[usace_data_1981$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
 
 ## Separate Usace Species Column
 
+#### There are cases where the genus is identified and not the species. We want the species column split into separate "genus" and "species" columns so that later we can calculate a mean c-value by genus to fill in any missing c-values.
+
 ```{r separate-usace-columns-1981}
-usace_data <- usace_data %>% 
+usace_data_1981 <- usace_data_1981 %>% 
   separate(col = species, 
           into = c("genus", "species"),
           sep = " ",
@@ -1269,7 +1282,45 @@ usace_data <- usace_data %>%
 
 ```{r merge-survey-with-c-values-1981}
 survey_1981 <- survey_1981 %>%
-  left_join(usace_data, by = c("genus", "species"))
+  left_join(usace_data_1981, by = c("genus", "species"))
+```
+
+
+
+## Filling in missing c-values
+
+#### Since there are rows where the genus is identified and not the species, we cannot say for certain what the c-value is. This code is creating a mean c-value for each genus from the Usace data so that we can fill in those missing c-values.
+
+```{r create-c-value-mean-1981}
+usace_data_mean_1981 <- usace_data_1981 %>%
+  group_by(genus) %>%
+  mutate(c_value_mean = round(mean(c_value, na.rm = T), digits = 0)) %>%
+  select(-species, -c_value) %>%
+  distinct()
+```
+
+
+#### The mean c-values from the Usace data are being merged to the 1981 survey
+
+```{r join-mean-with-survey-1981}
+survey_1981 <- survey_1981 %>%
+  left_join(usace_data_mean_1981, by = c("genus"))
+```
+
+
+#### The two datasets had to be merged by genus and not genus and species like before which would have been a stricter merge. This creates extra columns with a mean c-value for each data set (x and y) when in reality the values are the same in both columns. This transfers the values from the x and y columns into the original c-value column to fill in any missing values.
+
+```{r fill-c-values-with-mean-1981}
+survey_1981 <- survey_1981 %>%
+  mutate(c_value = ifelse(is.na(c_value), c_value_mean, c_value))
+```
+
+
+#### Now the extra x and y rows from the two data sets are removed so we can be left with one c-value column and no missing values.
+
+```{r remove-extra-c-value-columns-1981}
+survey_1981 <- survey_1981 %>%
+  select(-c_value_mean)
 ```
 
 
@@ -1325,7 +1376,6 @@ survey_1982$richness <- c(1)
 ```{r lowercase-species-names-1982}
 survey_1982$species = tolower(survey_1982$species)
 ```
-
 
 
 
@@ -1597,6 +1647,14 @@ survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "lilium philad
 survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "viola pedata lineariloba", "viola pedata", species))
 ```
 
+```{r rename-aster-sp-1982}
+survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum sp.", species))
+```
+
+```{r rename-prenanthes-sp-1982}
+survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
+```
+
 
 
 ## Separate Species Column
@@ -1617,7 +1675,7 @@ survey_1982 <- survey_1982 %>%
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1982, message = F}
-usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+usace_data_1982 <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
@@ -1626,7 +1684,7 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
 ```{r remove-usace-columns-1982}
-usace_data <- usace_data %>%
+usace_data_1982 <- usace_data_1982 %>%
   select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
 ```
 
@@ -1634,23 +1692,23 @@ usace_data <- usace_data %>%
 ##### Below the columns were renamed for simplicity.
 
 ```{r rename-usace-columns-1982}
-colnames(usace_data) <- c("species", "c_value")
+colnames(usace_data_1982) <- c("species", "c_value")
 ```
 
 
 ##### The code below changes the species names to lowercase for tidying purposes.
 
 ```{r lowercase-usace-names-1982}
-usace_data$species = tolower(usace_data$species)
+usace_data_1982$species = tolower(usace_data_1982$species)
 
-usace_data$c_value = tolower(usace_data$c_value)
+usace_data_1982$c_value = tolower(usace_data_1982$c_value)
 ```
 
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1982}
-usace_data <- usace_data %>%
+usace_data_1982 <- usace_data_1982 %>%
   mutate(c_value = as.numeric(c_value))
 ```
 
@@ -1658,19 +1716,21 @@ usace_data <- usace_data %>%
 ##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
 
 ```{r fix-rigidus-name-1982}
-usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+usace_data_1982$species[usace_data_1982$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
 ```
 
 ```{r fix-tenuiflorum-name-1982}
-usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+usace_data_1982$species[usace_data_1982$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
 
 ## Separate Usace Species Column
 
+#### There are cases where the genus is identified and not the species. We want the species column split into separate "genus" and "species" columns so that later we can calculate a mean c-value by genus to fill in any missing c-values.
+
 ```{r separate-usace-columns-1982}
-usace_data <- usace_data %>% 
+usace_data_1982 <- usace_data_1982 %>% 
   separate(col = species, 
           into = c("genus", "species"),
           sep = " ",
@@ -1686,7 +1746,45 @@ usace_data <- usace_data %>%
 
 ```{r merge-survey-with-c-values-1982}
 survey_1982 <- survey_1982 %>%
-  left_join(usace_data, by = c("genus", "species"))
+  left_join(usace_data_1982, by = c("genus", "species"))
+```
+
+
+
+## Filling in missing c-values
+
+#### Since there are rows where the genus is identified and not the species, we cannot say for certain what the c-value is. This code is creating a mean c-value for each genus from the Usace data so that we can fill in those missing c-values.
+
+```{r create-c-value-mean-1982}
+usace_data_mean_1982 <- usace_data_1982 %>%
+  group_by(genus) %>%
+  mutate(c_value_mean = round(mean(c_value, na.rm = T), digits = 0)) %>%
+  select(-species, -c_value) %>%
+  distinct()
+```
+
+
+#### The mean c-values from the Usace data are being merged to the 1982 survey
+
+```{r join-mean-with-survey-1982}
+survey_1982 <- survey_1982 %>%
+  left_join(usace_data_mean_1982, by = c("genus"))
+```
+
+
+#### The two datasets had to be merged by genus and not genus and species like before which would have been a stricter merge. This creates extra columns with a mean c-value for each data set (x and y) when in reality the values are the same in both columns. This transfers the values from the x and y columns into the original c-value column to fill in any missing values.
+
+```{r fill-c-values-with-mean-1982}
+survey_1982 <- survey_1982 %>%
+  mutate(c_value = ifelse(is.na(c_value), c_value_mean, c_value))
+```
+
+
+#### Now the extra x and y rows from the two data sets are removed so we can be left with one c-value column and no missing values.
+
+```{r remove-extra-c-value-columns-1982}
+survey_1982 <- survey_1982 %>%
+  select(-c_value_mean)
 ```
 
 
@@ -2041,7 +2139,7 @@ survey_1984 <- survey_1984 %>%
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1984, message = F}
-usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+usace_data_1984 <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
@@ -2050,7 +2148,7 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
 ```{r remove-usace-columns-1984}
-usace_data <- usace_data %>%
+usace_data_1984 <- usace_data_1984 %>%
   select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
 ```
 
@@ -2058,23 +2156,23 @@ usace_data <- usace_data %>%
 ##### Below the columns were renamed for simplicity.
 
 ```{r rename-usace-columns-1984}
-colnames(usace_data) <- c("species", "c_value")
+colnames(usace_data_1984) <- c("species", "c_value")
 ```
 
 
 ##### The code below changes the species names to lowercase for tidying purposes.
 
 ```{r lowercase-usace-names-1984}
-usace_data$species = tolower(usace_data$species)
+usace_data_1984$species = tolower(usace_data_1984$species)
 
-usace_data$c_value = tolower(usace_data$c_value)
+usace_data_1984$c_value = tolower(usace_data_1984$c_value)
 ```
 
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1984}
-usace_data <- usace_data %>%
+usace_data_1984 <- usace_data_1984 %>%
   mutate(c_value = as.numeric(c_value))
 ```
 
@@ -2082,19 +2180,21 @@ usace_data <- usace_data %>%
 ##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
 
 ```{r fix-rigidus-name-1984}
-usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+usace_data_1984$species[usace_data_1984$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
 ```
 
 ```{r fix-tenuiflorum-name-1984}
-usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+usace_data_1984$species[usace_data_1984$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
 
 ## Separate Usace Species Column
 
+#### There are cases where the genus is identified and not the species. We want the species column split into separate "genus" and "species" columns so that later we can calculate a mean c-value by genus to fill in any missing c-values.
+
 ```{r separate-usace-columns-1984}
-usace_data <- usace_data %>% 
+usace_data_1984 <- usace_data_1984 %>% 
   separate(col = species, 
           into = c("genus", "species"),
           sep = " ",
@@ -2110,7 +2210,45 @@ usace_data <- usace_data %>%
 
 ```{r merge-survey-with-c-values-1984}
 survey_1984 <- survey_1984 %>%
-  left_join(usace_data, by = c("genus", "species"))
+  left_join(usace_data_1984, by = c("genus", "species"))
+```
+
+
+
+## Filling in missing c-values
+
+#### Since there are rows where the genus is identified and not the species, we cannot say for certain what the c-value is. This code is creating a mean c-value for each genus from the Usace data so that we can fill in those missing c-values.
+
+```{r create-c-value-mean-1984}
+usace_data_mean_1984 <- usace_data_1984 %>%
+  group_by(genus) %>%
+  mutate(c_value_mean = round(mean(c_value, na.rm = T), digits = 0)) %>%
+  select(-species, -c_value) %>%
+  distinct()
+```
+
+
+#### The mean c-values from the Usace data are being merged to the 1984 survey
+
+```{r join-mean-with-survey-1984}
+survey_1984 <- survey_1984 %>%
+  left_join(usace_data_mean_1984, by = c("genus"))
+```
+
+
+#### The two datasets had to be merged by genus and not genus and species like before which would have been a stricter merge. This creates extra columns with a mean c-value for each data set (x and y) when in reality the values are the same in both columns. This transfers the values from the x and y columns into the original c-value column to fill in any missing values.
+
+```{r fill-c-values-with-mean-1984}
+survey_1984 <- survey_1984 %>%
+  mutate(c_value = ifelse(is.na(c_value), c_value_mean, c_value))
+```
+
+
+#### Now the extra x and y rows from the two data sets are removed so we can be left with one c-value column and no missing values.
+
+```{r remove-extra-c-value-columns-1984}
+survey_1984 <- survey_1984 %>%
+  select(-c_value_mean)
 ```
 
 
@@ -2445,6 +2583,10 @@ survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "agropyron tra
 survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "lysimachia quadriflolia", "lysimachia quadrifolia", species))
 ```
 
+```{r rename-prenanthes-sp-1987}
+survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
+```
+
 
 
 ## Separate Species Column
@@ -2465,7 +2607,7 @@ survey_1987 <- survey_1987 %>%
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1987, message = F}
-usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+usace_data_1987 <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
@@ -2474,7 +2616,7 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
 ```{r remove-usace-columns-1987}
-usace_data <- usace_data %>%
+usace_data_1987 <- usace_data_1987 %>%
   select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
 ```
 
@@ -2482,23 +2624,23 @@ usace_data <- usace_data %>%
 ##### Below the columns were renamed for simplicity.
 
 ```{r rename-usace-columns-1987}
-colnames(usace_data) <- c("species", "c_value")
+colnames(usace_data_1987) <- c("species", "c_value")
 ```
 
 
 ##### The code below changes the species names to lowercase for tidying purposes.
 
 ```{r lowercase-usace-names-1987}
-usace_data$species = tolower(usace_data$species)
+usace_data_1987$species = tolower(usace_data_1987$species)
 
-usace_data$c_value = tolower(usace_data$c_value)
+usace_data_1987$c_value = tolower(usace_data_1987$c_value)
 ```
 
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1987}
-usace_data <- usace_data %>%
+usace_data_1987 <- usace_data_1987 %>%
   mutate(c_value = as.numeric(c_value))
 ```
 
@@ -2506,19 +2648,21 @@ usace_data <- usace_data %>%
 ##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
 
 ```{r fix-rigidus-name-1987}
-usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+usace_data_1987$species[usace_data_1987$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
 ```
 
 ```{r fix-tenuiflorum-name-1987}
-usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+usace_data_1987$species[usace_data_1987$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
 
 ## Separate Usace Species Column
 
+#### There are cases where the genus is identified and not the species. We want the species column split into separate "genus" and "species" columns so that later we can calculate a mean c-value by genus to fill in any missing c-values.
+
 ```{r separate-usace-columns-1987}
-usace_data <- usace_data %>% 
+usace_data_1987 <- usace_data_1987 %>% 
   separate(col = species, 
           into = c("genus", "species"),
           sep = " ",
@@ -2534,7 +2678,45 @@ usace_data <- usace_data %>%
 
 ```{r merge-survey-with-c-values-1987}
 survey_1987 <- survey_1987 %>%
-  left_join(usace_data, by = c("genus", "species"))
+  left_join(usace_data_1987, by = c("genus", "species"))
+```
+
+
+
+## Filling in missing c-values
+
+#### Since there are rows where the genus is identified and not the species, we cannot say for certain what the c-value is. This code is creating a mean c-value for each genus from the Usace data so that we can fill in those missing c-values.
+
+```{r create-c-value-mean-1987}
+usace_data_mean_1987 <- usace_data_1987 %>%
+  group_by(genus) %>%
+  mutate(c_value_mean = round(mean(c_value, na.rm = T), digits = 0)) %>%
+  select(-species, -c_value) %>%
+  distinct()
+```
+
+
+#### The mean c-values from the Usace data are being merged to the 1987 survey
+
+```{r join-mean-with-survey-1987}
+survey_1987 <- survey_1987 %>%
+  left_join(usace_data_mean_1987, by = c("genus"))
+```
+
+
+#### The two datasets had to be merged by genus and not genus and species like before which would have been a stricter merge. This creates extra columns with a mean c-value for each data set (x and y) when in reality the values are the same in both columns. This transfers the values from the x and y columns into the original c-value column to fill in any missing values.
+
+```{r fill-c-values-with-mean-1987}
+survey_1987 <- survey_1987 %>%
+  mutate(c_value = ifelse(is.na(c_value), c_value_mean, c_value))
+```
+
+
+#### Now the extra x and y rows from the two data sets are removed so we can be left with one c-value column and no missing values.
+
+```{r remove-extra-c-value-columns-1987}
+survey_1987 <- survey_1987 %>%
+  select(-c_value_mean)
 ```
 
 
@@ -2917,7 +3099,7 @@ survey_1995 <- survey_1995 %>%
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data-1995, message = F}
-usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+usace_data_1995 <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11) %>%
   janitor:: clean_names()
 ```
@@ -2926,7 +3108,7 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
 ```{r remove-usace-columns-1995}
-usace_data <- usace_data %>%
+usace_data_1995 <- usace_data_1995 %>%
   select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
 ```
 
@@ -2934,23 +3116,23 @@ usace_data <- usace_data %>%
 ##### Below the columns were renamed for simplicity.
 
 ```{r rename-usace-columns-1995}
-colnames(usace_data) <- c("species", "c_value")
+colnames(usace_data_1995) <- c("species", "c_value")
 ```
 
 
 ##### The code below changes the species names to lowercase for tidying purposes.
 
 ```{r lowercase-usace-names-1995}
-usace_data$species = tolower(usace_data$species)
+usace_data_1995$species = tolower(usace_data_1995$species)
 
-usace_data$c_value = tolower(usace_data$c_value)
+usace_data_1995$c_value = tolower(usace_data_1995$c_value)
 ```
 
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
 ```{r coerce-usace-c-value-1995}
-usace_data <- usace_data %>%
+usace_data_1995 <- usace_data_1995 %>%
   mutate(c_value = as.numeric(c_value))
 ```
 
@@ -2958,19 +3140,21 @@ usace_data <- usace_data %>%
 ##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
 
 ```{r fix-rigidus-name-1995}
-usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+usace_data_1995$species[usace_data_1995$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
 ```
 
 ```{r fix-tenuiflorum-name-1995}
-usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+usace_data_1995$species[usace_data_1995$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
 
-#Separate Usace Species Column
+## Separate Usace Species Column
+
+#### There are cases where the genus is identified and not the species. We want the species column split into separate "genus" and "species" columns so that later we can calculate a mean c-value by genus to fill in any missing c-values.
 
 ```{r separate-usace-columns-1995}
-usace_data <- usace_data %>% 
+usace_data_1995 <- usace_data_1995 %>% 
   separate(col = species, 
           into = c("genus", "species"),
           sep = " ",
@@ -2986,9 +3170,46 @@ usace_data <- usace_data %>%
 
 ```{r merge-survey-with-c-values-1995}
 survey_1995 <- survey_1995 %>%
-  left_join(usace_data, by = c("genus", "species"))
+  left_join(usace_data_1995, by = c("genus", "species"))
 ```
 
+
+
+## Filling in missing c-values
+
+#### Since there are rows where the genus is identified and not the species, we cannot say for certain what the c-value is. This code is creating a mean c-value for each genus from the Usace data so that we can fill in those missing c-values.
+
+```{r create-c-value-mean-1995}
+usace_data_mean_1995 <- usace_data_1995 %>%
+  group_by(genus) %>%
+  mutate(c_value_mean = round(mean(c_value, na.rm = T), digits = 0)) %>%
+  select(-species, -c_value) %>%
+  distinct()
+```
+
+
+#### The mean c-values from the Usace data are being merged to the 1995 survey
+
+```{r join-mean-with-survey-1995}
+survey_1995 <- survey_1995 %>%
+  left_join(usace_data_mean_1995, by = c("genus"))
+```
+
+
+#### The two datasets had to be merged by genus and not genus and species like before which would have been a stricter merge. This creates extra columns with a mean c-value for each data set (x and y) when in reality the values are the same in both columns. This transfers the values from the x and y columns into the original c-value column to fill in any missing values.
+
+```{r fill-c-values-with-mean-1995}
+survey_1995 <- survey_1995 %>%
+  mutate(c_value = ifelse(is.na(c_value), c_value_mean, c_value))
+```
+
+
+#### Now the extra x and y rows from the two data sets are removed so we can be left with one c-value column and no missing values.
+
+```{r remove-extra-c-value-columns-1995}
+survey_1995 <- survey_1995 %>%
+  select(-c_value_mean)
+```
 
 ```{r change-c-value}
 survey_1995 <- survey_1995 %>%
@@ -3005,4 +3226,5 @@ survey_1995 <- survey_1995 %>%
 survey_1995 <- survey_1995 %>%
   mutate(c_value = as.numeric(c_value))
 ```
+
 
