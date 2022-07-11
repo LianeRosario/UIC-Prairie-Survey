@@ -18,6 +18,7 @@ library(janitor)
 library(readr)
 library(dplyr)
 library(stringr)
+library(ggplot2)
 ```
 
 
@@ -55,7 +56,9 @@ survey_1979 <- survey_1979 %>%
 survey_1979$richness <- c(1)
 ```
 
-
+```{r create-year-column-1979}
+survey_1979$year <- c(1979)
+```
 
 ##### The code below changes the species names to lowercase for tidying purposes
 
@@ -491,6 +494,14 @@ species_frequency_1979 <- survey_1979 %>%
 print(species_frequency_1979)
 ```
 
+## test bind of calculations
+```{r}
+test_bind <- bind_rows(tibble(x = mean_wt_c_1979), tibble(y = species_frequency_1979))
+
+view(test_bind)
+```
+
+
 
 ##### Here the new 1979 survey and analysis tables created are written back into an csv file that can be downloaded.
 
@@ -543,6 +554,10 @@ survey_1980 <- survey_1980 %>%
 
 ```{r create-richness-column-1980}
 survey_1980$richness <- c(1)
+```
+
+```{r create-year-column-1980}
+survey_1980$year <- c(1980)
 ```
 
 
@@ -3661,3 +3676,15 @@ write_csv(total_cover_1995, file = "data/total_cover_1995.csv")
 
 write_csv(total_richness_1995, file = "data/total_richness_1995.csv")
 ```
+
+
+
+
+
+## Bind all years into one dataframe
+```{r bind-surveys}
+jwp_multi_year_survey <- bind_rows(survey_1979, survey_1980, survey_1981, survey_1982, survey_1984, survey_1987, survey_1995)
+
+view(jwp_multi_year_survey)
+```
+
