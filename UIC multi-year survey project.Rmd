@@ -35,7 +35,7 @@ colnames(survey_1979) <- c("species", "percent_cover", "plot")
 
 ##### The code below removes blank or extra rows from the original excel file.
 
-```{r remove-extra-rows}
+```{r remove-extra-rows-1979}
 survey_1979 <- survey_1979 %>%
   filter(complete.cases(.))
 ```
@@ -43,7 +43,7 @@ survey_1979 <- survey_1979 %>%
 
 ##### Below the code adds a 1 to species that are native and a 0 to species that are non-native.
 
-```{r create-native-column}
+```{r create-native-column-1979}
 survey_1979 <- survey_1979 %>%
   mutate(native = if_else(species == toupper(species), 0, 1))
 ```
@@ -51,14 +51,15 @@ survey_1979 <- survey_1979 %>%
 
 ##### This code adds a 1 count for each species so that total richness for each plot may be summed later by adding all of the 1's together by plot.
 
-```{r create-richness-column}
+```{r create-richness-column-1979}
 survey_1979$richness <- c(1)
 ```
 
 
+
 ##### The code below changes the species names to lowercase for tidying purposes
 
-```{r lowercase-species-names}
+```{r lowercase-species-names-1979}
 survey_1979$species = tolower(survey_1979$species)
 ```
 
@@ -68,91 +69,91 @@ survey_1979$species = tolower(survey_1979$species)
 
 ##### The old species name shows first and after the comma is the new species name.
 
-```{r rename-repens}
+```{r rename-repens-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron repens", "elymus repens", species))
 ```
 
-```{r rename-eliator}
+```{r rename-eliator-1979}
 survey_1979 <- survey_1979%>% mutate(species = ifelse(species == "ambrosia artemisiifolia elatior", "ambrosia artemisiifolia", species))
 ```
 
-```{r rename-sibiricum}
+```{r rename-sibiricum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "apocynum sibiricum", "apocynum cannabinum", species))
 ```
 
-```{r rename-ericoides}
+```{r rename-ericoides-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster ericoides", "symphyotrichum ericoides", species))
 ```
 
-```{r rename-laevis}
+```{r rename-laevis-1979}
 survey_1979 <- survey_1979%>% mutate(species = ifelse(species == "aster laevis", "symphyotrichum laeve", species))
 ```
 
-```{r rename-angliae}
+```{r rename-angliae-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster novae-angliae", "symphyotrichum novae-angliae", species))
 ```
 
-```{r rename-pilosus}
+```{r rename-pilosus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster pilosus", "symphyotrichum pilosum", species))
 ```
 
-```{r rename-simplex}
+```{r rename-simplex-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster simplex", "symphyotrichum lanceolatum", species))
 ```
 
-```{r rename-hieracifolia}
+```{r rename-hieracifolia-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "erechtites hieracifolia", "senecio hieraciifolius", species))
 ```
 
-```{r rename-festuca}
+```{r rename-festuca-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "festuca elatior", "schedonorus arundinaceus", species))
 ```
 
-```{r rename-strictum}
+```{r rename-strictum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "geum aleppicum strictum", "geum aleppicum", species))
 ```
 
-```{r rename-rigidus}
+```{r rename-rigidus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "helianthus rigidus", "helianthus pauciflorus", species))
 ```
 
-```{r rename-littoralis}
+```{r rename-littoralis-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus balticus littoralis", "juncus balticus ssp. littoralis", species))
 ```
 
-```{r rename-europaea}
+```{r rename-europaea-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "oxalis europaea", "oxalis stricta", species))
 ```
 
-```{r rename-leibergii}
+```{r rename-leibergii-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "panicum leibergii", "dichanthelium leibergii", species))
 ```
 
-```{r rename-stipulaceum}
+```{r rename-stipulaceum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "polygonum amphibium stipulaceum", "persicaria amphibia", species))
 ```
 
-```{r rename-convolvulus}
+```{r rename-convolvulus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "polygonum convolvulus", "fallopia convolvulus", species))
 ```
 
-```{r rename-lanceolata}
+```{r rename-lanceolata-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "prunella vulgaris lanceolata", "prunella vulgaris ssp. lanceolata", species))
 ```
 
-```{r rename-stellata}
+```{r rename-stellata-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "smilacina stellata", "maianthemum stellatum", species))
 ```
 
-```{r rename-sepium}
+```{r rename-sepium-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "convolvulus sepium", "calystegia sepium", species))
 ```
 
-```{r rename-canadensis}
+```{r rename-canadensis-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "sambucus canadensis", "sambucus nigra ssp. canadensis", species))
 ```
 
-```{r rename-spartea}
+```{r rename-spartea-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "stipa spartea", "heserostipa spartea", species))
 ```
 
@@ -160,147 +161,147 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "stipa spartea
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "baptisia leucophaea", "baptisia bracteata", species))
 ```
 
-```{r rename-plantaginea}
+```{r rename-plantaginea-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "cacalia plantaginea", "arnoglossum plantagineum", species))
 ```
 
-```{r rename-pinnatifidum}
+```{r rename-pinnatifidum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "chrysanthemum leucanthemum pinnatifidum", "leucanthemum vulgare", species))
 ```
 
-```{r rename-puburulenta}
+```{r rename-puburulenta-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "gentiana puburulenta", "gentiana puberulenta", species))
 ```
 
-```{r rename-purpureum}
+```{r rename-purpureum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "petalostemum purpureum", "dalea purpurea", species))
 ```
 
-```{r rename-fulgida}
+```{r rename-fulgida-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "phlox pilosa fulgida", "phlox pilosa ssp. fulgida", species))
 ```
 
-```{r rename-subglabrata}
+```{r rename-subglabrata-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "physalis subglabrata", "physalis longifolia", species))
 ```
 
-```{r rename-pensylvanicum}
+```{r rename-pensylvanicum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "polygonum pensylvanicum", "persicaria pensylvanica", species))
 ```
 
-```{r rename-arguta}
+```{r rename-arguta-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "potentilla arguta", "drymocallis arguta", species))
 ```
 
-```{r rename-fernaldiana}
+```{r rename-fernaldiana-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "rorippa palustris fernaldiana", "rorippa palustris", species))
 ```
 
-```{r rename-leonardii}
+```{r rename-leonardii-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "scutellaria parvula leonardii", "scutellaria parvula", species))
 ```
 
-```{r rename-aureus}
+```{r rename-aureus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "senecio aureus", "packera aurea", species))
 ```
 
-```{r rename-graminifolia}
+```{r rename-graminifolia-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "solidago graminifolia", "euthamia gymnospermoides", species))
 ```
 
-```{r rename-nutallii}
+```{r rename-nutallii-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "solidago graminifolia nuttallii", "euthamia graminifolia", species))
 ```
 
-```{r rename-asper}
+```{r rename-asper-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "sporobolus asper", "sporobolus compositus", species))
 ```
 
-```{r rename-lateriflora}
+```{r rename-lateriflora-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "arenaria lateriflora", "moehringia lateriflora", species))
 ```
 
-```{r rename-leucantha}
+```{r rename-leucantha-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "baptisia leucantha", "baptisia alba var. macrophylla", species))
 ```
 
-```{r rename-leucanthemum}
+```{r rename-leucanthemum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "chrysanthemum leucanthemum", "leucanthemum vulgare", species))
 ```
 
-```{r rename-varia}
+```{r rename-varia-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "coronilla varia", "securigera varia", species))
 ```
 
-```{r rename-fraxinus}
+```{r rename-fraxinus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "fraxinus pennsylvanica subintegerrima", "fraxinus pennsylvanica", species))
 ```
 
-```{r rename-cristata}
+```{r rename-cristata-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "koeleria cristata", "koeleria macrantha", species))
 ```
 
-```{r rename-melilotus}
+```{r rename-melilotus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "melilotus alba", "melilotus officinalis", species))
 ```
 
-```{r rename-longistipata}
+```{r rename-longistipata-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "oenothera tetragona longistipata", "oenothera fruticosa", species))
 ```
 
-```{r rename-implicatum}
+```{r rename-implicatum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "panicum implicatum", "dichanthelium acuminatum", species))
 ```
 
-```{r rename-tenuiflora}
+```{r rename-tenuiflora-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "psoralea tenuiflora", "psoralidium tenuiflorum", species))
 ```
 
-```{r rename-scirpus}
+```{r rename-scirpus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "scirpus lineatus", "scirpus pendulus", species))
 ```
 
-```{r rename-pauperculus}
+```{r rename-pauperculus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "senecio pauperculus", "packera paupercula", species))
 ```
 
-```{r rename-deamii}
+```{r rename-deamii-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "silphium integrifolium deamii", "silphium integrifolium", species))
 ```
 
-```{r rename-terebinthinaceum}
+```{r rename-terebinthinaceum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "silphium terebinthinaceum x laciniatum", "silphium terebinthinaceum", species))
 ```
 
-```{r rename-hispida}
+```{r rename-hispida-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "stachys tenuifolia hispida", "stachys tenuifolia", species))
 ```
 
-```{r rename-ciliata}
+```{r rename-ciliata-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "valeriana ciliata", "valeriana edulis var. ciliata", species))
 ```
 
-```{r rename-petalostemum}
+```{r rename-petalostemum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "petalostemum candidum", "dalea candida", species))
 ```
 
-```{r rename-panicum}
+```{r rename-panicum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "panicum implicatum", "dichanthelium acuminatum", species))
 ```
 
-```{r rename-lineatus}
+```{r rename-lineatus-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "juncus lineatus", "scirpus pendulus", species))
 ```
 
-```{r rename-alba}
+```{r rename-alba-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agrostis alba", "agrostis gigantea", species))
 ```
 
-```{r rename-subulatum}
+```{r rename-subulatum-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron repens subulatum", "elymus repens", species))
 ```
 
-```{r rename-aster-sp}
+```{r rename-aster-sp-1979}
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum sp.", species))
 ```
 
@@ -324,7 +325,7 @@ survey_1979 <- survey_1979 %>%
 ##### The code below is to load in the excel file containing FQA Chicago Region USACE conservatism values. 
 
 ```{r load-conservatism-data, message = F}
-usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
+usace_data_1979 <- read_csv("data/FQA Chicago Region USACE 2017.csv",
                          skip = 11, show_col_types = F) %>%
   janitor:: clean_names()
 ```
@@ -332,44 +333,44 @@ usace_data <- read_csv("data/FQA Chicago Region USACE 2017.csv",
 
 ##### The code below is to remove columns that were not needed and to only utilize the columns with species names and conservatism values.
 
-```{r remove-usace-columns}
-usace_data <- usace_data %>%
+```{r remove-usace-columns-1979}
+usace_data_1979 <- usace_data_1979 %>%
   select(-family, -acronym, -w, -physiognomy, -duration, -native, -common_name)
 ```
 
 
 ##### Below the columns were renamed for simplicity.
 
-```{r rename-usace-columns}
-colnames(usace_data) <- c("species", "c_value")
+```{r rename-usace-columns-1979}
+colnames(usace_data_1979) <- c("species", "c_value")
 ```
 
 
 ##### The code below changes the species names to lowercase for tidying purposes.
 
-```{r lowercase-usace-names}
-usace_data$species = tolower(usace_data$species)
+```{r lowercase-usace-names-1979}
+usace_data_1979$species = tolower(usace_data_1979$species)
 
-usace_data$c_value = tolower(usace_data$c_value)
+usace_data_1979$c_value = tolower(usace_data_1979$c_value)
 ```
 
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
-```{r coerce-usace-c-value}
-usace_data <- usace_data %>%
+```{r coerce-usace-c-value-1979}
+usace_data_1979 <- usace_data_1979 %>%
   mutate(c_value = as.numeric(c_value))
 ```
 
 
 ##### Correcting a spelling error in the original excel file so that the code can read the species name properly.
 
-```{r fix-rigidus-name}
-usace_data$species[usace_data$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
+```{r fix-rigidus-name-1979}
+usace_data_1979$species[usace_data_1979$species=="helianthus pauci?orus"]<-"helianthus pauciflorus"
 ```
 
-```{r fix-tenuiflorum-name}
-usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
+```{r fix-tenuiflorum-name-1979}
+usace_data_1979$species[usace_data_1979$species=="psoralidium tenui?orum"]<-"psoralidium tenuiflorum"
 ```
 
 
@@ -378,8 +379,8 @@ usace_data$species[usace_data$species=="psoralidium tenui?orum"]<-"psoralidium t
 
 #### There are cases where the genus is identified and not the species. We want the species column split into separate "genus" and "species" columns so that later we can calculate a mean c-value by genus to fill in any missing c-values.
 
-```{r separate-usace-columns}
-usace_data <- usace_data %>% 
+```{r separate-usace-columns-1979}
+usace_data_1979 <- usace_data_1979 %>% 
   separate(col = species, 
           into = c("genus", "species"),
           sep = " ",
@@ -393,9 +394,9 @@ usace_data <- usace_data %>%
 
 ##### The code below joins the 1979 survey with the excel file containing the conservatism values into one data set. It is joined by species so that the conservatism value will join to the matching species name.
 
-```{r merge-survey-with-c-values}
+```{r merge-survey-with-c-values-1979}
 survey_1979 <- survey_1979 %>%
-  left_join(usace_data, by = c("genus", "species"))
+  left_join(usace_data_1979, by = c("genus", "species"))
 ```
 
 
@@ -404,8 +405,8 @@ survey_1979 <- survey_1979 %>%
 
 #### Since there are rows where the genus is identified and not the species, we cannot say for certain what the c-value is. This code is creating a mean c-value for each genus from the Usace data so that we can fill in those missing c-values.
 
-```{r create-c-value-mean}
-usace_data_mean <- usace_data %>%
+```{r create-c-value-mean-1979}
+usace_data_mean_1979 <- usace_data_1979 %>%
   group_by(genus) %>%
   mutate(c_value_mean = round(mean(c_value, na.rm = T), digits = 0)) %>%
   select(-species, -c_value) %>%
@@ -415,15 +416,15 @@ usace_data_mean <- usace_data %>%
 
 #### The mean c-values from the Usace data are being merged to the 1979 survey
 
-```{r join-mean-with-survey}
+```{r join-mean-with-survey-1979}
 survey_1979 <- survey_1979 %>%
-  left_join(usace_data_mean, by = c("genus"))
+  left_join(usace_data_mean_1979, by = c("genus"))
 ```
 
 
 #### The two datasets had to be merged by genus and not genus and species like before which would have been a stricter merge. This creates extra columns with a mean c-value for each data set (x and y) when in reality the values are the same in both columns. This transfers the values from the x and y columns into the original c-value column to fill in any missing values.
 
-```{r fill-c-values-with-mean}
+```{r fill-c-values-with-mean-1979}
 survey_1979 <- survey_1979 %>%
   mutate(c_value = ifelse(is.na(c_value), c_value_mean, c_value))
 ```
@@ -431,7 +432,7 @@ survey_1979 <- survey_1979 %>%
 
 #### Now the extra x and y rows from the two data sets are removed so we can be left with one c-value column and no missing values.
 
-```{r remove-extra-c-value-columns}
+```{r remove-extra-c-value-columns-1979}
 survey_1979 <- survey_1979 %>%
   select(-c_value_mean)
 ```
@@ -439,9 +440,70 @@ survey_1979 <- survey_1979 %>%
 
 ##### The code below ensures that conservatism values are reading as numbers and not as text or something else.
 
-```{r convert-merged-cvalue-numeric}
+```{r convert-merged-cvalue-numeric-1979}
 survey_1979 <- survey_1979 %>%
   mutate(c_value = as.numeric(c_value))
+```
+
+
+
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1979}
+mean_wt_c_1979 <- survey_1979 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1979)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1979}
+total_richness_1979 <- survey_1979 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1979)
+```
+
+```{r sum total-cover-1979}
+total_cover_1979 <- survey_1979 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1979)
+```
+
+```{r calculate-species-frequency-1979}
+species_frequency_1979 <- survey_1979 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 222)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1979)
+```
+
+
+##### Here the new 1979 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv}
+write_csv(survey_1979, file = "data/jwp_survey_1979.csv")
+
+write_csv(mean_wt_c_1979, file = "data/mean_wt_c_1979.csv")
+
+write_csv(species_frequency_1979, file = "data/species_frequency_1979.csv")
+
+write_csv(total_cover_1979, file = "data/total_cover_1979.csv")
+
+write_csv(total_richness_1979, file = "data/total_richness_1979.csv")
 ```
 
 
@@ -882,6 +944,67 @@ survey_1980 <- survey_1980 %>%
 ```{r convert-merged-cvalue-numeric-1980}
 survey_1980 <- survey_1980 %>%
   mutate(c_value = as.numeric(c_value))
+```
+
+
+
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1980}
+mean_wt_c_1980 <- survey_1980 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1980)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1980}
+total_richness_1980 <- survey_1980 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1980)
+```
+
+```{r sum total-cover-1980}
+total_cover_1980 <- survey_1980 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1980)
+```
+
+```{r calculate-species-frequency-1980}
+species_frequency_1980 <- survey_1980 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 222)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1980)
+```
+
+
+##### Here the new 1980 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv-1980}
+write_csv(survey_1980, file = "data/jwp_survey_1980.csv")
+
+write_csv(mean_wt_c_1980, file = "data/mean_wt_c_1980.csv")
+
+write_csv(species_frequency_1980, file = "data/species_frequency_1980.csv")
+
+write_csv(total_cover_1980, file = "data/total_cover_1980.csv")
+
+write_csv(total_richness_1980, file = "data/total_richness_1980.csv")
 ```
 
 
@@ -1329,6 +1452,67 @@ survey_1981 <- survey_1981 %>%
 ```{r convert-merged-cvalue-numeric-1981}
 survey_1981 <- survey_1981 %>%
   mutate(c_value = as.numeric(c_value))
+```
+
+
+
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1981}
+mean_wt_c_1981 <- survey_1981 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1981)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1981}
+total_richness_1981 <- survey_1981 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1981)
+```
+
+```{r sum total-cover-1981}
+total_cover_1981 <- survey_1981 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1981)
+```
+
+```{r calculate-species-frequency-1981}
+species_frequency_1981 <- survey_1981 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 221)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1981)
+```
+
+
+##### Here the new 1981 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv-1981}
+write_csv(survey_1981, file = "data/jwp_survey_1981.csv")
+
+write_csv(mean_wt_c_1981, file = "data/mean_wt_c_1981.csv")
+
+write_csv(species_frequency_1981, file = "data/species_frequency_1981.csv")
+
+write_csv(total_cover_1981, file = "data/total_cover_1981.csv")
+
+write_csv(total_richness_1981, file = "data/total_richness_1981.csv")
 ```
 
 
@@ -1797,6 +1981,68 @@ survey_1982 <- survey_1982 %>%
 
 
 
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1982}
+mean_wt_c_1982 <- survey_1982 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1982)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1982}
+total_richness_1982 <- survey_1982 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1982)
+```
+
+```{r sum total-cover-1982}
+total_cover_1982 <- survey_1982 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1982)
+```
+
+```{r calculate-species-frequency-1982}
+species_frequency_1982 <- survey_1982 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 222)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1982)
+```
+
+
+
+##### Here the new 1982 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv-1982}
+write_csv(survey_1982, file = "data/jwp_survey_1982.csv")
+
+write_csv(mean_wt_c_1982, file = "data/mean_wt_c_1982.csv")
+
+write_csv(species_frequency_1982, file = "data/species_frequency_1982.csv")
+
+write_csv(total_cover_1982, file = "data/total_cover_1982.csv")
+
+write_csv(total_richness_1982, file = "data/total_richness_1982.csv")
+```
+
+
+
 -------------------------------------------------
 
 
@@ -2257,6 +2503,68 @@ survey_1984 <- survey_1984 %>%
 ```{r convert-merged-cvalue-numeric-1984}
 survey_1984 <- survey_1984 %>%
   mutate(c_value = as.numeric(c_value))
+```
+
+
+
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1984}
+mean_wt_c_1984 <- survey_1984 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1984)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1984}
+total_richness_1984 <- survey_1984 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1984)
+```
+
+```{r sum total-cover-1984}
+total_cover_1984 <- survey_1984 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1984)
+```
+
+```{r calculate-species-frequency-1984}
+species_frequency_1984 <- survey_1984 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 222)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1984)
+```
+
+
+
+##### Here the new 1984 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv-1984}
+write_csv(survey_1984, file = "data/jwp_survey_1984.csv")
+
+write_csv(mean_wt_c_1984, file = "data/mean_wt_c_1984.csv")
+
+write_csv(species_frequency_1984, file = "data/species_frequency_1984.csv")
+
+write_csv(total_cover_1984, file = "data/total_cover_1984.csv")
+
+write_csv(total_richness_1984, file = "data/total_richness_1984.csv")
 ```
 
 
@@ -2725,6 +3033,68 @@ survey_1987 <- survey_1987 %>%
 ```{r convert-merged-cvalue-numeric-1987}
 survey_1987 <- survey_1987 %>%
   mutate(c_value = as.numeric(c_value))
+```
+
+
+
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1987}
+mean_wt_c_1987 <- survey_1987 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1987)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1987}
+total_richness_1987 <- survey_1987 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1987)
+```
+
+```{r sum total-cover-1987}
+total_cover_1987 <- survey_1987 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1987)
+```
+
+```{r calculate-species-frequency-1987}
+species_frequency_1987 <- survey_1987 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 221)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1987)
+```
+
+
+
+##### Here the new 1987 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv-1987}
+write_csv(survey_1987, file = "data/jwp_survey_1987.csv")
+
+write_csv(mean_wt_c_1987, file = "data/mean_wt_c_1987.csv")
+
+write_csv(species_frequency_1987, file = "data/species_frequency_1987.csv")
+
+write_csv(total_cover_1987, file = "data/total_cover_1987.csv")
+
+write_csv(total_richness_1987, file = "data/total_richness_1987.csv")
 ```
 
 
@@ -3211,12 +3581,15 @@ survey_1995 <- survey_1995 %>%
   select(-c_value_mean)
 ```
 
-```{r change-c-value}
+```{r change-c-value-eleocharis-erythopoda}
 survey_1995 <- survey_1995 %>%
   mutate(row = 1:n()) %>%
   mutate(c_value = ifelse(row == 2629, 1, c_value))
-  
-  view(survey_1995)
+```
+
+```{r remove-extra-row-column-1995}
+survey_1995 <- survey_1995 %>%
+  select(-row)
 ```
 
 
@@ -3228,3 +3601,63 @@ survey_1995 <- survey_1995 %>%
 ```
 
 
+
+## Analyzing the survey
+
+##### Below the code is calculating the mean weighted conservatism. It is grouping the survey by each plot, summing percent cover multiplied by conservatism value, then dividing by total percent cover. The summary table that is output is arranged in descending order from plots with the highest mean weighted c-value to plots with the lowest mean weighted c-values.
+
+```{r calculate-mean-wt-c-1995}
+mean_wt_c_1995 <- survey_1995 %>%
+  group_by(plot) %>%
+  summarize(mean_wt_c = sum(percent_cover*c_value) / sum(percent_cover)) %>%
+  arrange(desc(mean_wt_c))
+
+print(mean_wt_c_1995)
+```
+
+
+##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
+
+```{r sum-total-richness-1995}
+total_richness_1995 <- survey_1995 %>%
+  group_by(plot) %>%
+  summarize(total_richness = sum(richness)) %>%
+  arrange(desc(total_richness))
+
+print(total_richness_1995)
+```
+
+```{r sum total-cover-1995}
+total_cover_1995 <- survey_1995 %>%
+  group_by(plot) %>%
+  summarize(total_cover = sum(percent_cover)) %>%
+  arrange(desc(total_cover))
+
+print(total_cover_1995)
+```
+
+```{r calculate-species-frequency-1995}
+species_frequency_1995 <- survey_1995 %>%
+  group_by(genus, species) %>%
+  count(species) %>%
+  mutate(fraction = sum(n / 221)) %>%
+  arrange(desc(fraction))
+
+print(species_frequency_1995)
+```
+
+
+
+##### Here the new 1995 survey and analysis tables created are written back into an csv file that can be downloaded.
+
+```{r write-survey-csv-1995}
+write_csv(survey_1995, file = "data/jwp_survey_1995.csv")
+
+write_csv(mean_wt_c_1995, file = "data/mean_wt_c_1995.csv")
+
+write_csv(species_frequency_1995, file = "data/species_frequency_1995.csv")
+
+write_csv(total_cover_1995, file = "data/total_cover_1995.csv")
+
+write_csv(total_richness_1995, file = "data/total_richness_1995.csv")
+```
