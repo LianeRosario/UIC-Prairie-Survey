@@ -494,27 +494,14 @@ species_frequency_1979 <- survey_1979 %>%
 print(species_frequency_1979)
 ```
 
-## test bind of calculations
-```{r}
-test_bind <- bind_rows(tibble(x = mean_wt_c_1979), tibble(y = species_frequency_1979))
-
-view(test_bind)
-```
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
 
-
-##### Here the new 1979 survey and analysis tables created are written back into an csv file that can be downloaded.
-
-```{r write-survey-csv}
-write_csv(survey_1979, file = "data/jwp_survey_1979.csv")
-
-write_csv(mean_wt_c_1979, file = "data/mean_wt_c_1979.csv")
-
-write_csv(species_frequency_1979, file = "data/species_frequency_1979.csv")
-
-write_csv(total_cover_1979, file = "data/total_cover_1979.csv")
-
-write_csv(total_richness_1979, file = "data/total_richness_1979.csv")
+```{r join-variables-table-1979}
+variables_1979 <- mean_wt_c_1979 %>%
+  left_join(total_cover_1979, by = c("plot")) %>%
+  left_join(total_richness_1979, by = c("plot")) %>%
+  mutate(year = c("1979"))
 ```
 
 
@@ -1008,18 +995,14 @@ print(species_frequency_1980)
 ```
 
 
-##### Here the new 1980 survey and analysis tables created are written back into an csv file that can be downloaded.
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
-```{r write-survey-csv-1980}
-write_csv(survey_1980, file = "data/jwp_survey_1980.csv")
 
-write_csv(mean_wt_c_1980, file = "data/mean_wt_c_1980.csv")
-
-write_csv(species_frequency_1980, file = "data/species_frequency_1980.csv")
-
-write_csv(total_cover_1980, file = "data/total_cover_1980.csv")
-
-write_csv(total_richness_1980, file = "data/total_richness_1980.csv")
+```{r join-variables-table-1980}
+variables_1980 <- mean_wt_c_1980 %>%
+  left_join(total_cover_1980, by = c("plot")) %>%
+  left_join(total_richness_1980, by = c("plot")) %>%
+  mutate(year = c("1980"))
 ```
 
 
@@ -1516,18 +1499,16 @@ print(species_frequency_1981)
 ```
 
 
-##### Here the new 1981 survey and analysis tables created are written back into an csv file that can be downloaded.
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
-```{r write-survey-csv-1981}
-write_csv(survey_1981, file = "data/jwp_survey_1981.csv")
 
-write_csv(mean_wt_c_1981, file = "data/mean_wt_c_1981.csv")
+```{r join-variables-table-1981}
+variables_1981 <- mean_wt_c_1981 %>%
+  left_join(total_cover_1981, by = c("plot")) %>%
+  left_join(total_richness_1981, by = c("plot")) %>%
+  mutate(year = c("1981"))
 
-write_csv(species_frequency_1981, file = "data/species_frequency_1981.csv")
-
-write_csv(total_cover_1981, file = "data/total_cover_1981.csv")
-
-write_csv(total_richness_1981, file = "data/total_richness_1981.csv")
+view(variables_1981)
 ```
 
 
@@ -2042,18 +2023,14 @@ print(species_frequency_1982)
 
 
 
-##### Here the new 1982 survey and analysis tables created are written back into an csv file that can be downloaded.
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
-```{r write-survey-csv-1982}
-write_csv(survey_1982, file = "data/jwp_survey_1982.csv")
 
-write_csv(mean_wt_c_1982, file = "data/mean_wt_c_1982.csv")
-
-write_csv(species_frequency_1982, file = "data/species_frequency_1982.csv")
-
-write_csv(total_cover_1982, file = "data/total_cover_1982.csv")
-
-write_csv(total_richness_1982, file = "data/total_richness_1982.csv")
+```{r join-variables-table-1982}
+variables_1982 <- mean_wt_c_1982 %>%
+  left_join(total_cover_1982, by = c("plot")) %>%
+  left_join(total_richness_1982, by = c("plot")) %>%
+  mutate(year = c("1982"))
 ```
 
 
@@ -2568,18 +2545,14 @@ print(species_frequency_1984)
 
 
 
-##### Here the new 1984 survey and analysis tables created are written back into an csv file that can be downloaded.
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
-```{r write-survey-csv-1984}
-write_csv(survey_1984, file = "data/jwp_survey_1984.csv")
 
-write_csv(mean_wt_c_1984, file = "data/mean_wt_c_1984.csv")
-
-write_csv(species_frequency_1984, file = "data/species_frequency_1984.csv")
-
-write_csv(total_cover_1984, file = "data/total_cover_1984.csv")
-
-write_csv(total_richness_1984, file = "data/total_richness_1984.csv")
+```{r join-variables-table-1984}
+variables_1984 <- mean_wt_c_1984 %>%
+  left_join(total_cover_1984, by = c("plot")) %>%
+  left_join(total_richness_1984, by = c("plot")) %>%
+  mutate(year = c("1984"))
 ```
 
 
@@ -3098,18 +3071,16 @@ print(species_frequency_1987)
 
 
 
-##### Here the new 1987 survey and analysis tables created are written back into an csv file that can be downloaded.
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
-```{r write-survey-csv-1987}
-write_csv(survey_1987, file = "data/jwp_survey_1987.csv")
 
-write_csv(mean_wt_c_1987, file = "data/mean_wt_c_1987.csv")
+```{r join-variables-table-1987}
+variables_1987 <- mean_wt_c_1987 %>%
+  left_join(total_cover_1987, by = c("plot")) %>%
+  left_join(total_richness_1987, by = c("plot")) %>%
+  mutate(year = c("1987"))
 
-write_csv(species_frequency_1987, file = "data/species_frequency_1987.csv")
-
-write_csv(total_cover_1987, file = "data/total_cover_1987.csv")
-
-write_csv(total_richness_1987, file = "data/total_richness_1987.csv")
+view(variables_1987)
 ```
 
 
@@ -3663,22 +3634,26 @@ print(species_frequency_1995)
 
 
 
-##### Here the new 1995 survey and analysis tables created are written back into an csv file that can be downloaded.
+#### All of the variables from the calculations are combined into one summary table so that we can create plots later
 
-```{r write-survey-csv-1995}
-write_csv(survey_1995, file = "data/jwp_survey_1995.csv")
 
-write_csv(mean_wt_c_1995, file = "data/mean_wt_c_1995.csv")
-
-write_csv(species_frequency_1995, file = "data/species_frequency_1995.csv")
-
-write_csv(total_cover_1995, file = "data/total_cover_1995.csv")
-
-write_csv(total_richness_1995, file = "data/total_richness_1995.csv")
+```{r join-variables-table-1995}
+variables_1995 <- mean_wt_c_1995 %>%
+  left_join(total_cover_1995, by = c("plot")) %>%
+  left_join(total_richness_1995, by = c("plot")) %>%
+  mutate(year = c("1995"))
 ```
 
 
 
+-------------------------------------------------
+
+
+
+## Bind all of the variable tables into one data frame
+```{r}
+
+```
 
 
 ## Bind all years into one dataframe
