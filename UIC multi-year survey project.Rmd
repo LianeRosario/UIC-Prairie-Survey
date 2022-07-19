@@ -4308,6 +4308,9 @@ survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "hesperostipa 
 survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "veronicastrum virginianum", "veronicastrum virginicum", species))
 ```
 
+```{r rename-eleocharis-2020}
+survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "eleocharis erythropoda", "eleocharis palustris", species))
+```
 
 
 # Separate Species Column
@@ -4395,13 +4398,6 @@ usace_data_2020 <- usace_data_2020 %>%
 ```{r merge-survey-with-c-values-2020}
 survey_2020 <- survey_2020 %>%
   left_join(usace_data_2020, by = c("genus", "species"))
-```
-
-
-#### Fixing a c value for a species that was left out of the Usace data
-```{r assign-c-value}
-survey_2020 <- survey_2020 %>%
-  replace_na(list(c_value = 1))
 ```
 
 
@@ -4503,6 +4499,10 @@ jwp_variables %>%
 jwp_species_frequency <- bind_rows(species_frequency_1979, species_frequency_1980, species_frequency_1981, species_frequency_1982, species_frequency_1984, species_frequency_1987, species_frequency_1995, species_frequency_2005, species_frequency_2020)
 ```
 
+```{r}
+jwp_species_frequency$fraction_rounded <- round(jwp_species_frequency$fraction, digits = 3)
+```
+
 
 ```{r write-frequency-file}
 jwp_species_frequency %>%
@@ -4519,7 +4519,7 @@ jwp_multi_year_survey <- bind_rows(survey_1979, survey_1980, survey_1981, survey
 
 ```{r write-survey-file}
 jwp_multi_year_survey %>%
-  write_csv(file = "data/jwp_multip_year_survey.csv")
+  write_csv(file = "data/jwp_multi_year_survey.csv")
 ```
 
 
@@ -4530,5 +4530,30 @@ jwp_multi_year_survey %>%
 
 
 
-## Plots :)
+## Change in years
+
+```{r total-richness-change-year-to-year}
+jwp_variables %>%
+  group_by(plot) %>%
+  arrange(year) %>%
+  mutate(richness_change = total_richness - lag(total_richness),
+         mean_richness_change = mean(richness_change))
+```
+
+```{r change-mean-wt-c-year-to-year}
+jwp_variables %>%
+  group_by(plot) %>%
+  arrange(year) %>%
+  mutate(change_in_c = mean_wt_c - lag(mean_wt_c))
+```
+
+```{r}
+jwp_species_frequency %>%
+  group_by(genus, species) %>%
+  arrange(year) %>%
+  mutate(change_species_freq = fraction_rounded - lag(fraction_rounded))
+```
+
+
+
 
