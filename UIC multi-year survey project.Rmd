@@ -4485,6 +4485,10 @@ species_frequency_2020 <- species_frequency_2020 %>%
 jwp_variables <- bind_rows(variables_1979, variables_1980, variables_1981, variables_1982, variables_1984, variables_1987, variables_1995, variables_2005, variables_2020)
 ```
 
+```{r round-c-column}
+jwp_variables$mean_wt_c <- round(jwp_variables$mean_wt_c, digits = 2)
+```
+
 
 ```{r write-variables-file}
 jwp_variables %>%
@@ -4499,8 +4503,8 @@ jwp_variables %>%
 jwp_species_frequency <- bind_rows(species_frequency_1979, species_frequency_1980, species_frequency_1981, species_frequency_1982, species_frequency_1984, species_frequency_1987, species_frequency_1995, species_frequency_2005, species_frequency_2020)
 ```
 
-```{r}
-jwp_species_frequency$fraction_rounded <- round(jwp_species_frequency$fraction, digits = 3)
+```{r round-fraction-column}
+jwp_species_frequency$fraction <- round(jwp_species_frequency$fraction, digits = 3)
 ```
 
 
@@ -4537,22 +4541,26 @@ jwp_variables %>%
   group_by(plot) %>%
   arrange(year) %>%
   mutate(richness_change = total_richness - lag(total_richness),
-         mean_richness_change = mean(richness_change))
+         mean_richness_change = round(mean(richness_change, na.rm = T), digits = 0))
 ```
 
 ```{r change-mean-wt-c-year-to-year}
 jwp_variables %>%
   group_by(plot) %>%
   arrange(year) %>%
-  mutate(change_in_c = mean_wt_c - lag(mean_wt_c))
+  mutate(change_in_c = mean_wt_c - lag(mean_wt_c),
+         mean_change_in_c = round(mean(change_in_c, na.rm = T), digits = 2))
 ```
 
-```{r}
+
+```{r change-in-species-freq-year-to-year}
 jwp_species_frequency %>%
   group_by(genus, species) %>%
   arrange(year) %>%
-  mutate(change_species_freq = fraction_rounded - lag(fraction_rounded))
+  mutate(change_species_freq = fraction- lag(fraction),
+         mean_change_species_freq = round(mean(change_species_freq, na.rm = T), digits = 3))
 ```
+
 
 
 
