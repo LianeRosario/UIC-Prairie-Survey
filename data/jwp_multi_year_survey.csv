@@ -287,7 +287,7 @@ solidago,canadensis,3,G2,1,1,1979,1
 solidago,rigida,8,G2,1,1,1979,3
 sporobolus,heterolepis,10,G2,1,1,1979,10
 viola,sororia,1,G2,1,1,1979,3
-achillea,millefolium,1,H2,0,1,1979,0
+achillea,millefolium,1,H2,1,1,1979,0
 ambrosia,artemisiifolia,1,H2,1,1,1979,0
 symphyotrichum,ericoides,6,H2,1,1,1979,6
 carex,sp.,15,H2,1,1,1979,7
@@ -636,7 +636,7 @@ lactuca,canadensis,3,L4,1,1,1979,1
 lythrum,salicaria,4,L4,0,1,1979,0
 rhamnus,cathartica,1,L4,0,1,1979,0
 syringa,vulgaris,18,L4,0,1,1979,0
-achillea,millefolium,6,A5,0,1,1979,0
+achillea,millefolium,6,A5,1,1,1979,0
 ambrosia,trifida,15,A5,1,1,1979,0
 symphyotrichum,pilosum,40,A5,1,1,1979,0
 fraxinus,pennsylvanica,4,A5,1,1,1979,4
@@ -661,7 +661,7 @@ rosa,carolina,15,B5,1,1,1979,5
 silphium,integrifolium,2,B5,1,1,1979,5
 sporobolus,heterolepis,15,B5,1,1,1979,10
 zizia,aurea,4,B5,1,1,1979,5
-achillea,millefolium,8,C5,0,1,1979,0
+achillea,millefolium,8,C5,1,1,1979,0
 allium,canadense,3,C5,1,1,1979,3
 allium,cernuum,1,C5,1,1,1979,7
 amorpha,canescens,12,C5,1,1,1979,10
@@ -682,7 +682,7 @@ rudbeckia,hirta,2,C5,1,1,1979,1
 silphium,terebinthinaceum,2,C5,1,1,1979,5
 solidago,rigida,8,C5,1,1,1979,3
 spartina,pectinata,20,C5,1,1,1979,4
-achillea,millefolium,1,D5,0,1,1979,0
+achillea,millefolium,1,D5,1,1,1979,0
 allium,canadense,2,D5,1,1,1979,3
 allium,cernuum,1,D5,1,1,1979,7
 symphyotrichum,ericoides,3,D5,1,1,1979,6
@@ -825,7 +825,7 @@ fragaria,virginiana,3,B6,1,1,1979,0
 rosa,carolina,5,B6,1,1,1979,5
 silphium,terebinthinaceum,8,B6,1,1,1979,5
 zizia,aurea,3,B6,1,1,1979,5
-achillea,millefolium,4,C6,0,1,1979,0
+achillea,millefolium,4,C6,1,1,1979,0
 allium,cernuum,4,C6,1,1,1979,7
 amorpha,canescens,2,C6,1,1,1979,10
 andropogon,gerardii,2,C6,1,1,1979,5
@@ -1033,7 +1033,7 @@ silphium,terebinthinaceum,3,E7,1,1,1979,5
 maianthemum,stellatum,4,E7,1,1,1979,5
 solidago,rigida,2,E7,1,1,1979,3
 sporobolus,heterolepis,5,E7,1,1,1979,10
-achillea,millefolium,3,F7,0,1,1979,0
+achillea,millefolium,3,F7,1,1,1979,0
 allium,canadense,1,F7,1,1,1979,3
 allium,cernuum,4,F7,1,1,1979,7
 symphyotrichum,ericoides,3,F7,1,1,1979,6
@@ -1103,7 +1103,7 @@ rosa,carolina,35,I7,1,1,1979,5
 silphium,terebinthinaceum,4,I7,1,1,1979,5
 solidago,rigida,3,I7,1,1,1979,3
 zizia,aurea,2,I7,1,1,1979,5
-achillea,millefolium,4,J7,0,1,1979,0
+achillea,millefolium,4,J7,1,1,1979,0
 allium,cernuum,3,J7,1,1,1979,7
 symphyotrichum,ericoides,4,J7,1,1,1979,6
 symphyotrichum,laeve,8,J7,1,1,1979,9
@@ -1211,7 +1211,7 @@ symphyotrichum,sp.,8,E8,1,1,1979,6
 calamagrostis,canadensis,70,E8,1,1,1979,6
 galium,sp.,1,E8,1,1,1979,5
 lycopus,americanus,3,E8,1,1,1979,4
-achillea,millefolium,2,F8,0,1,1979,0
+achillea,millefolium,2,F8,1,1,1979,0
 allium,cernuum,1,F8,1,1,1979,7
 symphyotrichum,laeve,1,F8,1,1,1979,9
 comandra,umbellata,2,F8,1,1,1979,9
@@ -1344,7 +1344,7 @@ ratibida,pinnata,2,G9,1,1,1979,4
 rosa,carolina,8,G9,1,1,1979,5
 silphium,terebinthinaceum,2,G9,1,1,1979,5
 solidago,rigida,5,G9,1,1,1979,3
-achillea,millefolium,4,H9,0,1,1979,0
+achillea,millefolium,4,H9,1,1,1979,0
 andropogon,gerardii,3,H9,1,1,1979,5
 anemone,cylindrica,5,H9,1,1,1979,8
 comandra,umbellata,45,H9,1,1,1979,9
@@ -1423,7 +1423,7 @@ apocynum,cannabinum,7,C10,1,1,1979,2
 calamagrostis,canadensis,65,C10,1,1,1979,6
 galium,sp.,2,C10,1,1,1979,5
 lycopus,americanus,4,C10,1,1,1979,4
-achillea,millefolium,6,D10,0,1,1979,0
+achillea,millefolium,6,D10,1,1,1979,0
 allium,cernuum,3,D10,1,1,1979,7
 symphyotrichum,ericoides,5,D10,1,1,1979,6
 arnoglossum,plantagineum,1,D10,1,1,1979,10
@@ -1464,7 +1464,7 @@ silphium,laciniatum,7,F10,1,1,1979,5
 silphium,terebinthinaceum,8,F10,1,1,1979,5
 solidago,canadensis,2,F10,1,1,1979,1
 tradescantia,ohiensis,4,F10,1,1,1979,3
-achillea,millefolium,2,G10,0,1,1979,0
+achillea,millefolium,2,G10,1,1,1979,0
 andropogon,gerardii,35,G10,1,1,1979,5
 apocynum,cannabinum,3,G10,1,1,1979,2
 symphyotrichum,ericoides,15,G10,1,1,1979,6
@@ -1499,7 +1499,7 @@ maianthemum,stellatum,15,I10,1,1,1979,5
 solidago,rigida,5,I10,1,1,1979,3
 spartina,pectinata,1,I10,1,1,1979,4
 zizia,aurea,20,I10,1,1,1979,5
-achillea,millefolium,15,J10,0,1,1979,0
+achillea,millefolium,15,J10,1,1,1979,0
 allium,canadense,3,J10,1,1,1979,3
 andropogon,gerardii,10,J10,1,1,1979,5
 symphyotrichum,ericoides,6,J10,1,1,1979,6
@@ -1649,7 +1649,7 @@ euthamia,gymnospermoides,3,I11,1,1,1979,4
 solidago,rigida,15,I11,1,1,1979,3
 tradescantia,ohiensis,1,I11,1,1,1979,3
 zizia,aurea,1,I11,1,1,1979,5
-achillea,millefolium,2,J11,0,1,1979,0
+achillea,millefolium,2,J11,1,1,1979,0
 apocynum,cannabinum,10,J11,1,1,1979,2
 carex,sp.,1,J11,1,1,1979,7
 daucus,carota,4,J11,0,1,1979,0
@@ -1783,7 +1783,7 @@ lycopus,americanus,4,J12,1,1,1979,4
 oenothera,fruticosa,2,J12,1,1,1979,10
 poa,pratensis,30,J12,0,1,1979,0
 solidago,canadensis,15,J12,1,1,1979,1
-achillea,millefolium,3,K12,0,1,1979,0
+achillea,millefolium,3,K12,1,1,1979,0
 allium,cernuum,2,K12,1,1,1979,7
 andropogon,gerardii,2,K12,1,1,1979,5
 symphyotrichum,ericoides,3,K12,1,1,1979,6
@@ -1815,7 +1815,7 @@ helianthus,grosseserratus,15,A13,1,1,1979,4
 poa,pratensis,3,A13,0,1,1979,0
 rosa,carolina,15,A13,1,1,1979,5
 tradescantia,ohiensis,5,A13,1,1,1979,3
-achillea,millefolium,8,B13,0,1,1979,0
+achillea,millefolium,8,B13,1,1,1979,0
 allium,cernuum,3,B13,1,1,1979,7
 symphyotrichum,laeve,6,B13,1,1,1979,9
 coreopsis,palmata,15,B13,1,1,1979,10
@@ -2101,7 +2101,7 @@ solidago,canadensis,65,B15,1,1,1979,1
 solidago,rigida,8,B15,1,1,1979,3
 spartina,pectinata,1,B15,1,1,1979,4
 tradescantia,ohiensis,2,B15,1,1,1979,3
-achillea,millefolium,3,C15,0,1,1979,0
+achillea,millefolium,3,C15,1,1,1979,0
 allium,canadense,1,C15,1,1,1979,3
 antennaria,neglecta,2,C15,1,1,1979,3
 symphyotrichum,ericoides,1,C15,1,1,1979,6
@@ -2505,7 +2505,7 @@ rosa,multiflora,20,A20,0,1,1979,0
 euthamia,gymnospermoides,3,A20,1,1,1979,4
 solidago,rigida,5,A20,1,1,1979,3
 taraxacum,officinale,5,A20,0,1,1979,0
-achillea,millefolium,1,B20,0,1,1979,0
+achillea,millefolium,1,B20,1,1,1979,0
 allium,canadense,1,B20,1,1,1979,3
 allium,cernuum,2,B20,1,1,1979,7
 symphyotrichum,ericoides,4,B20,1,1,1979,6
@@ -2563,7 +2563,7 @@ rhamnus,cathartica,5,B21,0,1,1979,0
 rosa,carolina,15,B21,1,1,1979,5
 scutellaria,parvula,2,B21,1,1,1979,7
 tradescantia,ohiensis,2,B21,1,1,1979,3
-achillea,millefolium,3,C21,0,1,1979,0
+achillea,millefolium,3,C21,1,1,1979,0
 allium,cernuum,1,C21,1,1,1979,7
 ambrosia,artemisiifolia,1,C21,1,1,1979,0
 symphyotrichum,ericoides,3,C21,1,1,1979,6
@@ -2619,7 +2619,7 @@ silphium,integrifolium,30,B22,1,1,1979,5
 silphium,terebinthinaceum,3,B22,1,1,1979,5
 solidago,canadensis,5,B22,1,1,1979,1
 solidago,rigida,10,B22,1,1,1979,3
-achillea,millefolium,3,C22,0,1,1979,0
+achillea,millefolium,3,C22,1,1,1979,0
 allium,canadense,1,C22,1,1,1979,3
 symphyotrichum,laeve,1,C22,1,1,1979,9
 comandra,umbellata,8,C22,1,1,1979,9
@@ -2648,7 +2648,7 @@ schedonorus,arundinaceus,35,A23,0,1,1979,0
 lonicera,tatarica,2,A23,0,1,1979,0
 poa,pratensis,10,A23,0,1,1979,0
 rosa,carolina,55,A23,1,1,1979,5
-achillea,millefolium,2,B23,0,1,1979,0
+achillea,millefolium,2,B23,1,1,1979,0
 comandra,umbellata,3,B23,1,1,1979,9
 fragaria,virginiana,15,B23,1,1,1979,0
 rhamnus,cathartica,35,B23,0,1,1979,0
@@ -2992,7 +2992,7 @@ solidago,rigida,10,G2,1,1,1980,3
 sporobolus,heterolepis,10,G2,1,1,1980,10
 taraxacum,officinale,1,G2,0,1,1980,0
 viola,sororia,1,G2,1,1,1980,3
-achillea,millefolium,1,H2,0,1,1980,0
+achillea,millefolium,1,H2,1,1,1980,0
 ambrosia,artemisiifolia,1,H2,1,1,1980,0
 symphyotrichum,ericoides,4,H2,1,1,1980,6
 carex,sp.,15,H2,1,1,1980,7
@@ -3280,7 +3280,7 @@ solidago,rigida,20,F4,1,1,1980,3
 sporobolus,heterolepis,3,F4,1,1,1980,10
 heserostipa,spartea,2,F4,1,1,1980,8
 zizia,aurea,20,F4,1,1,1980,5
-achillea,millefolium,3,G4,0,1,1980,0
+achillea,millefolium,3,G4,1,1,1980,0
 allium,cernuum,2,G4,1,1,1980,7
 carex,sp.,2,G4,1,1,1980,7
 comandra,umbellata,8,G4,1,1,1980,9
@@ -3376,7 +3376,7 @@ carex,sp.,60,L4,1,1,1980,7
 daucus,carota,3,L4,0,1,1980,0
 lythrum,salicaria,4,L4,0,1,1980,0
 syringa,vulgaris,20,L4,0,1,1980,0
-achillea,millefolium,5,A5,0,1,1980,0
+achillea,millefolium,5,A5,1,1,1980,0
 ambrosia,trifida,5,A5,1,1,1980,0
 symphyotrichum,pilosum,25,A5,1,1,1980,0
 schedonorus,arundinaceus,10,A5,0,1,1980,0
@@ -3402,7 +3402,7 @@ rosa,carolina,10,B5,1,1,1980,5
 silphium,integrifolium,2,B5,1,1,1980,5
 sporobolus,heterolepis,25,B5,1,1,1980,10
 zizia,aurea,25,B5,1,1,1980,5
-achillea,millefolium,1,C5,0,1,1980,0
+achillea,millefolium,1,C5,1,1,1980,0
 allium,cernuum,5,C5,1,1,1980,7
 amorpha,canescens,10,C5,1,1,1980,10
 andropogon,gerardii,5,C5,1,1,1980,5
@@ -3422,7 +3422,7 @@ rudbeckia,hirta,1,C5,1,1,1980,1
 silphium,terebinthinaceum,8,C5,1,1,1980,5
 solidago,rigida,5,C5,1,1,1980,3
 spartina,pectinata,20,C5,1,1,1980,4
-achillea,millefolium,1,D5,0,1,1980,0
+achillea,millefolium,1,D5,1,1,1980,0
 allium,canadense,2,D5,1,1,1980,3
 symphyotrichum,ericoides,1,D5,1,1,1980,6
 lithospermum,canescens,2,D5,1,1,1980,8
@@ -3484,7 +3484,7 @@ rosa,carolina,45,H5,1,1,1980,5
 silphium,terebinthinaceum,3,H5,1,1,1980,5
 maianthemum,stellatum,25,H5,1,1,1980,5
 zizia,aurea,2,H5,1,1,1980,5
-achillea,millefolium,2,I5,0,1,1980,0
+achillea,millefolium,2,I5,1,1,1980,0
 allium,canadense,2,I5,1,1,1980,3
 ambrosia,artemisiifolia,1,I5,1,1,1980,0
 symphyotrichum,laeve,5,I5,1,1,1980,9
@@ -3572,7 +3572,7 @@ oenothera,biennis,3,B6,1,1,1980,0
 rosa,carolina,15,B6,1,1,1980,5
 silphium,terebinthinaceum,5,B6,1,1,1980,5
 zizia,aurea,15,B6,1,1,1980,5
-achillea,millefolium,1,C6,0,1,1980,0
+achillea,millefolium,1,C6,1,1,1980,0
 allium,cernuum,2,C6,1,1,1980,7
 amorpha,canescens,1,C6,1,1,1980,10
 andropogon,gerardii,5,C6,1,1,1980,5
@@ -3790,7 +3790,7 @@ silphium,terebinthinaceum,1,E7,1,1,1980,5
 maianthemum,stellatum,5,E7,1,1,1980,5
 solidago,rigida,1,E7,1,1,1980,3
 sporobolus,heterolepis,8,E7,1,1,1980,10
-achillea,millefolium,3,F7,0,1,1980,0
+achillea,millefolium,3,F7,1,1,1980,0
 allium,cernuum,5,F7,1,1,1980,7
 symphyotrichum,ericoides,10,F7,1,1,1980,6
 symphyotrichum,laeve,2,F7,1,1,1980,9
@@ -3863,7 +3863,7 @@ rosa,carolina,35,I7,1,1,1980,5
 silphium,terebinthinaceum,8,I7,1,1,1980,5
 solidago,rigida,5,I7,1,1,1980,3
 zizia,aurea,5,I7,1,1,1980,5
-achillea,millefolium,5,J7,0,1,1980,0
+achillea,millefolium,5,J7,1,1,1980,0
 allium,cernuum,5,J7,1,1,1980,7
 symphyotrichum,ericoides,3,J7,1,1,1980,6
 symphyotrichum,laeve,5,J7,1,1,1980,9
@@ -3983,7 +3983,7 @@ symphyotrichum,sp.,5,E8,1,1,1980,6
 calamagrostis,canadensis,85,E8,1,1,1980,6
 galium,sp.,2,E8,1,1,1980,5
 lycopus,americanus,5,E8,1,1,1980,4
-achillea,millefolium,3,F8,0,1,1980,0
+achillea,millefolium,3,F8,1,1,1980,0
 allium,cernuum,5,F8,1,1,1980,7
 symphyotrichum,laeve,1,F8,1,1,1980,9
 carex,sp.,10,F8,1,1,1980,7
@@ -4127,7 +4127,7 @@ rosa,carolina,10,G9,1,1,1980,5
 scutellaria,parvula,2,G9,1,1,1980,7
 silphium,terebinthinaceum,3,G9,1,1,1980,5
 solidago,rigida,8,G9,1,1,1980,3
-achillea,millefolium,8,H9,0,1,1980,0
+achillea,millefolium,8,H9,1,1,1980,0
 allium,canadense,2,H9,1,1,1980,3
 andropogon,gerardii,5,H9,1,1,1980,5
 anemone,cylindrica,10,H9,1,1,1980,8
@@ -4226,7 +4226,7 @@ apocynum,cannabinum,5,C10,1,1,1980,2
 calamagrostis,canadensis,70,C10,1,1,1980,6
 galium,sp.,2,C10,1,1,1980,5
 lycopus,americanus,5,C10,1,1,1980,4
-achillea,millefolium,5,D10,0,1,1980,0
+achillea,millefolium,5,D10,1,1,1980,0
 allium,cernuum,4,D10,1,1,1980,7
 symphyotrichum,ericoides,10,D10,1,1,1980,6
 symphyotrichum,laeve,1,D10,1,1,1980,9
@@ -4286,7 +4286,7 @@ silphium,terebinthinaceum,8,F10,1,1,1980,5
 solidago,canadensis,4,F10,1,1,1980,1
 solidago,nemoralis,2,F10,1,1,1980,3
 tradescantia,ohiensis,4,F10,1,1,1980,3
-achillea,millefolium,4,G10,0,1,1980,0
+achillea,millefolium,4,G10,1,1,1980,0
 agrostis,gigantea,2,G10,0,1,1980,0
 allium,canadense,1,G10,1,1,1980,3
 andropogon,gerardii,40,G10,1,1,1980,5
@@ -4331,7 +4331,7 @@ maianthemum,stellatum,15,I10,1,1,1980,5
 solidago,rigida,15,I10,1,1,1980,3
 spartina,pectinata,1,I10,1,1,1980,4
 zizia,aurea,25,I10,1,1,1980,5
-achillea,millefolium,10,J10,0,1,1980,0
+achillea,millefolium,10,J10,1,1,1980,0
 allium,canadense,3,J10,1,1,1980,3
 andropogon,gerardii,15,J10,1,1,1980,5
 symphyotrichum,ericoides,4,J10,1,1,1980,6
@@ -4482,7 +4482,7 @@ silphium,laciniatum,3,F11,1,1,1980,5
 spartina,pectinata,1,F11,1,1,1980,4
 sporobolus,heterolepis,10,F11,1,1,1980,10
 tradescantia,ohiensis,1,F11,1,1,1980,3
-achillea,millefolium,3,G11,0,1,1980,0
+achillea,millefolium,3,G11,1,1,1980,0
 agrostis,gigantea,2,G11,0,1,1980,0
 allium,cernuum,2,G11,1,1,1980,7
 ambrosia,artemisiifolia,1,G11,1,1,1980,0
@@ -4518,7 +4518,7 @@ euthamia,gymnospermoides,10,I11,1,1,1980,4
 solidago,rigida,15,I11,1,1,1980,3
 tradescantia,ohiensis,1,I11,1,1,1980,3
 zizia,aurea,1,I11,1,1,1980,5
-achillea,millefolium,2,J11,0,1,1980,0
+achillea,millefolium,2,J11,1,1,1980,0
 apocynum,cannabinum,10,J11,1,1,1980,2
 carex,sp.,1,J11,1,1,1980,7
 daucus,carota,4,J11,0,1,1980,0
@@ -4673,7 +4673,7 @@ juncus,torreyi,10,J12,1,1,1980,2
 lycopus,americanus,2,J12,1,1,1980,4
 poa,pratensis,40,J12,0,1,1980,0
 solidago,canadensis,25,J12,1,1,1980,1
-achillea,millefolium,3,K12,0,1,1980,0
+achillea,millefolium,3,K12,1,1,1980,0
 allium,cernuum,2,K12,1,1,1980,7
 ambrosia,trifida,8,K12,1,1,1980,0
 andropogon,gerardii,2,K12,1,1,1980,5
@@ -4709,7 +4709,7 @@ helianthus,grosseserratus,15,A13,1,1,1980,4
 poa,pratensis,10,A13,0,1,1980,0
 rosa,carolina,5,A13,1,1,1980,5
 tradescantia,ohiensis,1,A13,1,1,1980,3
-achillea,millefolium,10,B13,0,1,1980,0
+achillea,millefolium,10,B13,1,1,1980,0
 allium,cernuum,3,B13,1,1,1980,7
 symphyotrichum,laeve,8,B13,1,1,1980,9
 coreopsis,palmata,15,B13,1,1,1980,10
@@ -5017,7 +5017,7 @@ phleum,pratense,1,A15,0,1,1980,0
 rosa,carolina,10,A15,1,1,1980,5
 ulmus,pumila,10,A15,0,1,1980,0
 zizia,aurea,10,A15,1,1,1980,5
-achillea,millefolium,5,B15,0,1,1980,0
+achillea,millefolium,5,B15,1,1,1980,0
 carex,sp.,2,B15,1,1,1980,7
 eryngium,yuccifolium,3,B15,1,1,1980,9
 fragaria,virginiana,4,B15,1,1,1980,0
@@ -5028,7 +5028,7 @@ solidago,riddellii,4,B15,1,1,1980,8
 solidago,rigida,5,B15,1,1,1980,3
 spartina,pectinata,1,B15,1,1,1980,4
 tradescantia,ohiensis,1,B15,1,1,1980,3
-achillea,millefolium,2,C15,0,1,1980,0
+achillea,millefolium,2,C15,1,1,1980,0
 allium,canadense,2,C15,1,1,1980,3
 antennaria,neglecta,2,C15,1,1,1980,3
 symphyotrichum,ericoides,3,C15,1,1,1980,6
@@ -5487,7 +5487,7 @@ poa,compressa,15,A20,0,1,1980,0
 rhamnus,cathartica,25,A20,0,1,1980,0
 rosa,multiflora,10,A20,0,1,1980,0
 taraxacum,officinale,2,A20,0,1,1980,0
-achillea,millefolium,1,B20,0,1,1980,0
+achillea,millefolium,1,B20,1,1,1980,0
 allium,canadense,4,B20,1,1,1980,3
 symphyotrichum,ericoides,4,B20,1,1,1980,6
 symphyotrichum,pilosum,3,B20,1,1,1980,0
@@ -5553,7 +5553,7 @@ rhamnus,cathartica,5,B21,0,1,1980,0
 rosa,carolina,15,B21,1,1,1980,5
 scutellaria,parvula,2,B21,1,1,1980,7
 tradescantia,ohiensis,1,B21,1,1,1980,3
-achillea,millefolium,3,C21,0,1,1980,0
+achillea,millefolium,3,C21,1,1,1980,0
 allium,cernuum,1,C21,1,1,1980,7
 ambrosia,artemisiifolia,1,C21,1,1,1980,0
 symphyotrichum,ericoides,5,C21,1,1,1980,6
@@ -5603,7 +5603,7 @@ ratibida,pinnata,2,A22,1,1,1980,4
 rumex,crispus,2,A22,0,1,1980,0
 silphium,integrifolium,2,A22,1,1,1980,5
 solidago,canadensis,10,A22,1,1,1980,1
-achillea,millefolium,2,B22,0,1,1980,0
+achillea,millefolium,2,B22,1,1,1980,0
 allium,cernuum,5,B22,1,1,1980,7
 symphyotrichum,ericoides,5,B22,1,1,1980,6
 symphyotrichum,laeve,5,B22,1,1,1980,9
@@ -5618,7 +5618,7 @@ silphium,laciniatum,2,B22,1,1,1980,5
 silphium,terebinthinaceum,4,B22,1,1,1980,5
 solidago,canadensis,3,B22,1,1,1980,1
 solidago,rigida,10,B22,1,1,1980,3
-achillea,millefolium,5,C22,0,1,1980,0
+achillea,millefolium,5,C22,1,1,1980,0
 allium,canadense,1,C22,1,1,1980,3
 symphyotrichum,laeve,3,C22,1,1,1980,9
 comandra,umbellata,10,C22,1,1,1980,9
@@ -5653,7 +5653,7 @@ schedonorus,arundinaceus,40,A23,0,1,1980,0
 lonicera,tatarica,5,A23,0,1,1980,0
 poa,pratensis,10,A23,0,1,1980,0
 rosa,carolina,55,A23,1,1,1980,5
-achillea,millefolium,2,B23,0,1,1980,0
+achillea,millefolium,2,B23,1,1,1980,0
 ambrosia,trifida,3,B23,1,1,1980,0
 symphyotrichum,pilosum,2,B23,1,1,1980,0
 comandra,umbellata,10,B23,1,1,1980,9
@@ -6067,7 +6067,7 @@ solidago,rigida,10,G2,1,1,1981,3
 sporobolus,heterolepis,10,G2,1,1,1981,10
 taraxacum,officinale,1,G2,0,1,1981,0
 viola,sororia,2,G2,1,1,1981,3
-achillea,millefolium,3,H2,0,1,1981,0
+achillea,millefolium,3,H2,1,1,1981,0
 ambrosia,artemisiifolia,1,H2,1,1,1981,0
 symphyotrichum,ericoides,4,H2,1,1,1981,6
 symphyotrichum,novae-angliae,10,H2,1,1,1981,3
@@ -6394,7 +6394,7 @@ solidago,rigida,10,F4,1,1,1981,3
 sporobolus,heterolepis,5,F4,1,1,1981,10
 heserostipa,spartea,3,F4,1,1,1981,8
 zizia,aurea,10,F4,1,1,1981,5
-achillea,millefolium,1,G4,0,1,1981,0
+achillea,millefolium,1,G4,1,1,1981,0
 allium,cernuum,1,G4,1,1,1981,7
 carex,sp.,2,G4,1,1,1981,7
 comandra,umbellata,5,G4,1,1,1981,9
@@ -6495,7 +6495,7 @@ lactuca,canadensis,1,L4,1,1,1981,1
 lythrum,salicaria,10,L4,0,1,1981,0
 rhamnus,cathartica,2,L4,0,1,1981,0
 syringa,vulgaris,20,L4,0,1,1981,0
-achillea,millefolium,2,A5,0,1,1981,0
+achillea,millefolium,2,A5,1,1,1981,0
 ambrosia,trifida,10,A5,1,1,1981,0
 symphyotrichum,pilosum,2,A5,1,1,1981,0
 schedonorus,arundinaceus,1,A5,0,1,1981,0
@@ -6528,7 +6528,7 @@ rosa,carolina,15,B5,1,1,1981,5
 silphium,integrifolium,5,B5,1,1,1981,5
 sporobolus,heterolepis,15,B5,1,1,1981,10
 zizia,aurea,20,B5,1,1,1981,5
-achillea,millefolium,5,C5,0,1,1981,0
+achillea,millefolium,5,C5,1,1,1981,0
 allium,canadense,2,C5,1,1,1981,3
 allium,cernuum,2,C5,1,1,1981,7
 amorpha,canescens,10,C5,1,1,1981,10
@@ -6550,7 +6550,7 @@ silphium,terebinthinaceum,8,C5,1,1,1981,5
 solidago,riddellii,2,C5,1,1,1981,8
 solidago,rigida,5,C5,1,1,1981,3
 spartina,pectinata,25,C5,1,1,1981,4
-achillea,millefolium,1,D5,0,1,1981,0
+achillea,millefolium,1,D5,1,1,1981,0
 allium,canadense,1,D5,1,1,1981,3
 allium,cernuum,1,D5,1,1,1981,7
 symphyotrichum,ericoides,1,D5,1,1,1981,6
@@ -6618,7 +6618,7 @@ rosa,carolina,50,H5,1,1,1981,5
 silphium,terebinthinaceum,5,H5,1,1,1981,5
 maianthemum,stellatum,20,H5,1,1,1981,5
 zizia,aurea,5,H5,1,1,1981,5
-achillea,millefolium,2,I5,0,1,1981,0
+achillea,millefolium,2,I5,1,1,1981,0
 allium,canadense,2,I5,1,1,1981,3
 ambrosia,artemisiifolia,1,I5,1,1,1981,0
 symphyotrichum,laeve,5,I5,1,1,1981,9
@@ -6718,7 +6718,7 @@ silphium,terebinthinaceum,15,B6,1,1,1981,5
 sporobolus,heterolepis,5,B6,1,1,1981,10
 viola,pedatifida,3,B6,1,1,1981,9
 zizia,aurea,15,B6,1,1,1981,5
-achillea,millefolium,2,C6,0,1,1981,0
+achillea,millefolium,2,C6,1,1,1981,0
 allium,cernuum,5,C6,1,1,1981,7
 amorpha,canescens,1,C6,1,1,1981,10
 andropogon,gerardii,2,C6,1,1,1981,5
@@ -6968,7 +6968,7 @@ maianthemum,stellatum,2,E7,1,1,1981,5
 solidago,rigida,2,E7,1,1,1981,3
 sporobolus,heterolepis,10,E7,1,1,1981,10
 tradescantia,ohiensis,2,E7,1,1,1981,3
-achillea,millefolium,1,F7,0,1,1981,0
+achillea,millefolium,1,F7,1,1,1981,0
 allium,canadense,2,F7,1,1,1981,3
 allium,cernuum,5,F7,1,1,1981,7
 symphyotrichum,ericoides,1,F7,1,1,1981,6
@@ -6987,7 +6987,7 @@ rosa,carolina,5,F7,1,1,1981,5
 silphium,laciniatum,10,F7,1,1,1981,5
 sporobolus,heterolepis,15,F7,1,1,1981,10
 tradescantia,ohiensis,2,F7,1,1,1981,3
-achillea,millefolium,2,G7,0,1,1981,0
+achillea,millefolium,2,G7,1,1,1981,0
 allium,cernuum,5,G7,1,1,1981,7
 andropogon,gerardii,5,G7,1,1,1981,5
 symphyotrichum,laeve,10,G7,1,1,1981,9
@@ -7045,7 +7045,7 @@ rosa,carolina,30,I7,1,1,1981,5
 silphium,terebinthinaceum,5,I7,1,1,1981,5
 solidago,rigida,5,I7,1,1,1981,3
 zizia,aurea,8,I7,1,1,1981,5
-achillea,millefolium,2,J7,0,1,1981,0
+achillea,millefolium,2,J7,1,1,1981,0
 allium,cernuum,2,J7,1,1,1981,7
 symphyotrichum,ericoides,4,J7,1,1,1981,6
 symphyotrichum,laeve,5,J7,1,1,1981,9
@@ -7181,7 +7181,7 @@ galium,sp.,3,E8,1,1,1981,5
 lycopus,americanus,15,E8,1,1,1981,4
 solidago,riddellii,10,E8,1,1,1981,8
 valeriana,edulis var. ciliata,2,E8,1,1,1981,10
-achillea,millefolium,3,F8,0,1,1981,0
+achillea,millefolium,3,F8,1,1,1981,0
 allium,cernuum,5,F8,1,1,1981,7
 symphyotrichum,laeve,3,F8,1,1,1981,9
 calamagrostis,canadensis,15,F8,1,1,1981,6
@@ -7346,7 +7346,7 @@ scutellaria,parvula,1,G9,1,1,1981,7
 silphium,terebinthinaceum,5,G9,1,1,1981,5
 solidago,rigida,10,G9,1,1,1981,3
 viola,sororia,2,G9,1,1,1981,3
-achillea,millefolium,4,H9,0,1,1981,0
+achillea,millefolium,4,H9,1,1,1981,0
 allium,canadense,2,H9,1,1,1981,3
 andropogon,gerardii,5,H9,1,1,1981,5
 anemone,cylindrica,8,H9,1,1,1981,8
@@ -7455,7 +7455,7 @@ apocynum,cannabinum,4,C10,1,1,1981,2
 calamagrostis,canadensis,60,C10,1,1,1981,6
 galium,sp.,2,C10,1,1,1981,5
 lycopus,americanus,10,C10,1,1,1981,4
-achillea,millefolium,5,D10,0,1,1981,0
+achillea,millefolium,5,D10,1,1,1981,0
 allium,cernuum,4,D10,1,1,1981,7
 symphyotrichum,ericoides,5,D10,1,1,1981,6
 symphyotrichum,laeve,3,D10,1,1,1981,9
@@ -7520,7 +7520,7 @@ silphium,laciniatum,15,F10,1,1,1981,5
 solidago,canadensis,3,F10,1,1,1981,1
 solidago,nemoralis,3,F10,1,1,1981,3
 tradescantia,ohiensis,5,F10,1,1,1981,3
-achillea,millefolium,3,G10,0,1,1981,0
+achillea,millefolium,3,G10,1,1,1981,0
 agrostis,gigantea,2,G10,0,1,1981,0
 allium,canadense,2,G10,1,1,1981,3
 andropogon,gerardii,50,G10,1,1,1981,5
@@ -7568,7 +7568,7 @@ maianthemum,stellatum,15,I10,1,1,1981,5
 solidago,rigida,8,I10,1,1,1981,3
 spartina,pectinata,2,I10,1,1,1981,4
 zizia,aurea,20,I10,1,1,1981,5
-achillea,millefolium,8,J10,0,1,1981,0
+achillea,millefolium,8,J10,1,1,1981,0
 allium,canadense,2,J10,1,1,1981,3
 andropogon,gerardii,15,J10,1,1,1981,5
 symphyotrichum,ericoides,4,J10,1,1,1981,6
@@ -7732,7 +7732,7 @@ silphium,laciniatum,10,F11,1,1,1981,5
 spartina,pectinata,2,F11,1,1,1981,4
 sporobolus,heterolepis,10,F11,1,1,1981,10
 tradescantia,ohiensis,2,F11,1,1,1981,3
-achillea,millefolium,1,G11,0,1,1981,0
+achillea,millefolium,1,G11,1,1,1981,0
 agrostis,gigantea,5,G11,0,1,1981,0
 allium,cernuum,2,G11,1,1,1981,7
 ambrosia,artemisiifolia,1,G11,1,1,1981,0
@@ -7776,7 +7776,7 @@ euthamia,gymnospermoides,15,I11,1,1,1981,4
 solidago,rigida,15,I11,1,1,1981,3
 tradescantia,ohiensis,4,I11,1,1,1981,3
 zizia,aurea,5,I11,1,1,1981,5
-achillea,millefolium,2,J11,0,1,1981,0
+achillea,millefolium,2,J11,1,1,1981,0
 apocynum,cannabinum,10,J11,1,1,1981,2
 carex,sp.,1,J11,1,1,1981,7
 daucus,carota,1,J11,0,1,1981,0
@@ -7943,7 +7943,7 @@ phalaris,arundinacea,2,J12,0,1,1981,0
 poa,pratensis,30,J12,0,1,1981,0
 scutellaria,parvula,2,J12,1,1,1981,7
 solidago,canadensis,10,J12,1,1,1981,1
-achillea,millefolium,1,K12,0,1,1981,0
+achillea,millefolium,1,K12,1,1,1981,0
 allium,cernuum,2,K12,1,1,1981,7
 ambrosia,trifida,1,K12,1,1,1981,0
 andropogon,gerardii,2,K12,1,1,1981,5
@@ -7978,7 +7978,7 @@ schedonorus,arundinaceus,40,A13,0,1,1981,0
 poa,pratensis,10,A13,0,1,1981,0
 rosa,carolina,15,A13,1,1,1981,5
 tradescantia,ohiensis,1,A13,1,1,1981,3
-achillea,millefolium,5,B13,0,1,1981,0
+achillea,millefolium,5,B13,1,1,1981,0
 allium,cernuum,2,B13,1,1,1981,7
 symphyotrichum,laeve,5,B13,1,1,1981,9
 coreopsis,palmata,5,B13,1,1,1981,10
@@ -8307,7 +8307,7 @@ rosa,carolina,5,A15,1,1,1981,5
 solidago,canadensis,20,A15,1,1,1981,1
 ulmus,pumila,10,A15,0,1,1981,0
 zizia,aurea,20,A15,1,1,1981,5
-achillea,millefolium,2,B15,0,1,1981,0
+achillea,millefolium,2,B15,1,1,1981,0
 carex,sp.,1,B15,1,1,1981,7
 eryngium,yuccifolium,5,B15,1,1,1981,9
 fragaria,virginiana,5,B15,1,1,1981,0
@@ -8318,7 +8318,7 @@ solidago,riddellii,1,B15,1,1,1981,8
 solidago,rigida,5,B15,1,1,1981,3
 spartina,pectinata,2,B15,1,1,1981,4
 tradescantia,ohiensis,2,B15,1,1,1981,3
-achillea,millefolium,2,C15,0,1,1981,0
+achillea,millefolium,2,C15,1,1,1981,0
 allium,canadense,1,C15,1,1,1981,3
 antennaria,neglecta,1,C15,1,1,1981,3
 moehringia,lateriflora,2,C15,1,1,1981,8
@@ -8812,7 +8812,7 @@ rhamnus,cathartica,20,A20,0,1,1981,0
 rosa,multiflora,50,A20,0,1,1981,0
 solidago,rigida,5,A20,1,1,1981,3
 taraxacum,officinale,2,A20,0,1,1981,0
-achillea,millefolium,2,B20,0,1,1981,0
+achillea,millefolium,2,B20,1,1,1981,0
 allium,canadense,1,B20,1,1,1981,3
 allium,cernuum,1,B20,1,1,1981,7
 symphyotrichum,ericoides,1,B20,1,1,1981,6
@@ -8882,7 +8882,7 @@ rosa,carolina,35,B21,1,1,1981,5
 scutellaria,parvula,2,B21,1,1,1981,7
 tradescantia,ohiensis,4,B21,1,1,1981,3
 zizia,aurea,15,B21,1,1,1981,5
-achillea,millefolium,2,C21,0,1,1981,0
+achillea,millefolium,2,C21,1,1,1981,0
 allium,cernuum,2,C21,1,1,1981,7
 ambrosia,artemisiifolia,1,C21,1,1,1981,0
 symphyotrichum,ericoides,3,C21,1,1,1981,6
@@ -8932,7 +8932,7 @@ ratibida,pinnata,2,A22,1,1,1981,4
 rumex,crispus,2,A22,0,1,1981,0
 silphium,integrifolium,4,A22,1,1,1981,5
 solidago,canadensis,10,A22,1,1,1981,1
-achillea,millefolium,1,B22,0,1,1981,0
+achillea,millefolium,1,B22,1,1,1981,0
 allium,cernuum,2,B22,1,1,1981,7
 symphyotrichum,ericoides,15,B22,1,1,1981,6
 symphyotrichum,laeve,2,B22,1,1,1981,9
@@ -8948,7 +8948,7 @@ silphium,laciniatum,1,B22,1,1,1981,5
 silphium,terebinthinaceum,10,B22,1,1,1981,5
 solidago,canadensis,2,B22,1,1,1981,1
 solidago,rigida,10,B22,1,1,1981,3
-achillea,millefolium,1,C22,0,1,1981,0
+achillea,millefolium,1,C22,1,1,1981,0
 allium,canadense,2,C22,1,1,1981,3
 symphyotrichum,laeve,5,C22,1,1,1981,9
 comandra,umbellata,10,C22,1,1,1981,9
@@ -8989,7 +8989,7 @@ lonicera,tatarica,2,A23,0,1,1981,0
 poa,pratensis,10,A23,0,1,1981,0
 rosa,carolina,50,A23,1,1,1981,5
 rosa,multiflora,5,A23,0,1,1981,0
-achillea,millefolium,2,B23,0,1,1981,0
+achillea,millefolium,2,B23,1,1,1981,0
 ambrosia,trifida,2,B23,1,1,1981,0
 comandra,umbellata,5,B23,1,1,1981,9
 erigeron,strigosus,1,B23,1,1,1981,5
@@ -9381,7 +9381,7 @@ solidago,rigida,5,G2,1,1,1982,3
 sporobolus,heterolepis,10,G2,1,1,1982,10
 taraxacum,officinale,1,G2,0,1,1982,0
 viola,sororia,2,G2,1,1,1982,3
-achillea,millefolium,1,H2,0,1,1982,0
+achillea,millefolium,1,H2,1,1,1982,0
 allium,cernuum,2,H2,1,1,1982,7
 ambrosia,artemisiifolia,1,H2,1,1,1982,0
 symphyotrichum,ericoides,1,H2,1,1,1982,6
@@ -9569,7 +9569,7 @@ silphium,laciniatum,8,H3,1,1,1982,5
 solidago,rigida,5,H3,1,1,1982,3
 ulmus,rubra,4,H3,1,1,1982,4
 zizia,aurea,40,H3,1,1,1982,5
-achillea,millefolium,1,I3,0,1,1982,0
+achillea,millefolium,1,I3,1,1,1982,0
 allium,canadense,1,I3,1,1,1982,3
 allium,cernuum,4,I3,1,1,1982,7
 symphyotrichum,ericoides,2,I3,1,1,1982,6
@@ -9713,7 +9713,7 @@ solidago,rigida,8,F4,1,1,1982,3
 spartina,pectinata,2,F4,1,1,1982,4
 sporobolus,heterolepis,5,F4,1,1,1982,10
 zizia,aurea,2,F4,1,1,1982,5
-achillea,millefolium,1,G4,0,1,1982,0
+achillea,millefolium,1,G4,1,1,1982,0
 allium,cernuum,2,G4,1,1,1982,7
 carex,sp.,2,G4,1,1,1982,7
 comandra,umbellata,8,G4,1,1,1982,9
@@ -9733,7 +9733,7 @@ silphium,laciniatum,10,G4,1,1,1982,5
 taraxacum,officinale,1,G4,0,1,1982,0
 viola,pedatifida,1,G4,1,1,1982,9
 zizia,aurea,8,G4,1,1,1982,5
-achillea,millefolium,2,H4,0,1,1982,0
+achillea,millefolium,2,H4,1,1,1982,0
 elymus,repens,4,H4,0,1,1982,0
 allium,canadense,2,H4,1,1,1982,3
 ambrosia,artemisiifolia,1,H4,1,1,1982,0
@@ -9752,7 +9752,7 @@ solidago,canadensis,10,H4,1,1,1982,1
 solidago,rigida,2,H4,1,1,1982,3
 taraxacum,officinale,1,H4,0,1,1982,0
 zizia,aurea,10,H4,1,1,1982,5
-achillea,millefolium,1,I4,0,1,1982,0
+achillea,millefolium,1,I4,1,1,1982,0
 allium,canadense,1,I4,1,1,1982,3
 andropogon,gerardii,2,I4,1,1,1982,5
 symphyotrichum,ericoides,1,I4,1,1,1982,6
@@ -9852,7 +9852,7 @@ silphium,integrifolium,2,B5,1,1,1982,5
 silphium,terebinthinaceum,4,B5,1,1,1982,5
 sporobolus,heterolepis,15,B5,1,1,1982,10
 zizia,aurea,5,B5,1,1,1982,5
-achillea,millefolium,5,C5,0,1,1982,0
+achillea,millefolium,5,C5,1,1,1982,0
 allium,canadense,1,C5,1,1,1982,3
 allium,cernuum,2,C5,1,1,1982,7
 amorpha,canescens,8,C5,1,1,1982,10
@@ -9874,7 +9874,7 @@ silphium,terebinthinaceum,10,C5,1,1,1982,5
 solidago,rigida,5,C5,1,1,1982,3
 spartina,pectinata,20,C5,1,1,1982,4
 viola,pedata,1,C5,1,1,1982,9
-achillea,millefolium,1,D5,0,1,1982,0
+achillea,millefolium,1,D5,1,1,1982,0
 allium,canadense,1,D5,1,1,1982,3
 allium,cernuum,1,D5,1,1,1982,7
 symphyotrichum,ericoides,1,D5,1,1,1982,6
@@ -10039,7 +10039,7 @@ rosa,carolina,10,B6,1,1,1982,5
 silphium,terebinthinaceum,5,B6,1,1,1982,5
 solidago,canadensis,3,B6,1,1,1982,1
 zizia,aurea,2,B6,1,1,1982,5
-achillea,millefolium,1,C6,0,1,1982,0
+achillea,millefolium,1,C6,1,1,1982,0
 allium,cernuum,2,C6,1,1,1982,7
 amorpha,canescens,2,C6,1,1,1982,10
 andropogon,gerardii,2,C6,1,1,1982,5
@@ -10125,7 +10125,7 @@ silphium,laciniatum,5,H6,1,1,1982,5
 silphium,terebinthinaceum,5,H6,1,1,1982,5
 maianthemum,stellatum,2,H6,1,1,1982,5
 spartina,pectinata,15,H6,1,1,1982,4
-achillea,millefolium,1,I6,0,1,1982,0
+achillea,millefolium,1,I6,1,1,1982,0
 allium,cernuum,2,I6,1,1,1982,7
 symphyotrichum,laeve,3,I6,1,1,1982,9
 symphyotrichum,pilosum,1,I6,1,1,1982,0
@@ -10280,7 +10280,7 @@ maianthemum,stellatum,2,E7,1,1,1982,5
 solidago,rigida,2,E7,1,1,1982,3
 sporobolus,heterolepis,15,E7,1,1,1982,10
 valeriana,edulis var. ciliata,3,E7,1,1,1982,10
-achillea,millefolium,1,F7,0,1,1982,0
+achillea,millefolium,1,F7,1,1,1982,0
 allium,canadense,1,F7,1,1,1982,3
 allium,cernuum,2,F7,1,1,1982,7
 symphyotrichum,ericoides,3,F7,1,1,1982,6
@@ -10354,7 +10354,7 @@ rosa,carolina,10,I7,1,1,1982,5
 silphium,terebinthinaceum,5,I7,1,1,1982,5
 solidago,rigida,2,I7,1,1,1982,3
 zizia,aurea,3,I7,1,1,1982,5
-achillea,millefolium,2,J7,0,1,1982,0
+achillea,millefolium,2,J7,1,1,1982,0
 allium,cernuum,2,J7,1,1,1982,7
 symphyotrichum,ericoides,4,J7,1,1,1982,6
 symphyotrichum,laeve,5,J7,1,1,1982,9
@@ -10481,7 +10481,7 @@ symphyotrichum,sp.,15,E8,1,1,1982,6
 calamagrostis,canadensis,85,E8,1,1,1982,6
 galium,sp.,5,E8,1,1,1982,5
 lycopus,americanus,10,E8,1,1,1982,4
-achillea,millefolium,1,F8,0,1,1982,0
+achillea,millefolium,1,F8,1,1,1982,0
 allium,cernuum,1,F8,1,1,1982,7
 symphyotrichum,laeve,2,F8,1,1,1982,9
 calamagrostis,canadensis,8,F8,1,1,1982,6
@@ -10640,7 +10640,7 @@ rosa,carolina,8,G9,1,1,1982,5
 scutellaria,parvula,1,G9,1,1,1982,7
 silphium,terebinthinaceum,2,G9,1,1,1982,5
 solidago,rigida,10,G9,1,1,1982,3
-achillea,millefolium,5,H9,0,1,1982,0
+achillea,millefolium,5,H9,1,1,1982,0
 allium,canadense,1,H9,1,1,1982,3
 andropogon,gerardii,5,H9,1,1,1982,5
 anemone,cylindrica,5,H9,1,1,1982,8
@@ -10747,7 +10747,7 @@ apocynum,cannabinum,1,C10,1,1,1982,2
 calamagrostis,canadensis,85,C10,1,1,1982,6
 galium,sp.,2,C10,1,1,1982,5
 lycopus,americanus,20,C10,1,1,1982,4
-achillea,millefolium,3,D10,0,1,1982,0
+achillea,millefolium,3,D10,1,1,1982,0
 allium,cernuum,2,D10,1,1,1982,7
 symphyotrichum,laeve,1,D10,1,1,1982,9
 arnoglossum,plantagineum,1,D10,1,1,1982,10
@@ -10802,7 +10802,7 @@ rudbeckia,hirta,4,F10,1,1,1982,1
 silphium,laciniatum,5,F10,1,1,1982,5
 solidago,canadensis,4,F10,1,1,1982,1
 tradescantia,ohiensis,3,F10,1,1,1982,3
-achillea,millefolium,1,G10,0,1,1982,0
+achillea,millefolium,1,G10,1,1,1982,0
 allium,canadense,1,G10,1,1,1982,3
 andropogon,gerardii,30,G10,1,1,1982,5
 apocynum,cannabinum,1,G10,1,1,1982,2
@@ -10853,7 +10853,7 @@ silphium,laciniatum,8,I10,1,1,1982,5
 maianthemum,stellatum,20,I10,1,1,1982,5
 solidago,rigida,8,I10,1,1,1982,3
 zizia,aurea,25,I10,1,1,1982,5
-achillea,millefolium,3,J10,0,1,1982,0
+achillea,millefolium,3,J10,1,1,1982,0
 agrostis,gigantea,3,J10,0,1,1982,0
 allium,canadense,2,J10,1,1,1982,3
 andropogon,gerardii,15,J10,1,1,1982,5
@@ -11013,7 +11013,7 @@ packera,paupercula,2,F11,1,1,1982,4
 spartina,pectinata,1,F11,1,1,1982,4
 sporobolus,heterolepis,15,F11,1,1,1982,10
 tradescantia,ohiensis,1,F11,1,1,1982,3
-achillea,millefolium,1,G11,0,1,1982,0
+achillea,millefolium,1,G11,1,1,1982,0
 allium,cernuum,1,G11,1,1,1982,7
 symphyotrichum,ericoides,2,G11,1,1,1982,6
 calamagrostis,canadensis,45,G11,1,1,1982,6
@@ -11054,7 +11054,7 @@ maianthemum,stellatum,5,I11,1,1,1982,5
 euthamia,gymnospermoides,5,I11,1,1,1982,4
 tradescantia,ohiensis,2,I11,1,1,1982,3
 zizia,aurea,8,I11,1,1,1982,5
-achillea,millefolium,1,J11,0,1,1982,0
+achillea,millefolium,1,J11,1,1,1982,0
 apocynum,cannabinum,10,J11,1,1,1982,2
 daucus,carota,3,J11,0,1,1982,0
 equisetum,arvense,2,J11,1,1,1982,0
@@ -11196,7 +11196,7 @@ oenothera,biennis,1,H12,1,1,1982,0
 ratibida,pinnata,2,H12,1,1,1982,4
 solidago,canadensis,35,H12,1,1,1982,1
 stachys,tenuifolia,1,H12,1,1,1982,5
-achillea,millefolium,3,I12,0,1,1982,0
+achillea,millefolium,3,I12,1,1,1982,0
 allium,canadense,2,I12,1,1,1982,3
 ambrosia,artemisiifolia,3,I12,1,1,1982,0
 andropogon,gerardii,5,I12,1,1,1982,5
@@ -11224,7 +11224,7 @@ panicum,virgatum,3,J12,1,1,1982,3
 poa,pratensis,30,J12,0,1,1982,0
 ratibida,pinnata,2,J12,1,1,1982,4
 solidago,canadensis,8,J12,1,1,1982,1
-achillea,millefolium,4,K12,0,1,1982,0
+achillea,millefolium,4,K12,1,1,1982,0
 allium,cernuum,2,K12,1,1,1982,7
 ambrosia,trifida,1,K12,1,1,1982,0
 amphicarpaea,bracteata,5,K12,1,1,1982,5
@@ -11260,7 +11260,7 @@ poa,pratensis,10,A13,0,1,1982,0
 rosa,carolina,4,A13,1,1,1982,5
 solidago,canadensis,25,A13,1,1,1982,1
 tradescantia,ohiensis,2,A13,1,1,1982,3
-achillea,millefolium,4,B13,0,1,1982,0
+achillea,millefolium,4,B13,1,1,1982,0
 allium,cernuum,3,B13,1,1,1982,7
 symphyotrichum,ericoides,2,B13,1,1,1982,6
 symphyotrichum,laeve,6,B13,1,1,1982,9
@@ -11562,7 +11562,7 @@ silphium,laciniatum,3,G14,1,1,1982,5
 silphium,terebinthinaceum,2,G14,1,1,1982,5
 solidago,rigida,8,G14,1,1,1982,3
 spartina,pectinata,3,G14,1,1,1982,4
-achillea,millefolium,2,H14,0,1,1982,0
+achillea,millefolium,2,H14,1,1,1982,0
 apocynum,cannabinum,10,H14,1,1,1982,2
 erigeron,strigosus,1,H14,1,1,1982,5
 helianthus,grosseserratus,1,H14,1,1,1982,4
@@ -11607,7 +11607,7 @@ rosa,carolina,5,A15,1,1,1982,5
 solidago,canadensis,3,A15,1,1,1982,1
 ulmus,pumila,5,A15,0,1,1982,0
 zizia,aurea,4,A15,1,1,1982,5
-achillea,millefolium,4,B15,0,1,1982,0
+achillea,millefolium,4,B15,1,1,1982,0
 symphyotrichum,ericoides,2,B15,1,1,1982,6
 symphyotrichum,novae-angliae,2,B15,1,1,1982,3
 symphyotrichum,pilosum,1,B15,1,1,1982,0
@@ -11624,7 +11624,7 @@ solidago,riddellii,4,B15,1,1,1982,8
 solidago,rigida,10,B15,1,1,1982,3
 spartina,pectinata,2,B15,1,1,1982,4
 tradescantia,ohiensis,1,B15,1,1,1982,3
-achillea,millefolium,3,C15,0,1,1982,0
+achillea,millefolium,3,C15,1,1,1982,0
 allium,canadense,1,C15,1,1,1982,3
 antennaria,neglecta,2,C15,1,1,1982,3
 symphyotrichum,ericoides,2,C15,1,1,1982,6
@@ -11667,7 +11667,7 @@ maianthemum,stellatum,4,D15,1,1,1982,5
 solidago,rigida,3,D15,1,1,1982,3
 sporobolus,heterolepis,4,D15,1,1,1982,10
 zizia,aurea,15,D15,1,1,1982,5
-achillea,millefolium,2,E15,0,1,1982,0
+achillea,millefolium,2,E15,1,1,1982,0
 allium,cernuum,1,E15,1,1,1982,7
 ambrosia,artemisiifolia,1,E15,1,1,1982,0
 asclepias,syriaca,3,E15,1,1,1982,0
@@ -11972,7 +11972,7 @@ scutellaria,parvula,5,D17,1,1,1982,7
 silphium,laciniatum,1,D17,1,1,1982,5
 solidago,riddellii,1,D17,1,1,1982,8
 valeriana,edulis var. ciliata,2,D17,1,1,1982,10
-achillea,millefolium,2,E17,0,1,1982,0
+achillea,millefolium,2,E17,1,1,1982,0
 allium,cernuum,2,E17,1,1,1982,7
 apocynum,cannabinum,5,E17,1,1,1982,2
 symphyotrichum,pilosum,1,E17,1,1,1982,0
@@ -12082,7 +12082,7 @@ monarda,fistulosa,2,A19,1,1,1982,4
 solidago,canadensis,30,A19,1,1,1982,1
 taraxacum,officinale,3,A19,0,1,1982,0
 tragopogon,pratensis,1,A19,0,1,1982,0
-achillea,millefolium,10,B19,0,1,1982,0
+achillea,millefolium,10,B19,1,1,1982,0
 allium,cernuum,1,B19,1,1,1982,7
 asclepias,syriaca,4,B19,1,1,1982,0
 symphyotrichum,ericoides,10,B19,1,1,1982,6
@@ -12138,7 +12138,7 @@ rosa,multiflora,20,A20,0,1,1982,0
 euthamia,gymnospermoides,2,A20,1,1,1982,4
 solidago,rigida,2,A20,1,1,1982,3
 taraxacum,officinale,2,A20,0,1,1982,0
-achillea,millefolium,3,B20,0,1,1982,0
+achillea,millefolium,3,B20,1,1,1982,0
 allium,canadense,1,B20,1,1,1982,3
 allium,cernuum,2,B20,1,1,1982,7
 symphyotrichum,ericoides,4,B20,1,1,1982,6
@@ -12211,7 +12211,7 @@ solidago,canadensis,20,B21,1,1,1982,1
 solidago,rigida,4,B21,1,1,1982,3
 tradescantia,ohiensis,2,B21,1,1,1982,3
 zizia,aurea,15,B21,1,1,1982,5
-achillea,millefolium,5,C21,0,1,1982,0
+achillea,millefolium,5,C21,1,1,1982,0
 allium,cernuum,2,C21,1,1,1982,7
 ambrosia,artemisiifolia,1,C21,1,1,1982,0
 symphyotrichum,ericoides,2,C21,1,1,1982,6
@@ -12267,7 +12267,7 @@ ratibida,pinnata,5,A22,1,1,1982,4
 rumex,crispus,2,A22,0,1,1982,0
 silphium,integrifolium,2,A22,1,1,1982,5
 solidago,canadensis,60,A22,1,1,1982,1
-achillea,millefolium,2,B22,0,1,1982,0
+achillea,millefolium,2,B22,1,1,1982,0
 allium,cernuum,3,B22,1,1,1982,7
 symphyotrichum,ericoides,3,B22,1,1,1982,6
 symphyotrichum,laeve,3,B22,1,1,1982,9
@@ -12282,7 +12282,7 @@ silphium,integrifolium,10,B22,1,1,1982,5
 silphium,terebinthinaceum,15,B22,1,1,1982,5
 solidago,canadensis,10,B22,1,1,1982,1
 solidago,rigida,15,B22,1,1,1982,3
-achillea,millefolium,1,C22,0,1,1982,0
+achillea,millefolium,1,C22,1,1,1982,0
 allium,canadense,1,C22,1,1,1982,3
 andropogon,gerardii,3,C22,1,1,1982,5
 symphyotrichum,laeve,2,C22,1,1,1982,9
@@ -12325,7 +12325,7 @@ lonicera,tatarica,2,A23,0,1,1982,0
 poa,pratensis,10,A23,0,1,1982,0
 rosa,carolina,75,A23,1,1,1982,5
 solidago,gigantea,25,A23,1,1,1982,4
-achillea,millefolium,2,B23,0,1,1982,0
+achillea,millefolium,2,B23,1,1,1982,0
 ambrosia,trifida,1,B23,1,1,1982,0
 symphyotrichum,pilosum,2,B23,1,1,1982,0
 carex,sp.,3,B23,1,1,1982,7
@@ -12595,7 +12595,7 @@ solidago,rigida,3,G2,1,1,1984,3
 sporobolus,heterolepis,30,G2,1,1,1984,10
 viola,sororia,2,G2,1,1,1984,3
 zizia,aurea,5,G2,1,1,1984,5
-achillea,millefolium,10,H2,0,1,1984,0
+achillea,millefolium,10,H2,1,1,1984,0
 allium,canadense,3,H2,1,1,1984,3
 allium,cernuum,2,H2,1,1,1984,7
 symphyotrichum,laeve,3,H2,1,1,1984,9
@@ -12788,7 +12788,7 @@ tradescantia,ohiensis,2,B4,1,1,1984,3
 veronicastrum,virginicum,5,B4,1,1,1984,8
 viola,sororia,1,B4,1,1,1984,3
 zizia,aurea,5,B4,1,1,1984,5
-achillea,millefolium,2,C4,0,1,1984,0
+achillea,millefolium,2,C4,1,1,1984,0
 allium,canadense,1,C4,1,1,1984,3
 andropogon,gerardii,10,C4,1,1,1984,5
 comandra,umbellata,20,C4,1,1,1984,9
@@ -12867,7 +12867,7 @@ maianthemum,stellatum,8,H4,1,1,1984,5
 solidago,canadensis,10,H4,1,1,1984,1
 solidago,rigida,8,H4,1,1,1984,3
 zizia,aurea,15,H4,1,1,1984,5
-achillea,millefolium,4,I4,0,1,1984,0
+achillea,millefolium,4,I4,1,1,1984,0
 allium,canadense,2,I4,1,1,1984,3
 allium,cernuum,10,I4,1,1,1984,7
 symphyotrichum,laeve,8,I4,1,1,1984,9
@@ -12931,7 +12931,7 @@ silphium,terebinthinaceum,40,B5,1,1,1984,5
 solidago,canadensis,20,B5,1,1,1984,1
 solidago,rigida,35,B5,1,1,1984,3
 tradescantia,ohiensis,2,B5,1,1,1984,3
-achillea,millefolium,15,C5,0,1,1984,0
+achillea,millefolium,15,C5,1,1,1984,0
 elymus,trachycaulus ssp. subsecundus,2,C5,1,1,1984,8
 andropogon,gerardii,20,C5,1,1,1984,5
 baptisia,alba var. macrophylla,5,C5,1,1,1984,8
@@ -12969,7 +12969,7 @@ lycopus,americanus,3,E5,1,1,1984,4
 rosa,carolina,15,E5,1,1,1984,5
 spartina,pectinata,2,E5,1,1,1984,4
 tradescantia,ohiensis,3,E5,1,1,1984,3
-achillea,millefolium,3,F5,0,1,1984,0
+achillea,millefolium,3,F5,1,1,1984,0
 ambrosia,artemisiifolia,10,F5,1,1,1984,0
 carex,sp.,40,F5,1,1,1984,7
 comandra,umbellata,2,F5,1,1,1984,9
@@ -13004,7 +13004,7 @@ silphium,laciniatum,10,H5,1,1,1984,5
 silphium,terebinthinaceum,15,H5,1,1,1984,5
 maianthemum,stellatum,10,H5,1,1,1984,5
 solidago,rigida,5,H5,1,1,1984,3
-achillea,millefolium,2,I5,0,1,1984,0
+achillea,millefolium,2,I5,1,1,1984,0
 allium,canadense,2,I5,1,1,1984,3
 allium,cernuum,2,I5,1,1,1984,7
 andropogon,gerardii,15,I5,1,1,1984,5
@@ -13063,7 +13063,7 @@ silphium,integrifolium,3,B6,1,1,1984,5
 silphium,terebinthinaceum,15,B6,1,1,1984,5
 solidago,canadensis,5,B6,1,1,1984,1
 zizia,aurea,20,B6,1,1,1984,5
-achillea,millefolium,3,C6,0,1,1984,0
+achillea,millefolium,3,C6,1,1,1984,0
 allium,cernuum,10,C6,1,1,1984,7
 amorpha,canescens,1,C6,1,1,1984,10
 symphyotrichum,laeve,15,C6,1,1,1984,9
@@ -13201,7 +13201,7 @@ rosa,carolina,15,A7,1,1,1984,5
 solidago,canadensis,99,A7,1,1,1984,1
 tradescantia,ohiensis,2,A7,1,1,1984,3
 zizia,aurea,10,A7,1,1,1984,5
-achillea,millefolium,2,B7,0,1,1984,0
+achillea,millefolium,2,B7,1,1,1984,0
 ambrosia,trifida,2,B7,1,1,1984,0
 symphyotrichum,ericoides,3,B7,1,1,1984,6
 baptisia,alba var. macrophylla,15,B7,1,1,1984,8
@@ -13325,7 +13325,7 @@ parthenium,integrifolium,30,I7,1,1,1984,8
 rosa,carolina,70,I7,1,1,1984,5
 silphium,terebinthinaceum,5,I7,1,1,1984,5
 sporobolus,heterolepis,35,I7,1,1,1984,10
-achillea,millefolium,4,J7,0,1,1984,0
+achillea,millefolium,4,J7,1,1,1984,0
 andropogon,gerardii,45,J7,1,1,1984,5
 coreopsis,palmata,25,J7,1,1,1984,10
 eryngium,yuccifolium,10,J7,1,1,1984,9
@@ -13439,7 +13439,7 @@ galium,sp.,2,E8,1,1,1984,5
 lycopus,americanus,10,E8,1,1,1984,4
 lythrum,alatum,4,E8,1,1,1984,7
 panicum,virgatum,4,E8,1,1,1984,3
-achillea,millefolium,3,F8,0,1,1984,0
+achillea,millefolium,3,F8,1,1,1984,0
 symphyotrichum,novae-angliae,2,F8,1,1,1984,3
 calamagrostis,canadensis,40,F8,1,1,1984,6
 daucus,carota,2,F8,0,1,1984,0
@@ -13511,7 +13511,7 @@ maianthemum,stellatum,2,J8,1,1,1984,5
 tradescantia,ohiensis,2,J8,1,1,1984,3
 viola,sororia,30,J8,1,1,1984,3
 zizia,aurea,20,J8,1,1,1984,5
-achillea,millefolium,2,K8,0,1,1984,0
+achillea,millefolium,2,K8,1,1,1984,0
 ambrosia,trifida,5,K8,1,1,1984,0
 carex,sp.,5,K8,1,1,1984,7
 cirsium,discolor,5,K8,1,1,1984,3
@@ -13567,7 +13567,7 @@ lycopus,americanus,5,F9,1,1,1984,4
 pycnanthemum,virginianum,10,F9,1,1,1984,5
 solidago,canadensis,2,F9,1,1,1984,1
 tradescantia,ohiensis,3,F9,1,1,1984,3
-achillea,millefolium,2,G9,0,1,1984,0
+achillea,millefolium,2,G9,1,1,1984,0
 andropogon,gerardii,40,G9,1,1,1984,5
 symphyotrichum,ericoides,2,G9,1,1,1984,6
 symphyotrichum,laeve,3,G9,1,1,1984,9
@@ -13585,7 +13585,7 @@ rosa,carolina,10,G9,1,1,1984,5
 silphium,terebinthinaceum,5,G9,1,1,1984,5
 solidago,rigida,15,G9,1,1,1984,3
 viola,sororia,5,G9,1,1,1984,3
-achillea,millefolium,15,H9,0,1,1984,0
+achillea,millefolium,15,H9,1,1,1984,0
 andropogon,gerardii,15,H9,1,1,1984,5
 anemone,cylindrica,8,H9,1,1,1984,8
 symphyotrichum,ericoides,4,H9,1,1,1984,6
@@ -13613,7 +13613,7 @@ rosa,carolina,5,I9,1,1,1984,5
 solidago,canadensis,20,I9,1,1,1984,1
 solidago,rigida,20,I9,1,1,1984,3
 zizia,aurea,3,I9,1,1,1984,5
-achillea,millefolium,3,J9,0,1,1984,0
+achillea,millefolium,3,J9,1,1,1984,0
 symphyotrichum,novae-angliae,3,J9,1,1,1984,3
 comandra,umbellata,40,J9,1,1,1984,9
 fragaria,virginiana,15,J9,1,1,1984,0
@@ -13662,7 +13662,7 @@ lycopus,americanus,5,C10,1,1,1984,4
 lythrum,alatum,4,C10,1,1,1984,7
 pycnanthemum,virginianum,5,C10,1,1,1984,5
 ulmus,rubra,2,C10,1,1,1984,4
-achillea,millefolium,5,D10,0,1,1984,0
+achillea,millefolium,5,D10,1,1,1984,0
 allium,canadense,1,D10,1,1,1984,3
 allium,cernuum,2,D10,1,1,1984,7
 carex,sp.,2,D10,1,1,1984,7
@@ -13696,7 +13696,7 @@ rudbeckia,hirta,5,F10,1,1,1984,1
 silphium,laciniatum,25,F10,1,1,1984,5
 solidago,riddellii,3,F10,1,1,1984,8
 tradescantia,ohiensis,5,F10,1,1,1984,3
-achillea,millefolium,2,G10,0,1,1984,0
+achillea,millefolium,2,G10,1,1,1984,0
 andropogon,gerardii,90,G10,1,1,1984,5
 symphyotrichum,ericoides,25,G10,1,1,1984,6
 calamagrostis,canadensis,10,G10,1,1,1984,6
@@ -13730,7 +13730,7 @@ silphium,laciniatum,25,I10,1,1,1984,5
 maianthemum,stellatum,5,I10,1,1,1984,5
 solidago,rigida,15,I10,1,1,1984,3
 zizia,aurea,40,I10,1,1,1984,5
-achillea,millefolium,25,J10,0,1,1984,0
+achillea,millefolium,25,J10,1,1,1984,0
 allium,canadense,1,J10,1,1,1984,3
 andropogon,gerardii,30,J10,1,1,1984,5
 symphyotrichum,ericoides,4,J10,1,1,1984,6
@@ -13766,7 +13766,7 @@ helianthus,grosseserratus,99,A11,1,1,1984,4
 poa,pratensis,10,A11,0,1,1984,0
 rosa,carolina,40,A11,1,1,1984,5
 solidago,canadensis,40,A11,1,1,1984,1
-achillea,millefolium,2,B11,0,1,1984,0
+achillea,millefolium,2,B11,1,1,1984,0
 symphyotrichum,ericoides,2,B11,1,1,1984,6
 carex,sp.,3,B11,1,1,1984,7
 comandra,umbellata,4,B11,1,1,1984,9
@@ -13979,7 +13979,7 @@ ratibida,pinnata,3,H12,1,1,1984,4
 rosa,carolina,2,H12,1,1,1984,5
 solidago,canadensis,99,H12,1,1,1984,1
 solidago,rigida,4,H12,1,1,1984,3
-achillea,millefolium,4,I12,0,1,1984,0
+achillea,millefolium,4,I12,1,1,1984,0
 apocynum,cannabinum,4,I12,1,1,1984,2
 chenopodium,album,2,I12,0,1,1984,0
 comandra,umbellata,5,I12,1,1,1984,9
@@ -13993,7 +13993,7 @@ solidago,canadensis,80,I12,1,1,1984,1
 solidago,rigida,3,I12,1,1,1984,3
 spartina,pectinata,3,I12,1,1,1984,4
 tradescantia,ohiensis,4,I12,1,1,1984,3
-achillea,millefolium,5,J12,0,1,1984,0
+achillea,millefolium,5,J12,1,1,1984,0
 agrostis,gigantea,4,J12,0,1,1984,0
 ambrosia,artemisiifolia,2,J12,1,1,1984,0
 apocynum,cannabinum,30,J12,1,1,1984,2
@@ -14044,7 +14044,7 @@ poa,compressa,25,A13,0,1,1984,0
 rumex,crispus,10,A13,0,1,1984,0
 solidago,canadensis,60,A13,1,1,1984,1
 tradescantia,ohiensis,3,A13,1,1,1984,3
-achillea,millefolium,4,B13,0,1,1984,0
+achillea,millefolium,4,B13,1,1,1984,0
 allium,cernuum,3,B13,1,1,1984,7
 symphyotrichum,ericoides,3,B13,1,1,1984,6
 comandra,umbellata,10,B13,1,1,1984,9
@@ -14112,7 +14112,7 @@ pycnanthemum,virginianum,4,G13,1,1,1984,5
 rosa,carolina,15,G13,1,1,1984,5
 solidago,rigida,2,G13,1,1,1984,3
 stachys,tenuifolia,2,G13,1,1,1984,5
-achillea,millefolium,5,H13,0,1,1984,0
+achillea,millefolium,5,H13,1,1,1984,0
 symphyotrichum,pilosum,10,H13,1,1,1984,0
 cirsium,vulgare,4,H13,0,1,1984,0
 daucus,carota,5,H13,0,1,1984,0
@@ -14279,7 +14279,7 @@ rosa,carolina,80,G14,1,1,1984,5
 solidago,canadensis,5,G14,1,1,1984,1
 solidago,rigida,10,G14,1,1,1984,3
 zizia,aurea,5,G14,1,1,1984,5
-achillea,millefolium,4,H14,0,1,1984,0
+achillea,millefolium,4,H14,1,1,1984,0
 elymus,repens,3,H14,0,1,1984,0
 ambrosia,artemisiifolia,3,H14,1,1,1984,0
 apocynum,cannabinum,4,H14,1,1,1984,2
@@ -14318,7 +14318,7 @@ poa,pratensis,5,A15,0,1,1984,0
 scutellaria,parvula,3,A15,1,1,1984,7
 solidago,canadensis,8,A15,1,1,1984,1
 zizia,aurea,30,A15,1,1,1984,5
-achillea,millefolium,4,B15,0,1,1984,0
+achillea,millefolium,4,B15,1,1,1984,0
 symphyotrichum,novae-angliae,2,B15,1,1,1984,3
 erigeron,strigosus,4,B15,1,1,1984,5
 fragaria,virginiana,15,B15,1,1,1984,0
@@ -14329,7 +14329,7 @@ rosa,carolina,30,B15,1,1,1984,5
 solidago,canadensis,20,B15,1,1,1984,1
 solidago,riddellii,2,B15,1,1,1984,8
 solidago,rigida,40,B15,1,1,1984,3
-achillea,millefolium,3,C15,0,1,1984,0
+achillea,millefolium,3,C15,1,1,1984,0
 allium,cernuum,3,C15,1,1,1984,7
 andropogon,gerardii,15,C15,1,1,1984,5
 symphyotrichum,ericoides,10,C15,1,1,1984,6
@@ -14363,7 +14363,7 @@ spartina,pectinata,4,D15,1,1,1984,4
 sporobolus,heterolepis,10,D15,1,1,1984,10
 tradescantia,ohiensis,1,D15,1,1,1984,3
 zizia,aurea,15,D15,1,1,1984,5
-achillea,millefolium,3,E15,0,1,1984,0
+achillea,millefolium,3,E15,1,1,1984,0
 allium,cernuum,5,E15,1,1,1984,7
 symphyotrichum,ericoides,4,E15,1,1,1984,6
 symphyotrichum,laeve,5,E15,1,1,1984,9
@@ -14534,7 +14534,7 @@ poa,compressa,10,A17,0,1,1984,0
 poa,pratensis,10,A17,0,1,1984,0
 solanum,dulcamara,30,A17,0,1,1984,0
 solidago,canadensis,80,A17,1,1,1984,1
-achillea,millefolium,5,B17,0,1,1984,0
+achillea,millefolium,5,B17,1,1,1984,0
 symphyotrichum,ericoides,3,B17,1,1,1984,6
 symphyotrichum,pilosum,3,B17,1,1,1984,0
 comandra,umbellata,15,B17,1,1,1984,9
@@ -14584,7 +14584,7 @@ maianthemum,stellatum,2,E17,1,1,1984,5
 solidago,riddellii,5,E17,1,1,1984,8
 tradescantia,ohiensis,2,E17,1,1,1984,3
 zizia,aurea,40,E17,1,1,1984,5
-achillea,millefolium,2,A18,0,1,1984,0
+achillea,millefolium,2,A18,1,1,1984,0
 agrostis,gigantea,10,A18,0,1,1984,0
 symphyotrichum,pilosum,10,A18,1,1,1984,0
 bidens,frondosa,3,A18,1,1,1984,1
@@ -14615,7 +14615,7 @@ silphium,terebinthinaceum,15,B18,1,1,1984,5
 solidago,canadensis,30,B18,1,1,1984,1
 spartina,pectinata,3,B18,1,1,1984,4
 viola,sororia,10,B18,1,1,1984,3
-achillea,millefolium,1,C18,0,1,1984,0
+achillea,millefolium,1,C18,1,1,1984,0
 allium,cernuum,5,C18,1,1,1984,7
 symphyotrichum,ericoides,3,C18,1,1,1984,6
 carex,sp.,2,C18,1,1,1984,7
@@ -14658,7 +14658,7 @@ solidago,canadensis,15,E18,1,1,1984,1
 tradescantia,ohiensis,3,E18,1,1,1984,3
 viola,sororia,4,E18,1,1,1984,3
 zizia,aurea,3,E18,1,1,1984,5
-achillea,millefolium,5,F18,0,1,1984,0
+achillea,millefolium,5,F18,1,1,1984,0
 agrostis,gigantea,10,F18,0,1,1984,0
 symphyotrichum,pilosum,1,F18,1,1,1984,0
 erigeron,strigosus,1,F18,1,1,1984,5
@@ -14690,7 +14690,7 @@ rosa,carolina,1,A19,1,1,1984,5
 solanum,dulcamara,3,A19,0,1,1984,0
 solidago,canadensis,20,A19,1,1,1984,1
 taraxacum,officinale,2,A19,0,1,1984,0
-achillea,millefolium,15,B19,0,1,1984,0
+achillea,millefolium,15,B19,1,1,1984,0
 allium,cernuum,3,B19,1,1,1984,7
 anemone,cylindrica,2,B19,1,1,1984,8
 symphyotrichum,pilosum,5,B19,1,1,1984,0
@@ -14714,7 +14714,7 @@ persicaria,amphibia,15,D19,1,1,1984,4
 carex,sp.,25,E19,1,1,1984,7
 equisetum,arvense,2,E19,1,1,1984,0
 typha,latifolia,50,E19,1,1,1984,5
-achillea,millefolium,8,F19,0,1,1984,0
+achillea,millefolium,8,F19,1,1,1984,0
 symphyotrichum,novae-angliae,2,F19,1,1,1984,3
 symphyotrichum,pilosum,3,F19,1,1,1984,0
 comandra,umbellata,8,F19,1,1,1984,9
@@ -14780,7 +14780,7 @@ lonicera,tatarica,50,A21,0,1,1984,0
 poa,pratensis,30,A21,0,1,1984,0
 ratibida,pinnata,2,A21,1,1,1984,4
 solidago,canadensis,10,A21,1,1,1984,1
-achillea,millefolium,5,B21,0,1,1984,0
+achillea,millefolium,5,B21,1,1,1984,0
 cirsium,vulgare,4,B21,0,1,1984,0
 comandra,umbellata,15,B21,1,1,1984,9
 erigeron,strigosus,5,B21,1,1,1984,5
@@ -14795,7 +14795,7 @@ solidago,rigida,50,B21,1,1,1984,3
 tradescantia,ohiensis,2,B21,1,1,1984,3
 veronicastrum,virginicum,20,B21,1,1,1984,8
 zizia,aurea,10,B21,1,1,1984,5
-achillea,millefolium,8,C21,0,1,1984,0
+achillea,millefolium,8,C21,1,1,1984,0
 allium,cernuum,1,C21,1,1,1984,7
 calamagrostis,canadensis,1,C21,1,1,1984,6
 carex,sp.,2,C21,1,1,1984,7
@@ -14831,7 +14831,7 @@ silphium,integrifolium,2,A22,1,1,1984,5
 solanum,dulcamara,3,A22,0,1,1984,0
 solidago,canadensis,99,A22,1,1,1984,1
 vitis,riparia,2,A22,1,1,1984,1
-achillea,millefolium,4,B22,0,1,1984,0
+achillea,millefolium,4,B22,1,1,1984,0
 allium,cernuum,1,B22,1,1,1984,7
 comandra,umbellata,5,B22,1,1,1984,9
 erigeron,strigosus,2,B22,1,1,1984,5
@@ -14893,7 +14893,7 @@ schedonorus,arundinaceus,99,A24,0,1,1984,0
 lonicera,tatarica,40,A24,0,1,1984,0
 poa,pratensis,40,A24,0,1,1984,0
 solidago,canadensis,15,A24,1,1,1984,1
-achillea,millefolium,3,B24,0,1,1984,0
+achillea,millefolium,3,B24,1,1,1984,0
 ambrosia,trifida,2,B24,1,1,1984,0
 symphyotrichum,ericoides,5,B24,1,1,1984,6
 cirsium,discolor,2,B24,1,1,1984,3
@@ -15156,7 +15156,7 @@ rosa,carolina,30,G2,1,1,1987,5
 silphium,terebinthinaceum,4,G2,1,1,1987,5
 solidago,canadensis,3,G2,1,1,1987,1
 solidago,rigida,15,G2,1,1,1987,3
-achillea,millefolium,3,H2,0,1,1987,0
+achillea,millefolium,3,H2,1,1,1987,0
 allium,cernuum,5,H2,1,1,1987,7
 asclepias,syriaca,1,H2,1,1,1987,0
 carex,sp.,1,H2,1,1,1987,7
@@ -15318,7 +15318,7 @@ rosa,carolina,35,H3,1,1,1987,5
 solidago,rigida,15,H3,1,1,1987,3
 taraxacum,officinale,1,H3,0,1,1987,0
 zizia,aurea,35,H3,1,1,1987,5
-achillea,millefolium,1,I3,0,1,1987,0
+achillea,millefolium,1,I3,1,1,1987,0
 allium,cernuum,6,I3,1,1,1987,7
 symphyotrichum,laeve,10,I3,1,1,1987,9
 comandra,umbellata,25,I3,1,1,1987,9
@@ -15479,7 +15479,7 @@ silphium,laciniatum,5,G4,1,1,1987,5
 heserostipa,spartea,5,G4,1,1,1987,8
 viola,pedatifida,3,G4,1,1,1987,9
 zizia,aurea,5,G4,1,1,1987,5
-achillea,millefolium,3,H4,0,1,1987,0
+achillea,millefolium,3,H4,1,1,1987,0
 elymus,repens,5,H4,0,1,1987,0
 allium,canadense,2,H4,1,1,1987,3
 allium,cernuum,15,H4,1,1,1987,7
@@ -15496,7 +15496,7 @@ silphium,laciniatum,5,H4,1,1,1987,5
 maianthemum,stellatum,15,H4,1,1,1987,5
 solidago,canadensis,15,H4,1,1,1987,1
 zizia,aurea,20,H4,1,1,1987,5
-achillea,millefolium,3,I4,0,1,1987,0
+achillea,millefolium,3,I4,1,1,1987,0
 allium,cernuum,8,I4,1,1,1987,7
 andropogon,gerardii,5,I4,1,1,1987,5
 symphyotrichum,laeve,15,I4,1,1,1987,9
@@ -15580,7 +15580,7 @@ silphium,integrifolium,8,B4,1,1,1987,5
 silphium,terebinthinaceum,15,B4,1,1,1987,5
 sporobolus,heterolepis,20,B4,1,1,1987,10
 zizia,aurea,25,B4,1,1,1987,5
-achillea,millefolium,2,C5,0,1,1987,0
+achillea,millefolium,2,C5,1,1,1987,0
 allium,cernuum,15,C5,1,1,1987,7
 amorpha,canescens,4,C5,1,1,1987,10
 schizachyrium,scoparium,2,C5,1,1,1987,5
@@ -15634,7 +15634,7 @@ solidago,canadensis,10,E5,1,1,1987,1
 spartina,pectinata,2,E5,1,1,1987,4
 tradescantia,ohiensis,2,E5,1,1,1987,3
 ulmus,rubra,1,E5,1,1,1987,4
-achillea,millefolium,1,F5,0,1,1987,0
+achillea,millefolium,1,F5,1,1,1987,0
 allium,canadense,1,F5,1,1,1987,3
 allium,cernuum,1,F5,1,1,1987,7
 ambrosia,artemisiifolia,2,F5,1,1,1987,0
@@ -15685,7 +15685,7 @@ rosa,carolina,15,H5,1,1,1987,5
 silphium,laciniatum,5,H5,1,1,1987,5
 silphium,terebinthinaceum,5,H5,1,1,1987,5
 maianthemum,stellatum,3,H5,1,1,1987,5
-achillea,millefolium,2,I5,0,1,1987,0
+achillea,millefolium,2,I5,1,1,1987,0
 allium,cernuum,3,I5,1,1,1987,7
 andropogon,gerardii,3,I5,1,1,1987,5
 schizachyrium,scoparium,5,I5,1,1,1987,5
@@ -15743,7 +15743,7 @@ silphium,integrifolium,3,A6,1,1,1987,5
 solidago,canadensis,35,A6,1,1,1987,1
 tradescantia,ohiensis,3,A6,1,1,1987,3
 zizia,aurea,20,A6,1,1,1987,5
-achillea,millefolium,4,B6,0,1,1987,0
+achillea,millefolium,4,B6,1,1,1987,0
 allium,cernuum,15,B6,1,1,1987,7
 amorpha,canescens,15,B6,1,1,1987,10
 andropogon,gerardii,2,B6,1,1,1987,5
@@ -15760,7 +15760,7 @@ silphium,terebinthinaceum,10,B6,1,1,1987,5
 solidago,canadensis,5,B6,1,1,1987,1
 viola,pedatifida,1,B6,1,1,1987,9
 zizia,aurea,30,B6,1,1,1987,5
-achillea,millefolium,4,C6,0,1,1987,0
+achillea,millefolium,4,C6,1,1,1987,0
 allium,cernuum,15,C6,1,1,1987,7
 amorpha,canescens,2,C6,1,1,1987,10
 symphyotrichum,laeve,15,C6,1,1,1987,9
@@ -15846,7 +15846,7 @@ equisetum,arvense,2,H6,1,1,1987,0
 rosa,carolina,2,H6,1,1,1987,5
 silphium,laciniatum,2,H6,1,1,1987,5
 maianthemum,stellatum,4,H6,1,1,1987,5
-achillea,millefolium,3,I6,0,1,1987,0
+achillea,millefolium,3,I6,1,1,1987,0
 allium,cernuum,10,I6,1,1,1987,7
 andropogon,gerardii,2,I6,1,1,1987,5
 symphyotrichum,laeve,15,I6,1,1,1987,9
@@ -15926,7 +15926,7 @@ rosa,carolina,25,A7,1,1,1987,5
 sambucus,nigra ssp. canadensis,10,A7,1,1,1987,4
 solidago,canadensis,30,A7,1,1,1987,1
 zizia,aurea,15,A7,1,1,1987,5
-achillea,millefolium,1,B7,0,1,1987,0
+achillea,millefolium,1,B7,1,1,1987,0
 allium,cernuum,15,B7,1,1,1987,7
 andropogon,gerardii,5,B7,1,1,1987,5
 symphyotrichum,ericoides,4,B7,1,1,1987,6
@@ -15945,7 +15945,7 @@ ratibida,pinnata,15,B7,1,1,1987,4
 rosa,carolina,25,B7,1,1,1987,5
 silphium,terebinthinaceum,50,B7,1,1,1987,5
 solidago,rigida,2,B7,1,1,1987,3
-achillea,millefolium,1,C7,0,1,1987,0
+achillea,millefolium,1,C7,1,1,1987,0
 allium,cernuum,5,C7,1,1,1987,7
 amorpha,canescens,15,C7,1,1,1987,10
 symphyotrichum,ericoides,1,C7,1,1,1987,6
@@ -15986,7 +15986,7 @@ sporobolus,heterolepis,4,D7,1,1,1987,10
 viola,pedatifida,2,D7,1,1,1987,9
 viola,sororia,10,D7,1,1,1987,3
 zizia,aurea,2,D7,1,1,1987,5
-achillea,millefolium,2,E7,0,1,1987,0
+achillea,millefolium,2,E7,1,1,1987,0
 allium,canadense,1,E7,1,1,1987,3
 allium,cernuum,3,E7,1,1,1987,7
 andropogon,gerardii,15,E7,1,1,1987,5
@@ -16012,7 +16012,7 @@ sisyrinchium,albidum,1,E7,1,1,1987,6
 solidago,rigida,3,E7,1,1,1987,3
 sporobolus,heterolepis,35,E7,1,1,1987,10
 valeriana,edulis var. ciliata,5,E7,1,1,1987,10
-achillea,millefolium,1,F7,0,1,1987,0
+achillea,millefolium,1,F7,1,1,1987,0
 allium,canadense,1,F7,1,1,1987,3
 allium,cernuum,5,F7,1,1,1987,7
 andropogon,gerardii,25,F7,1,1,1987,5
@@ -16036,7 +16036,7 @@ rosa,carolina,25,F7,1,1,1987,5
 scutellaria,parvula,1,F7,1,1,1987,7
 silphium,laciniatum,20,F7,1,1,1987,5
 sporobolus,heterolepis,25,F7,1,1,1987,10
-achillea,millefolium,3,G7,0,1,1987,0
+achillea,millefolium,3,G7,1,1,1987,0
 allium,cernuum,5,G7,1,1,1987,7
 andropogon,gerardii,3,G7,1,1,1987,5
 antennaria,neglecta,15,G7,1,1,1987,3
@@ -16081,7 +16081,7 @@ rosa,carolina,80,I7,1,1,1987,5
 silphium,terebinthinaceum,5,I7,1,1,1987,5
 sporobolus,heterolepis,15,I7,1,1,1987,10
 zizia,aurea,5,I7,1,1,1987,5
-achillea,millefolium,2,J7,0,1,1987,0
+achillea,millefolium,2,J7,1,1,1987,0
 allium,cernuum,8,J7,1,1,1987,7
 andropogon,gerardii,50,J7,1,1,1987,5
 symphyotrichum,ericoides,3,J7,1,1,1987,6
@@ -16214,7 +16214,7 @@ helianthus,grosseserratus,1,E8,1,1,1987,4
 juncus,dudleyi,1,E8,1,1,1987,2
 lycopus,americanus,2,E8,1,1,1987,4
 lythrum,alatum,4,E8,1,1,1987,7
-achillea,millefolium,1,F8,0,1,1987,0
+achillea,millefolium,1,F8,1,1,1987,0
 allium,cernuum,4,F8,1,1,1987,7
 andropogon,gerardii,10,F8,1,1,1987,5
 calamagrostis,canadensis,2,F8,1,1,1987,6
@@ -16409,7 +16409,7 @@ rosa,carolina,25,G9,1,1,1987,5
 packera,paupercula,5,G9,1,1,1987,4
 silphium,terebinthinaceum,3,G9,1,1,1987,5
 solidago,rigida,5,G9,1,1,1987,3
-achillea,millefolium,2,H9,0,1,1987,0
+achillea,millefolium,2,H9,1,1,1987,0
 allium,cernuum,8,H9,1,1,1987,7
 andropogon,gerardii,10,H9,1,1,1987,5
 anemone,cylindrica,40,H9,1,1,1987,8
@@ -16445,7 +16445,7 @@ rosa,carolina,15,I9,1,1,1987,5
 solidago,canadensis,2,I9,1,1,1987,1
 solidago,rigida,30,I9,1,1,1987,3
 zizia,aurea,5,I9,1,1,1987,5
-achillea,millefolium,3,J9,0,1,1987,0
+achillea,millefolium,3,J9,1,1,1987,0
 cirsium,discolor,2,J9,1,1,1987,3
 comandra,umbellata,30,J9,1,1,1987,9
 erigeron,strigosus,1,J9,1,1,1987,5
@@ -16519,7 +16519,7 @@ lycopus,americanus,5,C10,1,1,1987,4
 lythrum,alatum,15,C10,1,1,1987,7
 pycnanthemum,virginianum,8,C10,1,1,1987,5
 ulmus,rubra,5,C10,1,1,1987,4
-achillea,millefolium,1,D10,0,1,1987,0
+achillea,millefolium,1,D10,1,1,1987,0
 allium,cernuum,5,D10,1,1,1987,7
 andropogon,gerardii,1,D10,1,1,1987,5
 symphyotrichum,ericoides,5,D10,1,1,1987,6
@@ -16580,7 +16580,7 @@ silphium,laciniatum,20,F10,1,1,1987,5
 solidago,canadensis,25,F10,1,1,1987,1
 solidago,riddellii,2,F10,1,1,1987,8
 tradescantia,ohiensis,1,F10,1,1,1987,3
-achillea,millefolium,8,G10,0,1,1987,0
+achillea,millefolium,8,G10,1,1,1987,0
 allium,cernuum,4,G10,1,1,1987,7
 andropogon,gerardii,60,G10,1,1,1987,5
 moehringia,lateriflora,8,G10,1,1,1987,8
@@ -16633,7 +16633,7 @@ solidago,rigida,10,I10,1,1,1987,3
 tragopogon,sp.,1,I10,0,1,1987,0
 viola,pedatifida,1,I10,1,1,1987,9
 zizia,aurea,10,I10,1,1,1987,5
-achillea,millefolium,3,J10,0,1,1987,0
+achillea,millefolium,3,J10,1,1,1987,0
 allium,canadense,1,J10,1,1,1987,3
 allium,cernuum,2,J10,1,1,1987,7
 andropogon,gerardii,15,J10,1,1,1987,5
@@ -16692,7 +16692,7 @@ poa,compressa,15,A11,0,1,1987,0
 poa,pratensis,5,A11,0,1,1987,0
 rosa,carolina,5,A11,1,1,1987,5
 solidago,canadensis,60,A11,1,1,1987,1
-achillea,millefolium,3,B11,0,1,1987,0
+achillea,millefolium,3,B11,1,1,1987,0
 allium,canadense,1,B11,1,1,1987,3
 allium,cernuum,3,B11,1,1,1987,7
 andropogon,gerardii,15,B11,1,1,1987,5
@@ -16780,7 +16780,7 @@ solidago,riddellii,2,F11,1,1,1987,8
 spartina,pectinata,4,F11,1,1,1987,4
 sporobolus,heterolepis,35,F11,1,1,1987,10
 tradescantia,ohiensis,1,F11,1,1,1987,3
-achillea,millefolium,2,G11,0,1,1987,0
+achillea,millefolium,2,G11,1,1,1987,0
 symphyotrichum,novae-angliae,1,G11,1,1,1987,3
 calamagrostis,canadensis,1,G11,1,1,1987,6
 fragaria,virginiana,4,G11,1,1,1987,0
@@ -16789,7 +16789,7 @@ pycnanthemum,virginianum,25,G11,1,1,1987,5
 rosa,carolina,8,G11,1,1,1987,5
 solidago,canadensis,3,G11,1,1,1987,1
 spartina,pectinata,60,G11,1,1,1987,4
-achillea,millefolium,3,H11,0,1,1987,0
+achillea,millefolium,3,H11,1,1,1987,0
 agrostis,gigantea,10,H11,0,1,1987,0
 apocynum,cannabinum,4,H11,1,1,1987,2
 carex,sp.,5,H11,1,1,1987,7
@@ -16946,7 +16946,7 @@ pycnanthemum,virginianum,1,G12,1,1,1987,5
 rosa,carolina,30,G12,1,1,1987,5
 solidago,canadensis,4,G12,1,1,1987,1
 tradescantia,ohiensis,2,G12,1,1,1987,3
-achillea,millefolium,2,H12,0,1,1987,0
+achillea,millefolium,2,H12,1,1,1987,0
 ambrosia,artemisiifolia,80,H12,1,1,1987,0
 apocynum,cannabinum,3,H12,1,1,1987,2
 asclepias,syriaca,15,H12,1,1,1987,0
@@ -16996,7 +16996,7 @@ scutellaria,parvula,15,J12,1,1,1987,7
 solidago,canadensis,8,J12,1,1,1987,1
 sorghastrum,nutans,5,J12,1,1,1987,5
 zizia,aurea,8,J12,1,1,1987,5
-achillea,millefolium,1,K12,0,1,1987,0
+achillea,millefolium,1,K12,1,1,1987,0
 allium,cernuum,1,K12,1,1,1987,7
 amphicarpaea,bracteata,10,K12,1,1,1987,5
 andropogon,gerardii,80,K12,1,1,1987,5
@@ -17013,7 +17013,7 @@ solidago,canadensis,3,K12,1,1,1987,1
 solidago,rigida,1,K12,1,1,1987,3
 tradescantia,ohiensis,1,K12,1,1,1987,3
 zizia,aurea,70,K12,1,1,1987,5
-achillea,millefolium,5,L12,0,1,1987,0
+achillea,millefolium,5,L12,1,1,1987,0
 ambrosia,trifida,5,L12,1,1,1987,0
 amphicarpaea,bracteata,3,L12,1,1,1987,5
 symphyotrichum,lanceolatum,1,L12,1,1,1987,3
@@ -17040,7 +17040,7 @@ poa,pratensis,60,A13,0,1,1987,0
 rosa,carolina,20,A13,1,1,1987,5
 solidago,canadensis,40,A13,1,1,1987,1
 tradescantia,ohiensis,4,A13,1,1,1987,3
-achillea,millefolium,10,B13,0,1,1987,0
+achillea,millefolium,10,B13,1,1,1987,0
 allium,cernuum,5,B13,1,1,1987,7
 schizachyrium,scoparium,3,B13,1,1,1987,5
 symphyotrichum,ericoides,8,B13,1,1,1987,6
@@ -17140,7 +17140,7 @@ helianthus,grosseserratus,5,G13,1,1,1987,4
 rosa,carolina,35,G13,1,1,1987,5
 solidago,canadensis,50,G13,1,1,1987,1
 stachys,tenuifolia,1,G13,1,1,1987,5
-achillea,millefolium,8,H13,0,1,1987,0
+achillea,millefolium,8,H13,1,1,1987,0
 apocynum,cannabinum,3,H13,1,1,1987,2
 asclepias,syriaca,8,H13,1,1,1987,0
 equisetum,arvense,80,H13,1,1,1987,0
@@ -17151,7 +17151,7 @@ ratibida,pinnata,15,H13,1,1,1987,4
 silphium,laciniatum,8,H13,1,1,1987,5
 heserostipa,spartea,5,H13,1,1,1987,8
 taraxacum,officinale,4,H13,0,1,1987,0
-achillea,millefolium,4,I13,0,1,1987,0
+achillea,millefolium,4,I13,1,1,1987,0
 elymus,repens,10,I13,0,1,1987,0
 allium,cernuum,8,I13,1,1,1987,7
 ambrosia,artemisiifolia,4,I13,1,1,1987,0
@@ -17362,7 +17362,7 @@ solanum,dulcamara,5,A15,0,1,1987,0
 solidago,canadensis,10,A15,1,1,1987,1
 taraxacum,officinale,1,A15,0,1,1987,0
 zizia,aurea,20,A15,1,1,1987,5
-achillea,millefolium,8,B15,0,1,1987,0
+achillea,millefolium,8,B15,1,1,1987,0
 allium,cernuum,1,B15,1,1,1987,7
 carex,sp.,35,B15,1,1,1987,7
 calystegia,sepium,3,B15,1,1,1987,1
@@ -17376,7 +17376,7 @@ solidago,canadensis,2,B15,1,1,1987,1
 solidago,riddellii,1,B15,1,1,1987,8
 solidago,rigida,8,B15,1,1,1987,3
 tradescantia,ohiensis,1,B15,1,1,1987,3
-achillea,millefolium,8,C15,0,1,1987,0
+achillea,millefolium,8,C15,1,1,1987,0
 allium,cernuum,6,C15,1,1,1987,7
 andropogon,gerardii,1,C15,1,1,1987,5
 symphyotrichum,ericoides,1,C15,1,1,1987,6
@@ -17413,7 +17413,7 @@ spartina,pectinata,5,D15,1,1,1987,4
 sporobolus,heterolepis,5,D15,1,1,1987,10
 viola,sororia,2,D15,1,1,1987,3
 zizia,aurea,20,D15,1,1,1987,5
-achillea,millefolium,1,E15,0,1,1987,0
+achillea,millefolium,1,E15,1,1,1987,0
 allium,canadense,1,E15,1,1,1987,3
 allium,cernuum,2,E15,1,1,1987,7
 symphyotrichum,ericoides,5,E15,1,1,1987,6
@@ -17616,7 +17616,7 @@ silphium,laciniatum,2,G16,1,1,1987,5
 silphium,terebinthinaceum,2,G16,1,1,1987,5
 solidago,rigida,35,G16,1,1,1987,3
 sorghastrum,nutans,20,G16,1,1,1987,5
-achillea,millefolium,2,H16,0,1,1987,0
+achillea,millefolium,2,H16,1,1,1987,0
 elymus,repens,3,H16,0,1,1987,0
 apocynum,cannabinum,1,H16,1,1,1987,2
 cirsium,discolor,3,H16,1,1,1987,3
@@ -17636,7 +17636,7 @@ melilotus,sp.,25,A17,0,1,1987,0
 phalaris,arundinacea,15,A17,0,1,1987,0
 poa,pratensis,25,A17,0,1,1987,0
 taraxacum,officinale,3,A17,0,1,1987,0
-achillea,millefolium,5,B17,0,1,1987,0
+achillea,millefolium,5,B17,1,1,1987,0
 allium,cernuum,10,B17,1,1,1987,7
 andropogon,gerardii,5,B17,1,1,1987,5
 carex,sp.,15,B17,1,1,1987,7
@@ -17807,7 +17807,7 @@ helianthus,grosseserratus,15,A19,1,1,1987,4
 monarda,fistulosa,40,A19,1,1,1987,4
 solanum,dulcamara,5,A19,0,1,1987,0
 solidago,canadensis,75,A19,1,1,1987,1
-achillea,millefolium,2,B19,0,1,1987,0
+achillea,millefolium,2,B19,1,1,1987,0
 allium,cernuum,4,B19,1,1,1987,7
 symphyotrichum,ericoides,1,B19,1,1,1987,6
 symphyotrichum,laeve,4,B19,1,1,1987,9
@@ -17955,7 +17955,7 @@ rosa,carolina,40,B21,1,1,1987,5
 solidago,canadensis,4,B21,1,1,1987,1
 tradescantia,ohiensis,5,B21,1,1,1987,3
 zizia,aurea,60,B21,1,1,1987,5
-achillea,millefolium,2,C21,0,1,1987,0
+achillea,millefolium,2,C21,1,1,1987,0
 symphyotrichum,lanceolatum,3,C21,1,1,1987,3
 carex,sp.,3,C21,1,1,1987,7
 comandra,umbellata,25,C21,1,1,1987,9
@@ -18013,7 +18013,7 @@ ratibida,pinnata,2,A22,1,1,1987,4
 rumex,crispus,4,A22,0,1,1987,0
 solidago,canadensis,50,A22,1,1,1987,1
 taraxacum,officinale,2,A22,0,1,1987,0
-achillea,millefolium,1,B22,0,1,1987,0
+achillea,millefolium,1,B22,1,1,1987,0
 allium,canadense,1,B22,1,1,1987,3
 allium,cernuum,3,B22,1,1,1987,7
 symphyotrichum,ericoides,4,B22,1,1,1987,6
@@ -18031,7 +18031,7 @@ silphium,integrifolium,2,B22,1,1,1987,5
 silphium,terebinthinaceum,15,B22,1,1,1987,5
 solidago,rigida,8,B22,1,1,1987,3
 tradescantia,ohiensis,8,B22,1,1,1987,3
-achillea,millefolium,2,C22,0,1,1987,0
+achillea,millefolium,2,C22,1,1,1987,0
 allium,cernuum,2,C22,1,1,1987,7
 symphyotrichum,ericoides,3,C22,1,1,1987,6
 symphyotrichum,laeve,15,C22,1,1,1987,9
@@ -18062,7 +18062,7 @@ bidens,frondosa,1,E22,1,1,1987,1
 calamagrostis,canadensis,70,E22,1,1,1987,6
 lycopus,americanus,1,E22,1,1,1987,4
 phalaris,arundinacea,40,E22,0,1,1987,0
-achillea,millefolium,2,A23,0,1,1987,0
+achillea,millefolium,2,A23,1,1,1987,0
 ambrosia,artemisiifolia,30,A23,1,1,1987,0
 ambrosia,trifida,15,A23,1,1,1987,0
 carex,sp.,20,A23,1,1,1987,7
@@ -18079,7 +18079,7 @@ ratibida,pinnata,3,A23,1,1,1987,4
 rosa,carolina,4,A23,1,1,1987,5
 solanum,dulcamara,4,A23,0,1,1987,0
 solidago,canadensis,30,A23,1,1,1987,1
-achillea,millefolium,10,B23,0,1,1987,0
+achillea,millefolium,10,B23,1,1,1987,0
 allium,canadense,1,B23,1,1,1987,3
 ambrosia,artemisiifolia,25,B23,1,1,1987,0
 ambrosia,trifida,5,B23,1,1,1987,0
@@ -18423,7 +18423,7 @@ packera,aurea,5,G2,1,1,1995,8
 silphium,terebinthinaceum,20,G2,1,1,1995,5
 sporobolus,heterolepis,50,G2,1,1,1995,10
 viola,sororia,5,G2,1,1,1995,3
-achillea,millefolium,5,H2,0,1,1995,0
+achillea,millefolium,5,H2,1,1,1995,0
 allium,cernuum,5,H2,1,1,1995,7
 symphyotrichum,ericoides,1,H2,1,1,1995,6
 symphyotrichum,laeve,5,H2,1,1,1995,9
@@ -18536,7 +18536,7 @@ silphium,terebinthinaceum,20,D3,1,1,1995,5
 solidago,rigida,5,D3,1,1,1995,3
 sporobolus,heterolepis,20,D3,1,1,1995,10
 viola,sororia,3,D3,1,1,1995,3
-achillea,millefolium,2,E3,0,1,1995,0
+achillea,millefolium,2,E3,1,1,1995,0
 allium,cernuum,3,E3,1,1,1995,7
 andropogon,gerardii,2,E3,1,1,1995,5
 symphyotrichum,laeve,5,E3,1,1,1995,9
@@ -18601,7 +18601,7 @@ silphium,laciniatum,3,H3,1,1,1995,5
 solidago,gigantea,3,H3,1,1,1995,4
 solidago,rigida,10,H3,1,1,1995,3
 viola,sororia,10,H3,1,1,1995,3
-achillea,millefolium,2,I3,0,1,1995,0
+achillea,millefolium,2,I3,1,1,1995,0
 allium,canadense,5,I3,1,1,1995,3
 allium,cernuum,5,I3,1,1,1995,7
 symphyotrichum,laeve,5,I3,1,1,1995,9
@@ -18703,7 +18703,7 @@ solidago,gigantea,5,E4,1,1,1995,4
 spartina,pectinata,7,E4,1,1,1995,4
 veronicastrum,virginicum,3,E4,1,1,1995,8
 viola,sororia,2,E4,1,1,1995,3
-achillea,millefolium,1,F4,0,1,1995,0
+achillea,millefolium,1,F4,1,1,1995,0
 allium,cernuum,3,F4,1,1,1995,7
 symphyotrichum,laeve,2,F4,1,1,1995,9
 comandra,umbellata,10,F4,1,1,1995,9
@@ -18745,7 +18745,7 @@ silphium,laciniatum,10,G4,1,1,1995,5
 maianthemum,stellatum,2,G4,1,1,1995,5
 solidago,rigida,10,G4,1,1,1995,3
 heserostipa,spartea,1,G4,1,1,1995,8
-achillea,millefolium,3,H4,0,1,1995,0
+achillea,millefolium,3,H4,1,1,1995,0
 asclepias,syriaca,5,H4,1,1,1995,0
 symphyotrichum,ericoides,3,H4,1,1,1995,6
 symphyotrichum,pilosum,5,H4,1,1,1995,0
@@ -18761,7 +18761,7 @@ rosa,carolina,80,H4,1,1,1995,5
 maianthemum,stellatum,10,H4,1,1,1995,5
 solidago,gigantea,10,H4,1,1,1995,4
 spartina,pectinata,2,H4,1,1,1995,4
-achillea,millefolium,10,I4,0,1,1995,0
+achillea,millefolium,10,I4,1,1,1995,0
 allium,canadense,1,I4,1,1,1995,3
 allium,cernuum,5,I4,1,1,1995,7
 symphyotrichum,laeve,10,I4,1,1,1995,9
@@ -18782,7 +18782,7 @@ spartina,pectinata,2,I4,1,1,1995,4
 tradescantia,ohiensis,2,I4,1,1,1995,3
 viola,sororia,5,I4,1,1,1995,3
 zizia,aurea,10,I4,1,1,1995,5
-achillea,millefolium,5,J4,0,1,1995,0
+achillea,millefolium,5,J4,1,1,1995,0
 allium,canadense,1,J4,1,1,1995,3
 allium,cernuum,2,J4,1,1,1995,7
 symphyotrichum,ericoides,1,J4,1,1,1995,6
@@ -18845,7 +18845,7 @@ rosa,carolina,20,B5,1,1,1995,5
 silphium,integrifolium,7,B5,1,1,1995,5
 silphium,terebinthinaceum,25,B5,1,1,1995,5
 sporobolus,heterolepis,25,B5,1,1,1995,10
-achillea,millefolium,5,C5,0,1,1995,0
+achillea,millefolium,5,C5,1,1,1995,0
 allium,cernuum,5,C5,1,1,1995,7
 amorpha,canescens,7,C5,1,1,1995,10
 schizachyrium,scoparium,3,C5,1,1,1995,5
@@ -18949,7 +18949,7 @@ rosa,carolina,80,H5,1,1,1995,5
 silphium,laciniatum,5,H5,1,1,1995,5
 sisyrinchium,albidum,1,H5,1,1,1995,6
 maianthemum,stellatum,10,H5,1,1,1995,5
-achillea,millefolium,2,I5,0,1,1995,0
+achillea,millefolium,2,I5,1,1,1995,0
 symphyotrichum,laeve,15,I5,1,1,1995,9
 comandra,umbellata,5,I5,1,1,1995,9
 coreopsis,palmata,30,I5,1,1,1995,10
@@ -19020,7 +19020,7 @@ rosa,carolina,20,A6,1,1,1995,5
 rumex,crispus,3,A6,0,1,1995,0
 solidago,canadensis,60,A6,1,1,1995,1
 tradescantia,ohiensis,2,A6,1,1,1995,3
-achillea,millefolium,5,B6,0,1,1995,0
+achillea,millefolium,5,B6,1,1,1995,0
 allium,cernuum,1,B6,1,1,1995,7
 amorpha,canescens,30,B6,1,1,1995,10
 symphyotrichum,ericoides,2,B6,1,1,1995,6
@@ -19039,7 +19039,7 @@ silphium,terebinthinaceum,5,B6,1,1,1995,5
 solidago,canadensis,10,B6,1,1,1995,1
 viola,pedatifida,1,B6,1,1,1995,9
 zizia,aurea,5,B6,1,1,1995,5
-achillea,millefolium,5,C6,0,1,1995,0
+achillea,millefolium,5,C6,1,1,1995,0
 allium,cernuum,5,C6,1,1,1995,7
 amorpha,canescens,5,C6,1,1,1995,10
 symphyotrichum,laeve,5,C6,1,1,1995,9
@@ -19144,7 +19144,7 @@ rudbeckia,hirta,1,H6,1,1,1995,1
 maianthemum,stellatum,25,H6,1,1,1995,5
 viola,sororia,5,H6,1,1,1995,3
 zizia,aurea,3,H6,1,1,1995,5
-achillea,millefolium,2,I6,0,1,1995,0
+achillea,millefolium,2,I6,1,1,1995,0
 allium,cernuum,5,I6,1,1,1995,7
 antennaria,neglecta,5,I6,1,1,1995,3
 symphyotrichum,laeve,10,I6,1,1,1995,9
@@ -19235,7 +19235,7 @@ rosa,carolina,50,B7,1,1,1995,5
 packera,aurea,3,B7,1,1,1995,8
 silphium,terebinthinaceum,50,B7,1,1,1995,5
 tradescantia,ohiensis,1,B7,1,1,1995,3
-achillea,millefolium,1,C7,0,1,1995,0
+achillea,millefolium,1,C7,1,1,1995,0
 allium,cernuum,2,C7,1,1,1995,7
 amorpha,canescens,10,C7,1,1,1995,10
 symphyotrichum,laeve,1,C7,1,1,1995,9
@@ -19291,7 +19291,7 @@ silphium,terebinthinaceum,10,E7,1,1,1995,5
 maianthemum,stellatum,4,E7,1,1,1995,5
 sporobolus,heterolepis,20,E7,1,1,1995,10
 viola,sororia,2,E7,1,1,1995,3
-achillea,millefolium,1,F7,0,1,1995,0
+achillea,millefolium,1,F7,1,1,1995,0
 andropogon,gerardii,5,F7,1,1,1995,5
 calamagrostis,canadensis,3,F7,1,1,1995,6
 comandra,umbellata,5,F7,1,1,1995,9
@@ -19306,7 +19306,7 @@ silphium,terebinthinaceum,1,F7,1,1,1995,5
 sporobolus,heterolepis,50,F7,1,1,1995,10
 tradescantia,ohiensis,2,F7,1,1,1995,3
 veronicastrum,virginicum,10,F7,1,1,1995,8
-achillea,millefolium,10,G7,0,1,1995,0
+achillea,millefolium,10,G7,1,1,1995,0
 allium,cernuum,5,G7,1,1,1995,7
 antennaria,neglecta,70,G7,1,1,1995,3
 symphyotrichum,laeve,5,G7,1,1,1995,9
@@ -19358,7 +19358,7 @@ packera,paupercula,10,I7,1,1,1995,4
 maianthemum,stellatum,2,I7,1,1,1995,5
 solidago,rigida,2,I7,1,1,1995,3
 sporobolus,heterolepis,10,I7,1,1,1995,10
-achillea,millefolium,5,J7,0,1,1995,0
+achillea,millefolium,5,J7,1,1,1995,0
 allium,cernuum,5,J7,1,1,1995,7
 symphyotrichum,laeve,10,J7,1,1,1995,9
 comandra,umbellata,10,J7,1,1,1995,9
@@ -19457,7 +19457,7 @@ carex,cristatella,10,E8,1,1,1995,4
 carex,pellita,10,E8,1,1,1995,4
 galium,obtusum,1,E8,1,1,1995,5
 lycopus,americanus,1,E8,1,1,1995,4
-achillea,millefolium,1,F8,0,1,1995,0
+achillea,millefolium,1,F8,1,1,1995,0
 allium,cernuum,1,F8,1,1,1995,7
 apocynum,cannabinum,2,F8,1,1,1995,2
 calamagrostis,canadensis,5,F8,1,1,1995,6
@@ -19495,7 +19495,7 @@ solidago,rigida,5,G8,1,1,1995,3
 sporobolus,heterolepis,10,G8,1,1,1995,10
 viola,sororia,3,G8,1,1,1995,3
 zizia,aurea,5,G8,1,1,1995,5
-achillea,millefolium,3,H8,0,1,1995,0
+achillea,millefolium,3,H8,1,1,1995,0
 anemone,cylindrica,2,H8,1,1,1995,8
 symphyotrichum,laeve,10,H8,1,1,1995,9
 cirsium,discolor,5,H8,1,1,1995,3
@@ -19523,7 +19523,7 @@ rosa,carolina,50,I8,1,1,1995,5
 maianthemum,stellatum,5,I8,1,1,1995,5
 euthamia,gymnospermoides,10,I8,1,1,1995,4
 viola,sororia,10,I8,1,1,1995,3
-achillea,millefolium,3,J8,0,1,1995,0
+achillea,millefolium,3,J8,1,1,1995,0
 allium,cernuum,7,J8,1,1,1995,7
 symphyotrichum,laeve,10,J8,1,1,1995,9
 comandra,umbellata,10,J8,1,1,1995,9
@@ -19623,7 +19623,7 @@ rosa,carolina,60,G9,1,1,1995,5
 rudbeckia,hirta,5,G9,1,1,1995,1
 silphium,terebinthinaceum,10,G9,1,1,1995,5
 viola,sororia,5,G9,1,1,1995,3
-achillea,millefolium,3,H9,0,1,1995,0
+achillea,millefolium,3,H9,1,1,1995,0
 allium,canadense,2,H9,1,1,1995,3
 allium,cernuum,5,H9,1,1,1995,7
 andropogon,gerardii,2,H9,1,1,1995,5
@@ -19663,7 +19663,7 @@ rosa,carolina,15,I9,1,1,1995,5
 solidago,rigida,10,I9,1,1,1995,3
 sorghastrum,nutans,3,I9,1,1,1995,5
 zizia,aurea,20,I9,1,1,1995,5
-achillea,millefolium,5,J9,0,1,1995,0
+achillea,millefolium,5,J9,1,1,1995,0
 allium,cernuum,5,J9,1,1,1995,7
 symphyotrichum,laeve,2,J9,1,1,1995,9
 comandra,umbellata,15,J9,1,1,1995,9
@@ -19724,7 +19724,7 @@ galium,obtusum,3,C10,1,1,1995,5
 lycopus,americanus,2,C10,1,1,1995,4
 lythrum,alatum,7,C10,1,1,1995,7
 pycnanthemum,virginianum,2,C10,1,1,1995,5
-achillea,millefolium,5,D10,0,1,1995,0
+achillea,millefolium,5,D10,1,1,1995,0
 allium,cernuum,5,D10,1,1,1995,7
 calamagrostis,canadensis,10,D10,1,1,1995,6
 comandra,umbellata,10,D10,1,1,1995,9
@@ -19774,7 +19774,7 @@ packera,aurea,20,F10,1,1,1995,8
 silphium,laciniatum,40,F10,1,1,1995,5
 tradescantia,ohiensis,5,F10,1,1,1995,3
 viola,sororia,2,F10,1,1,1995,3
-achillea,millefolium,5,G10,0,1,1995,0
+achillea,millefolium,5,G10,1,1,1995,0
 allium,canadense,2,G10,1,1,1995,3
 andropogon,gerardii,10,G10,1,1,1995,5
 moehringia,lateriflora,5,G10,1,1,1995,8
@@ -19809,7 +19809,7 @@ sorghastrum,nutans,5,H10,1,1,1995,5
 tradescantia,ohiensis,5,H10,1,1,1995,3
 viola,sororia,2,H10,1,1,1995,3
 zizia,aurea,10,H10,1,1,1995,5
-achillea,millefolium,2,I10,0,1,1995,0
+achillea,millefolium,2,I10,1,1,1995,0
 allium,cernuum,3,I10,1,1,1995,7
 andropogon,gerardii,2,I10,1,1,1995,5
 schizachyrium,scoparium,5,I10,1,1,1995,5
@@ -19826,7 +19826,7 @@ silphium,terebinthinaceum,2,I10,1,1,1995,5
 maianthemum,stellatum,15,I10,1,1,1995,5
 solidago,rigida,5,I10,1,1,1995,3
 zizia,aurea,5,I10,1,1,1995,5
-achillea,millefolium,5,J10,0,1,1995,0
+achillea,millefolium,5,J10,1,1,1995,0
 allium,cernuum,5,J10,1,1,1995,7
 symphyotrichum,laeve,3,J10,1,1,1995,9
 leucanthemum,vulgare,5,J10,0,1,1995,0
@@ -19877,7 +19877,7 @@ helianthus,grosseserratus,10,A11,1,1,1995,4
 poa,pratensis,5,A11,0,1,1995,0
 rhamnus,cathartica,100,A11,0,1,1995,0
 rosa,carolina,20,A11,1,1,1995,5
-achillea,millefolium,2,B11,0,1,1995,0
+achillea,millefolium,2,B11,1,1,1995,0
 allium,canadense,2,B11,1,1,1995,3
 comandra,umbellata,1,B11,1,1,1995,9
 carex,pellita,50,B11,1,1,1995,4
@@ -19971,7 +19971,7 @@ rosa,carolina,60,G11,1,1,1995,5
 solidago,canadensis,30,G11,1,1,1995,1
 spartina,pectinata,5,G11,1,1,1995,4
 tradescantia,ohiensis,4,G11,1,1,1995,3
-achillea,millefolium,5,H11,0,1,1995,0
+achillea,millefolium,5,H11,1,1,1995,0
 andropogon,gerardii,60,H11,1,1,1995,5
 apocynum,cannabinum,5,H11,1,1,1995,2
 asclepias,syriaca,3,H11,1,1,1995,0
@@ -19986,7 +19986,7 @@ solidago,canadensis,10,H11,1,1,1995,1
 solidago,rigida,15,H11,1,1,1995,3
 taraxacum,officinale,2,H11,0,1,1995,0
 zizia,aurea,4,H11,1,1,1995,5
-achillea,millefolium,2,I11,0,1,1995,0
+achillea,millefolium,2,I11,1,1,1995,0
 allium,canadense,3,I11,1,1,1995,3
 ambrosia,artemisiifolia,3,I11,1,1,1995,0
 andropogon,gerardii,50,I11,1,1,1995,5
@@ -20020,7 +20020,7 @@ euthamia,gymnospermoides,2,J11,1,1,1995,4
 solidago,rigida,1,J11,1,1,1995,3
 viola,sororia,10,J11,1,1,1995,3
 zizia,aurea,10,J11,1,1,1995,5
-achillea,millefolium,1,K11,0,1,1995,0
+achillea,millefolium,1,K11,1,1,1995,0
 apios,americana,5,K11,1,1,1995,5
 apocynum,cannabinum,5,K11,1,1,1995,2
 carex,pellita,3,K11,1,1,1995,4
@@ -20052,7 +20052,7 @@ rosa,carolina,7,A12,1,1,1995,5
 solidago,canadensis,20,A12,1,1,1995,1
 tradescantia,ohiensis,2,A12,1,1,1995,3
 ulmus,pumila,1,A12,0,1,1995,0
-achillea,millefolium,1,B12,0,1,1995,0
+achillea,millefolium,1,B12,1,1,1995,0
 allium,cernuum,3,B12,1,1,1995,7
 comandra,umbellata,10,B12,1,1,1995,9
 coreopsis,palmata,10,B12,1,1,1995,10
@@ -20135,7 +20135,7 @@ helianthus,grosseserratus,1,G12,1,1,1995,4
 lycopus,americanus,5,G12,1,1,1995,4
 rosa,carolina,30,G12,1,1,1995,5
 tradescantia,ohiensis,15,G12,1,1,1995,3
-achillea,millefolium,5,H12,0,1,1995,0
+achillea,millefolium,5,H12,1,1,1995,0
 ambrosia,artemisiifolia,5,H12,1,1,1995,0
 apocynum,cannabinum,10,H12,1,1,1995,2
 carex,pellita,10,H12,1,1,1995,4
@@ -20190,7 +20190,7 @@ helianthus,grosseserratus,10,A13,1,1,1995,4
 rosa,carolina,2,A13,1,1,1995,5
 solidago,canadensis,20,A13,1,1,1995,1
 solanum,dulcamara,5,A13,0,1,1995,0
-achillea,millefolium,5,C13,0,1,1995,0
+achillea,millefolium,5,C13,1,1,1995,0
 allium,cernuum,3,C13,1,1,1995,7
 ambrosia,trifida,1,C13,1,1,1995,0
 symphyotrichum,pilosum,1,C13,1,1,1995,0
@@ -20269,7 +20269,7 @@ calamagrostis,canadensis,50,G13,1,1,1995,6
 carex,pellita,5,G13,1,1,1995,4
 rosa,carolina,50,G13,1,1,1995,5
 solidago,gigantea,10,G13,1,1,1995,4
-achillea,millefolium,10,H13,0,1,1995,0
+achillea,millefolium,10,H13,1,1,1995,0
 ambrosia,artemisiifolia,2,H13,1,1,1995,0
 apocynum,cannabinum,5,H13,1,1,1995,2
 asclepias,syriaca,5,H13,1,1,1995,0
@@ -20284,7 +20284,7 @@ ratibida,pinnata,40,H13,1,1,1995,4
 solidago,canadensis,5,H13,1,1,1995,1
 solidago,gigantea,5,H13,1,1,1995,4
 heserostipa,spartea,10,H13,1,1,1995,8
-achillea,millefolium,1,I13,0,1,1995,0
+achillea,millefolium,1,I13,1,1,1995,0
 ambrosia,artemisiifolia,3,I13,1,1,1995,0
 apocynum,cannabinum,4,I13,1,1,1995,2
 calamagrostis,canadensis,1,I13,1,1,1995,6
@@ -20298,7 +20298,7 @@ ratibida,pinnata,3,I13,1,1,1995,4
 rosa,carolina,5,I13,1,1,1995,5
 solidago,canadensis,50,I13,1,1,1995,1
 tradescantia,ohiensis,2,I13,1,1,1995,3
-achillea,millefolium,5,J13,0,1,1995,0
+achillea,millefolium,5,J13,1,1,1995,0
 elymus,repens,1,J13,0,1,1995,0
 ambrosia,artemisiifolia,5,J13,1,1,1995,0
 apios,americana,5,J13,1,1,1995,5
@@ -20413,7 +20413,7 @@ silphium,terebinthinaceum,25,F14,1,1,1995,5
 maianthemum,stellatum,10,F14,1,1,1995,5
 solidago,rigida,5,F14,1,1,1995,3
 viola,sororia,2,F14,1,1,1995,3
-achillea,millefolium,1,G14,0,1,1995,0
+achillea,millefolium,1,G14,1,1,1995,0
 allium,canadense,1,G14,1,1,1995,3
 ambrosia,artemisiifolia,1,G14,1,1,1995,0
 apocynum,cannabinum,2,G14,1,1,1995,2
@@ -20432,7 +20432,7 @@ maianthemum,stellatum,10,G14,1,1,1995,5
 solidago,gigantea,4,G14,1,1,1995,4
 spartina,pectinata,1,G14,1,1,1995,4
 tradescantia,ohiensis,3,G14,1,1,1995,3
-achillea,millefolium,5,H14,0,1,1995,0
+achillea,millefolium,5,H14,1,1,1995,0
 elymus,repens,3,H14,0,1,1995,0
 allium,cernuum,3,H14,1,1,1995,7
 apocynum,cannabinum,3,H14,1,1,1995,2
@@ -20481,7 +20481,7 @@ pycnanthemum,virginianum,80,B15,1,1,1995,5
 rosa,carolina,10,B15,1,1,1995,5
 tradescantia,ohiensis,3,B15,1,1,1995,3
 viola,sororia,2,B15,1,1,1995,3
-achillea,millefolium,1,C15,0,1,1995,0
+achillea,millefolium,1,C15,1,1,1995,0
 allium,canadense,1,C15,1,1,1995,3
 carex,pellita,7,C15,1,1,1995,4
 eryngium,yuccifolium,5,C15,1,1,1995,9
@@ -20511,7 +20511,7 @@ solidago,rigida,5,D15,1,1,1995,3
 spartina,pectinata,5,D15,1,1,1995,4
 sporobolus,heterolepis,10,D15,1,1,1995,10
 zizia,aurea,5,D15,1,1,1995,5
-achillea,millefolium,5,E15,0,1,1995,0
+achillea,millefolium,5,E15,1,1,1995,0
 allium,cernuum,2,E15,1,1,1995,7
 symphyotrichum,laeve,2,E15,1,1,1995,9
 comandra,umbellata,2,E15,1,1,1995,9
@@ -20549,7 +20549,7 @@ sorghastrum,nutans,2,F15,1,1,1995,5
 sporobolus,heterolepis,2,F15,1,1,1995,10
 viola,pedatifida,1,F15,1,1,1995,9
 zizia,aurea,2,F15,1,1,1995,5
-achillea,millefolium,5,G15,0,1,1995,0
+achillea,millefolium,5,G15,1,1,1995,0
 allium,canadense,1,G15,1,1,1995,3
 symphyotrichum,ericoides,1,G15,1,1,1995,6
 leucanthemum,vulgare,1,G15,0,1,1995,0
@@ -20695,7 +20695,7 @@ silphium,terebinthinaceum,2,G16,1,1,1995,5
 sisyrinchium,albidum,2,G16,1,1,1995,6
 solidago,rigida,10,G16,1,1,1995,3
 sorghastrum,nutans,5,G16,1,1,1995,5
-achillea,millefolium,10,H16,0,1,1995,0
+achillea,millefolium,10,H16,1,1,1995,0
 elymus,repens,1,H16,0,1,1995,0
 apocynum,cannabinum,5,H16,1,1,1995,2
 asclepias,syriaca,4,H16,1,1,1995,0
@@ -20725,7 +20725,7 @@ rosa,carolina,5,A17,1,1,1995,5
 solidago,canadensis,30,A17,1,1,1995,1
 taraxacum,officinale,1,A17,0,1,1995,0
 tradescantia,ohiensis,1,A17,1,1,1995,3
-achillea,millefolium,2,B17,0,1,1995,0
+achillea,millefolium,2,B17,1,1,1995,0
 comandra,umbellata,5,B17,1,1,1995,9
 carex,pellita,10,B17,1,1,1995,4
 eryngium,yuccifolium,10,B17,1,1,1995,9
@@ -20798,7 +20798,7 @@ poa,pratensis,2,A18,0,1,1995,0
 rhamnus,cathartica,5,A18,0,1,1995,0
 rosa,carolina,5,A18,1,1,1995,5
 solidago,canadensis,5,A18,1,1,1995,1
-achillea,millefolium,5,B18,0,1,1995,0
+achillea,millefolium,5,B18,1,1,1995,0
 symphyotrichum,ericoides,2,B18,1,1,1995,6
 comandra,umbellata,10,B18,1,1,1995,9
 carex,pellita,2,B18,1,1,1995,4
@@ -20907,7 +20907,7 @@ pycnanthemum,virginianum,5,F19,1,1,1995,5
 rosa,carolina,50,F19,1,1,1995,5
 solidago,canadensis,4,F19,1,1,1995,1
 tradescantia,ohiensis,5,F19,1,1,1995,3
-achillea,millefolium,1,A20,0,1,1995,0
+achillea,millefolium,1,A20,1,1,1995,0
 elymus,repens,1,A20,0,1,1995,0
 symphyotrichum,pilosum,5,A20,1,1,1995,0
 barbarea,vulgaris,1,A20,0,1,1995,0
@@ -20981,7 +20981,7 @@ rhamnus,cathartica,25,A21,0,1,1995,0
 rosa,carolina,5,A21,1,1,1995,5
 rumex,crispus,2,A21,0,1,1995,0
 solidago,canadensis,3,A21,1,1,1995,1
-achillea,millefolium,1,B21,0,1,1995,0
+achillea,millefolium,1,B21,1,1,1995,0
 symphyotrichum,novae-angliae,5,B21,1,1,1995,3
 fragaria,virginiana,15,B21,1,1,1995,0
 galium,aparine,5,B21,1,1,1995,0
@@ -20991,7 +20991,7 @@ rosa,carolina,10,B21,1,1,1995,5
 rubus,pensilvanicus,10,B21,1,1,1995,10
 silphium,laciniatum,5,B21,1,1,1995,5
 tradescantia,ohiensis,15,B21,1,1,1995,3
-achillea,millefolium,1,C21,0,1,1995,0
+achillea,millefolium,1,C21,1,1,1995,0
 allium,canadense,1,C21,1,1,1995,3
 symphyotrichum,ericoides,1,C21,1,1,1995,6
 symphyotrichum,laeve,1,C21,1,1,1995,9
@@ -21037,7 +21037,7 @@ rumex,crispus,3,A22,0,1,1995,0
 solidago,canadensis,10,A22,1,1,1995,1
 taraxacum,officinale,1,A22,0,1,1995,0
 vitis,riparia,1,A22,1,1,1995,1
-achillea,millefolium,5,B22,0,1,1995,0
+achillea,millefolium,5,B22,1,1,1995,0
 symphyotrichum,ericoides,2,B22,1,1,1995,6
 symphyotrichum,laeve,3,B22,1,1,1995,9
 symphyotrichum,novae-angliae,2,B22,1,1,1995,3
@@ -21057,7 +21057,7 @@ silphium,terebinthinaceum,35,B22,1,1,1995,5
 solidago,rigida,7,B22,1,1,1995,3
 tradescantia,ohiensis,10,B22,1,1,1995,3
 viola,sororia,1,B22,1,1,1995,3
-achillea,millefolium,1,C22,0,1,1995,0
+achillea,millefolium,1,C22,1,1,1995,0
 andropogon,gerardii,1,C22,1,1,1995,5
 symphyotrichum,laeve,3,C22,1,1,1995,9
 comandra,umbellata,3,C22,1,1,1995,9
@@ -21089,7 +21089,7 @@ carex,brevior,40,A23,1,1,1995,3
 helianthus,grosseserratus,10,A23,1,1,1995,4
 poa,pratensis,10,A23,0,1,1995,0
 solidago,canadensis,25,A23,1,1,1995,1
-achillea,millefolium,2,B23,0,1,1995,0
+achillea,millefolium,2,B23,1,1,1995,0
 asclepias,syriaca,2,B23,1,1,1995,0
 symphyotrichum,ericoides,1,B23,1,1,1995,6
 comandra,umbellata,2,B23,1,1,1995,9
@@ -21103,7 +21103,7 @@ maianthemum,stellatum,1,B23,1,1,1995,5
 solidago,canadensis,30,B23,1,1,1995,1
 solidago,rigida,5,B23,1,1,1995,3
 tradescantia,ohiensis,3,B23,1,1,1995,3
-achillea,millefolium,2,C23,0,1,1995,0
+achillea,millefolium,2,C23,1,1,1995,0
 allium,canadense,1,C23,1,1,1995,3
 andropogon,gerardii,10,C23,1,1,1995,5
 symphyotrichum,ericoides,2,C23,1,1,1995,6
@@ -21127,7 +21127,7 @@ geum,aleppicum,25,A24,1,1,1995,3
 poa,pratensis,50,A24,0,1,1995,0
 rosa,carolina,15,A24,1,1,1995,5
 taraxacum,officinale,1,A24,0,1,1995,0
-achillea,millefolium,3,B24,0,1,1995,0
+achillea,millefolium,3,B24,1,1,1995,0
 symphyotrichum,ericoides,60,B24,1,1,1995,6
 symphyotrichum,laeve,1,B24,1,1,1995,9
 comandra,umbellata,5,B24,1,1,1995,9
@@ -21410,7 +21410,7 @@ silphium,integrifolium,30,B5,1,1,2005,5
 silphium,terebinthinaceum,80,B5,1,1,2005,5
 solidago,canadensis,5,B5,1,1,2005,1
 sporobolus,heterolepis,1,B5,1,1,2005,10
-achillea,millefolium,8,B6,0,1,2005,0
+achillea,millefolium,8,B6,1,1,2005,0
 amorpha,canescens,5,B6,1,1,2005,10
 symphyotrichum,ericoides,2,B6,1,1,2005,6
 comandra,umbellata,2,B6,1,1,2005,9
@@ -21510,7 +21510,7 @@ rosa,carolina,15,B17,1,1,2005,5
 packera,aurea,2,B17,1,1,2005,8
 silphium,laciniatum,75,B17,1,1,2005,5
 solidago,canadensis,10,B17,1,1,2005,1
-achillea,millefolium,2,B18,0,1,2005,0
+achillea,millefolium,2,B18,1,1,2005,0
 carex,pellita,2,B18,1,1,2005,4
 comandra,umbellata,15,B18,1,1,2005,9
 cornus,racemosa,5,B18,1,1,2005,1
@@ -21544,7 +21544,7 @@ rubus,occidentalis,5,B20,1,1,2005,0
 silphium,laciniatum,100,B20,1,1,2005,5
 solidago,canadensis,40,B20,1,1,2005,1
 veronicastrum,virginicum,140,B20,1,1,2005,8
-achillea,millefolium,3,B21,0,1,2005,0
+achillea,millefolium,3,B21,1,1,2005,0
 carex,pellita,2,B21,1,1,2005,4
 eryngium,yuccifolium,20,B21,1,1,2005,9
 fragaria,virginiana,8,B21,1,1,2005,0
@@ -21654,7 +21654,7 @@ parthenium,integrifolium,3,C6,1,1,2005,8
 rosa,carolina,5,C6,1,1,2005,5
 silphium,terebinthinaceum,30,C6,1,1,2005,5
 sporobolus,heterolepis,5,C6,1,1,2005,10
-achillea,millefolium,2,C7,0,1,2005,0
+achillea,millefolium,2,C7,1,1,2005,0
 amorpha,canescens,1,C7,1,1,2005,10
 antennaria,neglecta,2,C7,1,1,2005,3
 comandra,umbellata,8,C7,1,1,2005,9
@@ -21714,7 +21714,7 @@ rosa,carolina,25,C12,1,1,2005,5
 silphium,terebinthinaceum,80,C12,1,1,2005,5
 maianthemum,stellatum,2,C12,1,1,2005,5
 spartina,pectinata,1,C12,1,1,2005,4
-achillea,millefolium,1,C13,0,1,2005,0
+achillea,millefolium,1,C13,1,1,2005,0
 symphyotrichum,novae-angliae,25,C13,1,1,2005,3
 carex,pellita,5,C13,1,1,2005,4
 eryngium,yuccifolium,3,C13,1,1,2005,9
@@ -22056,7 +22056,7 @@ eupatorium,altissimum,2,D22,1,1,2005,0
 helianthus,grosseserratus,10,D22,1,1,2005,4
 lycopus,americanus,3,D22,1,1,2005,4
 rosa,carolina,3,D22,1,1,2005,5
-achillea,millefolium,15,D23,0,1,2005,0
+achillea,millefolium,15,D23,1,1,2005,0
 ambrosia,artemisiifolia,1,D23,1,1,2005,0
 comandra,umbellata,1,D23,1,1,2005,9
 schedonorus,arundinaceus,2,D23,0,1,2005,0
@@ -22176,7 +22176,7 @@ pycnanthemum,virginianum,15,E10,1,1,2005,5
 rosa,carolina,30,E10,1,1,2005,5
 packera,aurea,1,E10,1,1,2005,8
 silphium,terebinthinaceum,3,E10,1,1,2005,5
-achillea,millefolium,5,E11,0,1,2005,0
+achillea,millefolium,5,E11,1,1,2005,0
 allium,cernuum,3,E11,1,1,2005,7
 symphyotrichum,laeve,2,E11,1,1,2005,9
 carex,pellita,3,E11,1,1,2005,4
@@ -22239,7 +22239,7 @@ poa,pratensis,1,E14,0,1,2005,0
 rosa,carolina,20,E14,1,1,2005,5
 silphium,terebinthinaceum,60,E14,1,1,2005,5
 solidago,nemoralis,2,E14,1,1,2005,3
-achillea,millefolium,3,E15,0,1,2005,0
+achillea,millefolium,3,E15,1,1,2005,0
 allium,cernuum,3,E15,1,1,2005,7
 symphyotrichum,ericoides,2,E15,1,1,2005,6
 symphyotrichum,laeve,5,E15,1,1,2005,9
@@ -22365,7 +22365,7 @@ silphium,terebinthinaceum,8,F3,1,1,2005,5
 solidago,nemoralis,5,F3,1,1,2005,3
 solidago,rigida,5,F3,1,1,2005,3
 viola,sororia,1,F3,1,1,2005,3
-achillea,millefolium,1,F4,0,1,2005,0
+achillea,millefolium,1,F4,1,1,2005,0
 allium,cernuum,1,F4,1,1,2005,7
 anemone,cylindrica,1,F4,1,1,2005,8
 symphyotrichum,laeve,1,F4,1,1,2005,9
@@ -22419,7 +22419,7 @@ rudbeckia,triloba,1,F7,1,1,2005,1
 silphium,laciniatum,3,F7,1,1,2005,5
 silphium,terebinthinaceum,5,F7,1,1,2005,5
 veronicastrum,virginicum,15,F7,1,1,2005,8
-achillea,millefolium,1,F8,0,1,2005,0
+achillea,millefolium,1,F8,1,1,2005,0
 calamagrostis,canadensis,1,F8,1,1,2005,6
 carex,pellita,5,F8,1,1,2005,4
 carex,stricta,10,F8,1,1,2005,5
@@ -22650,7 +22650,7 @@ dichanthelium,leibergii,1,G6,1,1,2005,10
 rosa,carolina,25,G6,1,1,2005,5
 sporobolus,heterolepis,40,G6,1,1,2005,10
 viola,sororia,1,G6,1,1,2005,3
-achillea,millefolium,2,G7,0,1,2005,0
+achillea,millefolium,2,G7,1,1,2005,0
 symphyotrichum,ericoides,2,G7,1,1,2005,6
 symphyotrichum,laeve,8,G7,1,1,2005,9
 carex,pellita,3,G7,1,1,2005,4
@@ -22673,7 +22673,7 @@ liatris,aspera,3,G8,1,1,2005,8
 dichanthelium,leibergii,10,G8,1,1,2005,10
 rosa,carolina,25,G8,1,1,2005,5
 solidago,rigida,1,G8,1,1,2005,3
-achillea,millefolium,1,G9,0,1,2005,0
+achillea,millefolium,1,G9,1,1,2005,0
 allium,cernuum,1,G9,1,1,2005,7
 andropogon,gerardii,1,G9,1,1,2005,5
 symphyotrichum,laeve,3,G9,1,1,2005,9
@@ -22686,7 +22686,7 @@ ratibida,pinnata,5,G9,1,1,2005,4
 rosa,carolina,30,G9,1,1,2005,5
 solidago,rigida,8,G9,1,1,2005,3
 viola,sororia,2,G9,1,1,2005,3
-achillea,millefolium,1,G10,0,1,2005,0
+achillea,millefolium,1,G10,1,1,2005,0
 symphyotrichum,ericoides,2,G10,1,1,2005,6
 calamagrostis,canadensis,1,G10,1,1,2005,6
 carex,pellita,5,G10,1,1,2005,4
@@ -22726,7 +22726,7 @@ geum,aleppicum,20,G13,1,1,2005,3
 helianthus,grosseserratus,3,G13,1,1,2005,4
 lycopus,americanus,10,G13,1,1,2005,4
 rosa,carolina,25,G13,1,1,2005,5
-achillea,millefolium,1,G14,0,1,2005,0
+achillea,millefolium,1,G14,1,1,2005,0
 allium,cernuum,2,G14,1,1,2005,7
 symphyotrichum,novae-angliae,1,G14,1,1,2005,3
 carex,pellita,3,G14,1,1,2005,4
@@ -22739,7 +22739,7 @@ ratibida,pinnata,10,G14,1,1,2005,4
 rosa,carolina,10,G14,1,1,2005,5
 silphium,laciniatum,10,G14,1,1,2005,5
 viola,sororia,1,G14,1,1,2005,3
-achillea,millefolium,1,G15,0,1,2005,0
+achillea,millefolium,1,G15,1,1,2005,0
 symphyotrichum,laeve,2,G15,1,1,2005,9
 carex,pellita,1,G15,1,1,2005,4
 leucanthemum,vulgare,1,G15,0,1,2005,0
@@ -22756,7 +22756,7 @@ silphium,laciniatum,50,G15,1,1,2005,5
 silphium,terebinthinaceum,20,G15,1,1,2005,5
 solidago,nemoralis,2,G15,1,1,2005,3
 solidago,rigida,8,G15,1,1,2005,3
-achillea,millefolium,1,G16,0,1,2005,0
+achillea,millefolium,1,G16,1,1,2005,0
 amorpha,canescens,2,G16,1,1,2005,10
 andropogon,gerardii,5,G16,1,1,2005,5
 comandra,umbellata,2,G16,1,1,2005,9
@@ -22792,7 +22792,7 @@ carex,pellita,15,G21,1,1,2005,4
 poa,pratensis,1,G21,0,1,2005,0
 rosa,carolina,25,G21,1,1,2005,5
 maianthemum,stellatum,1,G21,1,1,2005,5
-achillea,millefolium,2,H1,0,1,2005,0
+achillea,millefolium,2,H1,1,1,2005,0
 anemone,cylindrica,5,H1,1,1,2005,8
 symphyotrichum,laeve,3,H1,1,1,2005,9
 carex,pellita,3,H1,1,1,2005,4
@@ -22886,7 +22886,7 @@ sisyrinchium,albidum,1,H7,1,1,2005,6
 solidago,rigida,3,H7,1,1,2005,3
 sporobolus,heterolepis,1,H7,1,1,2005,10
 zizia,aurea,1,H7,1,1,2005,5
-achillea,millefolium,3,H8,0,1,2005,0
+achillea,millefolium,3,H8,1,1,2005,0
 anemone,cylindrica,1,H8,1,1,2005,8
 symphyotrichum,laeve,2,H8,1,1,2005,9
 carex,pellita,1,H8,1,1,2005,4
@@ -22922,7 +22922,7 @@ sisyrinchium,albidum,1,H10,1,1,2005,6
 solidago,rigida,5,H10,1,1,2005,3
 sporobolus,heterolepis,1,H10,1,1,2005,10
 zizia,aurea,15,H10,1,1,2005,5
-achillea,millefolium,15,H11,0,1,2005,0
+achillea,millefolium,15,H11,1,1,2005,0
 apocynum,cannabinum,1,H11,1,1,2005,2
 carex,pellita,2,H11,1,1,2005,4
 equisetum,arvense,2,H11,1,1,2005,0
@@ -22945,7 +22945,7 @@ rosa,carolina,25,H12,1,1,2005,5
 silphium,laciniatum,2,H12,1,1,2005,5
 maianthemum,stellatum,2,H12,1,1,2005,5
 solidago,gigantea,2,H12,1,1,2005,4
-achillea,millefolium,5,H13,0,1,2005,0
+achillea,millefolium,5,H13,1,1,2005,0
 apocynum,cannabinum,3,H13,1,1,2005,2
 symphyotrichum,novae-angliae,2,H13,1,1,2005,3
 cirsium,discolor,3,H13,1,1,2005,3
@@ -22958,7 +22958,7 @@ ratibida,pinnata,5,H13,1,1,2005,4
 solidago,canadensis,5,H13,1,1,2005,1
 solidago,gigantea,5,H13,1,1,2005,4
 taraxacum,officinale,1,H13,0,1,2005,0
-achillea,millefolium,1,H14,0,1,2005,0
+achillea,millefolium,1,H14,1,1,2005,0
 andropogon,gerardii,3,H14,1,1,2005,5
 anemone,cylindrica,1,H14,1,1,2005,8
 carex,pellita,1,H14,1,1,2005,4
@@ -22987,7 +22987,7 @@ rosa,carolina,10,H16,1,1,2005,5
 silphium,integrifolium,75,H16,1,1,2005,5
 silphium,laciniatum,5,H16,1,1,2005,5
 solidago,canadensis,10,H16,1,1,2005,1
-achillea,millefolium,1,H19,0,1,2005,0
+achillea,millefolium,1,H19,1,1,2005,0
 andropogon,gerardii,3,H19,1,1,2005,5
 fragaria,virginiana,1,H19,1,1,2005,0
 dichanthelium,leibergii,2,H19,1,1,2005,10
@@ -23019,7 +23019,7 @@ panicum,virgatum,8,I2,1,1,2005,3
 ratibida,pinnata,3,I2,1,1,2005,4
 rosa,carolina,8,I2,1,1,2005,5
 solidago,rigida,1,I2,1,1,2005,3
-achillea,millefolium,3,I3,0,1,2005,0
+achillea,millefolium,3,I3,1,1,2005,0
 symphyotrichum,laeve,5,I3,1,1,2005,9
 comandra,umbellata,8,I3,1,1,2005,9
 echinacea,pallida,8,I3,1,1,2005,10
@@ -23042,7 +23042,7 @@ poa,pratensis,2,I4,0,1,2005,0
 rosa,carolina,30,I4,1,1,2005,5
 solidago,rigida,1,I4,1,1,2005,3
 viola,sororia,3,I4,1,1,2005,3
-achillea,millefolium,1,I5,0,1,2005,0
+achillea,millefolium,1,I5,1,1,2005,0
 symphyotrichum,laeve,25,I5,1,1,2005,9
 carex,pellita,2,I5,1,1,2005,4
 comandra,umbellata,3,I5,1,1,2005,9
@@ -23053,7 +23053,7 @@ dichanthelium,leibergii,2,I5,1,1,2005,10
 poa,pratensis,1,I5,0,1,2005,0
 rosa,carolina,30,I5,1,1,2005,5
 zizia,aurea,3,I5,1,1,2005,5
-achillea,millefolium,1,I6,0,1,2005,0
+achillea,millefolium,1,I6,1,1,2005,0
 symphyotrichum,laeve,3,I6,1,1,2005,9
 carex,pellita,1,I6,1,1,2005,4
 comandra,umbellata,10,I6,1,1,2005,9
@@ -23096,7 +23096,7 @@ ratibida,pinnata,1,I9,1,1,2005,4
 solidago,rigida,2,I9,1,1,2005,3
 sporobolus,heterolepis,1,I9,1,1,2005,10
 zizia,aurea,8,I9,1,1,2005,5
-achillea,millefolium,1,I10,0,1,2005,0
+achillea,millefolium,1,I10,1,1,2005,0
 carex,pellita,1,I10,1,1,2005,4
 leucanthemum,vulgare,1,I10,0,1,2005,0
 comandra,umbellata,3,I10,1,1,2005,9
@@ -23119,7 +23119,7 @@ carex,pellita,10,I12,1,1,2005,4
 rosa,carolina,25,I12,1,1,2005,5
 solidago,canadensis,40,I12,1,1,2005,1
 euthamia,gymnospermoides,20,I12,1,1,2005,4
-achillea,millefolium,1,I13,0,1,2005,0
+achillea,millefolium,1,I13,1,1,2005,0
 apocynum,cannabinum,8,I13,1,1,2005,2
 carex,pellita,2,I13,1,1,2005,4
 calystegia,sepium,1,I13,1,1,2005,1
@@ -23145,7 +23145,7 @@ phalaris,arundinacea,1,I15,0,1,2005,0
 poa,pratensis,1,I15,0,1,2005,0
 rosa,carolina,40,I15,1,1,2005,5
 solidago,canadensis,20,I15,1,1,2005,1
-achillea,millefolium,5,I19,0,1,2005,0
+achillea,millefolium,5,I19,1,1,2005,0
 andropogon,gerardii,80,I19,1,1,2005,5
 solidago,rigida,3,I19,1,1,2005,3
 sporobolus,compositus,2,I19,0,1,2005,0
@@ -23175,7 +23175,7 @@ fragaria,virginiana,1,J3,1,1,2005,0
 pycnanthemum,virginianum,80,J3,1,1,2005,5
 rosa,carolina,15,J3,1,1,2005,5
 viola,sororia,1,J3,1,1,2005,3
-achillea,millefolium,1,J4,0,1,2005,0
+achillea,millefolium,1,J4,1,1,2005,0
 allium,cernuum,1,J4,1,1,2005,7
 symphyotrichum,laeve,5,J4,1,1,2005,9
 carex,pellita,1,J4,1,1,2005,4
@@ -23204,7 +23204,7 @@ silphium,laciniatum,40,J5,1,1,2005,5
 silphium,terebinthinaceum,5,J5,1,1,2005,5
 maianthemum,stellatum,1,J5,1,1,2005,5
 viola,sororia,1,J5,1,1,2005,3
-achillea,millefolium,2,J6,0,1,2005,0
+achillea,millefolium,2,J6,1,1,2005,0
 allium,cernuum,1,J6,1,1,2005,7
 symphyotrichum,laeve,15,J6,1,1,2005,9
 carex,pellita,1,J6,1,1,2005,4
@@ -23220,7 +23220,7 @@ ratibida,pinnata,1,J6,1,1,2005,4
 rosa,carolina,8,J6,1,1,2005,5
 sporobolus,heterolepis,1,J6,1,1,2005,10
 viola,sororia,3,J6,1,1,2005,3
-achillea,millefolium,2,J7,0,1,2005,0
+achillea,millefolium,2,J7,1,1,2005,0
 allium,cernuum,1,J7,1,1,2005,7
 symphyotrichum,laeve,60,J7,1,1,2005,9
 carex,pellita,3,J7,1,1,2005,4
@@ -23232,7 +23232,7 @@ monarda,fistulosa,2,J7,1,1,2005,4
 rosa,carolina,5,J7,1,1,2005,5
 maianthemum,stellatum,1,J7,1,1,2005,5
 sporobolus,heterolepis,1,J7,1,1,2005,10
-achillea,millefolium,3,J8,0,1,2005,0
+achillea,millefolium,3,J8,1,1,2005,0
 allium,cernuum,1,J8,1,1,2005,7
 andropogon,gerardii,2,J8,1,1,2005,5
 symphyotrichum,laeve,15,J8,1,1,2005,9
@@ -23251,7 +23251,7 @@ euthamia,gymnospermoides,3,J8,1,1,2005,4
 solidago,nemoralis,5,J8,1,1,2005,3
 solidago,rigida,10,J8,1,1,2005,3
 viola,sororia,1,J8,1,1,2005,3
-achillea,millefolium,3,J9,0,1,2005,0
+achillea,millefolium,3,J9,1,1,2005,0
 allium,cernuum,1,J9,1,1,2005,7
 andropogon,gerardii,2,J9,1,1,2005,5
 symphyotrichum,ericoides,2,J9,1,1,2005,6
@@ -23267,7 +23267,7 @@ ratibida,pinnata,3,J9,1,1,2005,4
 rosa,carolina,5,J9,1,1,2005,5
 solidago,rigida,10,J9,1,1,2005,3
 zizia,aurea,30,J9,1,1,2005,5
-achillea,millefolium,1,J10,0,1,2005,0
+achillea,millefolium,1,J10,1,1,2005,0
 andropogon,gerardii,1,J10,1,1,2005,5
 symphyotrichum,laeve,2,J10,1,1,2005,9
 carex,pellita,3,J10,1,1,2005,4
@@ -23412,7 +23412,7 @@ helianthus,grosseserratus,120,K12,1,1,2005,4
 pycnanthemum,virginianum,10,K12,1,1,2005,5
 rosa,carolina,15,K12,1,1,2005,5
 solidago,canadensis,5,K12,1,1,2005,1
-achillea,millefolium,1,K13,0,1,2005,0
+achillea,millefolium,1,K13,1,1,2005,0
 apocynum,cannabinum,8,K13,1,1,2005,2
 carex,pellita,5,K13,1,1,2005,4
 helianthus,grosseserratus,150,K13,1,1,2005,4
