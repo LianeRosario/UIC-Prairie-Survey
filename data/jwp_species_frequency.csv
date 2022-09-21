@@ -540,6 +540,7 @@ lithospermum,canescens,1,9,0.041,1984,NA
 rhamnus,cathartica,0,9,0.041,1984,NA
 pedicularis,canadensis,1,9,0.041,1987,NA
 solanum,dulcamara,0,9,0.041,1987,NA
+viola,pedatifida,1,9,0.041,1987,NA
 glechoma,hederacea,0,9,0.041,1995,NA
 persicaria,amphibia,1,9,0.041,1995,NA
 veronicastrum,virginicum,1,9,0.041,1995,NA
@@ -635,7 +636,6 @@ rhamnus,cathartica,0,7,0.032,1987,NA
 ulmus,rubra,1,7,0.032,1987,NA
 verbena,hastata,1,7,0.032,1987,NA
 veronicastrum,virginicum,1,7,0.032,1987,NA
-viola,pedatifida,1,7,0.032,1987,NA
 apios,americana,1,7,0.032,1995,NA
 dalea,purpurea,1,7,0.032,1995,NA
 potentilla,simplex,1,7,0.032,1995,NA
@@ -672,7 +672,7 @@ glechoma,hederacea,0,6,0.027,1984,NA
 baptisia,alba var. macrophylla,1,6,0.027,1987,NA
 elymus,canadensis,1,6,0.027,1987,NA
 helianthus,pauciflorus,1,6,0.027,1987,NA
-lysimachia,quadrifolia,1,6,0.027,1987,NA
+lysimachia,quadriflora,1,6,0.027,1987,NA
 sisyrinchium,albidum,1,6,0.027,1987,NA
 baptisia,bracteata,1,6,0.027,1995,NA
 gentiana,andrewsii,1,6,0.027,1995,NA
@@ -708,11 +708,12 @@ phalaris,arundinacea,0,5,0.023,1982,NA
 plantago,major,0,5,0.023,1982,NA
 polygonum,sp.,1,5,0.023,1982,NA
 sisyrinchium,albidum,1,5,0.023,1982,NA
+viola,pedatifida,1,5,0.023,1982,NA
 baptisia,alba var. macrophylla,1,5,0.023,1984,NA
 calystegia,sepium,1,5,0.023,1984,NA
 cornus,racemosa,1,5,0.023,1984,NA
 gentiana,puberulenta,1,5,0.023,1984,NA
-lysimachia,quadrifolia,1,5,0.023,1984,NA
+lysimachia,quadriflora,1,5,0.023,1984,NA
 melilotus,officinalis,0,5,0.023,1984,NA
 pedicularis,canadensis,1,5,0.023,1984,NA
 phalaris,arundinacea,0,5,0.023,1984,NA
@@ -753,7 +754,7 @@ veronicastrum,virginicum,1,4,0.018,1980,NA
 arnoglossum,plantagineum,1,4,0.018,1981,NA
 glechoma,hederacea,0,4,0.018,1981,NA
 hypericum,punctatum,1,4,0.018,1981,NA
-lathyrus,venosus,1,4,0.018,1981,NA
+lathyrus,palustris,1,4,0.018,1981,NA
 moehringia,lateriflora,1,4,0.018,1981,NA
 oxalis,stricta,1,4,0.018,1981,NA
 physalis,longifolia,1,4,0.018,1981,NA
@@ -773,7 +774,6 @@ scirpus,pendulus,1,4,0.018,1982,NA
 solidago,juncea,1,4,0.018,1982,NA
 tragopogon,sp.,0,4,0.018,1982,NA
 ulmus,rubra,1,4,0.018,1982,NA
-viola,pedatifida,1,4,0.018,1982,NA
 chenopodium,album,0,4,0.018,1984,NA
 elymus,canadensis,1,4,0.018,1984,NA
 fraxinus,pennsylvanica,1,4,0.018,1984,NA
@@ -817,7 +817,7 @@ euthamia,gymnospermoides,1,3,0.014,1979,NA
 heuchera,richardsonii,1,3,0.014,1979,NA
 juncus,balticus ssp. littoralis,1,3,0.014,1979,NA
 koeleria,macrantha,1,3,0.014,1979,NA
-lathyrus,venosus,1,3,0.014,1979,NA
+lathyrus,palustris,1,3,0.014,1979,NA
 lilium,michiganense,1,3,0.014,1979,NA
 scirpus,pendulus,1,3,0.014,1979,NA
 solidago,sp.,1,3,0.014,1979,NA
@@ -941,7 +941,7 @@ gentiana,andrewsii,1,2,0.009,1980,NA
 geum,aleppicum,1,2,0.009,1980,NA
 glechoma,hederacea,0,2,0.009,1980,NA
 lactuca,canadensis,1,2,0.009,1980,NA
-lathyrus,venosus,1,2,0.009,1980,NA
+lathyrus,palustris,1,2,0.009,1980,NA
 lilium,michiganense,1,2,0.009,1980,NA
 lysimachia,ciliata,1,2,0.009,1980,NA
 lythrum,salicaria,0,2,0.009,1980,NA
@@ -982,7 +982,7 @@ gentiana,andrewsii,1,2,0.009,1982,NA
 glechoma,hederacea,0,2,0.009,1982,NA
 koeleria,macrantha,1,2,0.009,1982,NA
 krigia,biflora,1,2,0.009,1982,NA
-lathyrus,venosus,1,2,0.009,1982,NA
+lathyrus,palustris,1,2,0.009,1982,NA
 leucanthemum,vulgare,0,2,0.009,1982,NA
 liatris,spicata,1,2,0.009,1982,NA
 lysimachia,ciliata,1,2,0.009,1982,NA
@@ -1027,12 +1027,12 @@ rumex,crispus,0,2,0.009,1987,NA
 scirpus,pendulus,1,2,0.009,1987,NA
 senecio,hieraciifolius,1,2,0.009,1987,NA
 solidago,sp.,1,2,0.009,1987,NA
-viola,pedata,1,2,0.009,1987,NA
 acer,saccharinum,1,2,0.009,1995,NA
 agrostis,gigantea,0,2,0.009,1995,NA
 antennaria,neglecta,1,2,0.009,1995,NA
 eupatorium,serotinum,1,2,0.009,1995,NA
 hypericum,perforatum,0,2,0.009,1995,NA
+lysimachia,quadriflora,1,2,0.009,1995,NA
 medicago,lupulina,0,2,0.009,1995,NA
 moehringia,lateriflora,1,2,0.009,1995,NA
 rubus,flagellaris,1,2,0.009,1995,NA
@@ -1060,7 +1060,7 @@ juncus,sp.,1,1,0.005,1979,NA
 juncus,torreyi,1,1,0.005,1979,NA
 leucanthemum,vulgare,0,1,0.005,1979,NA
 moehringia,lateriflora,1,1,0.005,1979,NA
-oenothera,fruticosa,1,1,0.005,1979,NA
+oenothera,perennis,1,1,0.005,1979,NA
 oxalis,violacea,1,1,0.005,1979,NA
 physalis,longifolia,1,1,0.005,1979,NA
 psoralidium,tenuiflorum,1,1,0.005,1979,NA
@@ -1102,7 +1102,7 @@ juncus,sp.,1,1,0.005,1981,NA
 juncus,torreyi,1,1,0.005,1981,NA
 lepidium,campestre,0,1,0.005,1981,NA
 nabalus,sp.,1,1,0.005,1981,NA
-oenothera,fruticosa,1,1,0.005,1981,NA
+oenothera,perennis,1,1,0.005,1981,NA
 persicaria,maculosa,0,1,0.005,1981,NA
 phlox,glaberrima ssp. interior,1,1,0.005,1981,NA
 rorippa,palustris,1,1,0.005,1981,NA
@@ -1127,7 +1127,7 @@ juncus,torreyi,1,1,0.005,1982,NA
 lilium,philadelphicum var. andinum,1,1,0.005,1982,NA
 moehringia,lateriflora,1,1,0.005,1982,NA
 nabalus,sp.,1,1,0.005,1982,NA
-oenothera,fruticosa,1,1,0.005,1982,NA
+oenothera,perennis,1,1,0.005,1982,NA
 oxalis,violacea,1,1,0.005,1982,NA
 phlox,glaberrima ssp. interior,1,1,0.005,1982,NA
 potentilla,norvegica,1,1,0.005,1982,NA
@@ -1141,7 +1141,6 @@ symphyotrichum,oolentangiense,1,1,0.005,1982,NA
 tragopogon,pratensis,0,1,0.005,1982,NA
 trifolium,pratense,0,1,0.005,1982,NA
 vinca,minor,0,1,0.005,1982,NA
-viola,pedata,1,1,0.005,1982,NA
 vitis,riparia,1,1,0.005,1982,NA
 arnoglossum,plantagineum,1,1,0.005,1984,NA
 asclepias,verticillata,1,1,0.005,1984,NA
@@ -1151,7 +1150,7 @@ elymus,trachycaulus ssp. subsecundus,1,1,0.005,1984,NA
 geum,aleppicum,1,1,0.005,1984,NA
 hemerocallis,fulva,0,1,0.005,1984,NA
 hordeum,jubatum,0,1,0.005,1984,NA
-lathyrus,venosus,1,1,0.005,1984,NA
+lathyrus,palustris,1,1,0.005,1984,NA
 liatris,sp.,1,1,0.005,1984,NA
 persicaria,maculosa,0,1,0.005,1984,NA
 phleum,pratense,0,1,0.005,1984,NA
@@ -1182,7 +1181,7 @@ leucanthemum,vulgare,0,1,0.005,1987,NA
 lysimachia,ciliata,1,1,0.005,1987,NA
 melilotus,sp.,0,1,0.005,1987,NA
 nabalus,sp.,1,1,0.005,1987,NA
-oenothera,fruticosa,1,1,0.005,1987,NA
+oenothera,perennis,1,1,0.005,1987,NA
 oxalis,violacea,1,1,0.005,1987,NA
 oxypolis,rigidior,1,1,0.005,1987,NA
 phlox,paniculata,0,1,0.005,1987,NA
@@ -1217,8 +1216,6 @@ krigia,biflora,1,1,0.005,1995,NA
 lactuca,canadensis,1,1,0.005,1995,NA
 lathyrus,palustris,1,1,0.005,1995,NA
 lonicera,tatarica,0,1,0.005,1995,NA
-lysimachia,quadriflora,1,1,0.005,1995,NA
-lysimachia,quadrifolia,1,1,0.005,1995,NA
 mentha,arvensis,1,1,0.005,1995,NA
 nepeta,cataria,0,1,0.005,1995,NA
 pedicularis,canadensis,1,1,0.005,1995,NA

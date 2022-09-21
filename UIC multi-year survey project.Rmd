@@ -315,6 +315,21 @@ survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "agropyron rep
 survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "aster sp.", "symphyotrichum sp.", species))
 ```
 
+```{r rename-venosus-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1979}
+survey_1979 <- survey_1979 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
 
 
 ## Separate Species Column
@@ -468,6 +483,14 @@ mean_wt_c_1979 <- survey_1979 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_1979)
+```
+
+```{r calculate-avg-c-1979}
+avg_c_1979 <- mean_wt_c_1979 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1979"))
+
+print(avg_c_1979)
 ```
 
 
@@ -827,6 +850,22 @@ survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "aster sp.", "
 survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
 ```
 
+```{r rename-venosus-sp-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1980}
+survey_1980 <- survey_1980 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 
 
 ## Separate Species Column
@@ -982,6 +1021,13 @@ mean_wt_c_1980 <- survey_1980 %>%
 print(mean_wt_c_1980)
 ```
 
+```{r calculate-avg-c-1980}
+avg_c_1980 <- mean_wt_c_1980 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1980"))
+
+print(avg_c_1980)
+```
 
 ##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
 
@@ -1348,6 +1394,22 @@ survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "aster sp.", "
 survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
 ```
 
+```{r rename-venosus-sp-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1981}
+survey_1981 <- survey_1981 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 
 ## Separate Species Column
 
@@ -1500,6 +1562,14 @@ mean_wt_c_1981 <- survey_1981 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_1981)
+```
+
+```{r calculate-avg-c-1981}
+avg_c_1981 <- mean_wt_c_1981 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1981"))
+
+print(avg_c_1981)
 ```
 
 
@@ -1884,6 +1954,22 @@ survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "aster sp.", "
 survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
 ```
 
+```{r rename-venosus-sp-1982}
+survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1982}
+survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1982}
+survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1982}
+survey_1982 <- survey_1982 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 
 
 ## Separate Species Column
@@ -2037,6 +2123,14 @@ mean_wt_c_1982 <- survey_1982 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_1982)
+```
+
+```{r calculate-avg-c-1982}
+avg_c_1982 <- mean_wt_c_1982 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1982"))
+
+print(avg_c_1982)
 ```
 
 
@@ -2423,6 +2517,22 @@ survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "agropyron tra
 survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "lysimachia quadriflolia", "lysimachia quadrifolia", species))
 ```
 
+```{r rename-venosus-sp-1984}
+survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1984}
+survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1984}
+survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1984}
+survey_1984 <- survey_1984 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 
 
 ## Separate Species Column
@@ -2576,6 +2686,14 @@ mean_wt_c_1984 <- survey_1984 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_1984)
+```
+
+```{r calculate-avg-c-1984}
+avg_c_1984 <- mean_wt_c_1984 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1984"))
+
+print(avg_c_1984)
 ```
 
 
@@ -2967,6 +3085,21 @@ survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "lysimachia qu
 survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "prenanthes sp.", "nabalus sp.", species))
 ```
 
+```{r rename-venosus-sp-1987}
+survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1987}
+survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1987}
+survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1987}
+survey_1987 <- survey_1987 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
 
 
 ## Separate Species Column
@@ -3120,6 +3253,14 @@ mean_wt_c_1987 <- survey_1987 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_1987)
+```
+
+```{r calculate-avg-c-1987}
+avg_c_1987 <- mean_wt_c_1987 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1987"))
+
+print(avg_c_1987)
 ```
 
 
@@ -3534,6 +3675,22 @@ survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "rhus typhina"
 survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "stachys palustris homotricha", "stachys pilosa", species))
 ```
 
+```{r rename-venosus-sp-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-1995}
+survey_1995 <- survey_1995 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 
 
 # Separate Species Column
@@ -3698,6 +3855,14 @@ mean_wt_c_1995 <- survey_1995 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_1995)
+```
+
+```{r calculate-avg-c-1995}
+avg_c_1995 <- mean_wt_c_1995 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("1995"))
+
+print(avg_c_1995)
 ```
 
 
@@ -3971,6 +4136,22 @@ survey_2005 <- survey_2005 %>%
   select(-row)
 ```
 
+```{r rename-venosus-sp-2005}
+survey_2005 <- survey_2005 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-2005}
+survey_2005 <- survey_2005 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-2005}
+survey_2005 <- survey_2005 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-2005}
+survey_2005 <- survey_2005 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 
 
 
@@ -4073,6 +4254,14 @@ mean_wt_c_2005 <- survey_2005 %>%
   arrange(desc(mean_wt_c))
 
 print(mean_wt_c_2005)
+```
+
+```{r calculate-avg-c-2005}
+avg_c_2005 <- mean_wt_c_2005 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("2005"))
+
+print(avg_c_2005)
 ```
 
 
@@ -4363,6 +4552,22 @@ survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "hesperostipa 
 survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "veronicastrum virginianum", "veronicastrum virginicum", species))
 ```
 
+```{r rename-venosus-sp-2020}
+survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "lathyrus venosus", "lathyrus palustris", species))
+```
+
+```{r rename-fructicosa-sp-2020}
+survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "oenothera fruticosa", "oenothera perennis", species))
+```
+
+```{r rename-quadrifolia-sp-2020}
+survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "lysimachia quadrifolia", "lysimachia quadriflora", species))
+```
+
+```{r rename-pedata-sp-2020}
+survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "viola pedata", "viola pedatifida", species))
+```
+
 ```{r rename-eleocharis-2020}
 survey_2020 <- survey_2020 %>% mutate(species = ifelse(species == "eleocharis erythropoda", "eleocharis palustris", species))
 ```
@@ -4485,6 +4690,14 @@ mean_wt_c_2020 <- survey_2020 %>%
 print(mean_wt_c_2020)
 ```
 
+```{r calculate-avg-c-2020}
+avg_c_2020 <- mean_wt_c_2020 %>%
+  summarize(avg_c = mean(mean_wt_c)) %>%
+  mutate(year = c("2020"))
+
+print(avg_c_2020)
+```
+
 
 ##### The code below sums total richness by grouping by plot and then summing the 1's given to each species for that plot. ex: 23 species in a plot, each species has a 1 associated to it, and it is adding all of the ones to show 23 species. Also arranged in descending order with plots containing the highest total richness at the top.
 
@@ -4593,6 +4806,12 @@ jwp_multi_year_survey <- jwp_multi_year_survey %>%
 ```{r write-survey-file}
 jwp_multi_year_survey %>%
   write_csv(file = "data/jwp_multi_year_survey.csv")
+```
+
+
+```{r bind-avg-c}
+avg_c_values <- bind_rows(avg_c_1979, avg_c_1980, avg_c_1981, avg_c_1982, avg_c_1984, avg_c_1987, avg_c_1995, avg_c_2005, avg_c_2020)
+
 ```
 
 
@@ -4709,24 +4928,10 @@ nonnative_species_freq_variation %>%
 ## plots
 
 ```{r plot-most-frequent-nonnatives}
-nonnative_top_frequent <- jwp_species_frequency %>%
-  filter(native == 0, fraction > 0.1)
-
-ggplot(nonnative_top_frequent, aes(x = year)) +
-  geom_bar(aes(fill = species)) +
-  labs(title="Top 6 Most Frequent Non-Native Species",
-        x ="Year", y = "Number of Appearances") +
+ggplot(avg_c_values, aes(x = year, y = avg_c, group = 1)) +
+  geom_line() +
+  geom_point() +
+  labs(title="Change in Average Conservatism Value",
+        x ="Year", y = "Average Mean Conservatism Value") +
   theme_minimal()
 ```
-
-```{r plot-most-frequent-natives}
-native_top_frequent <- jwp_species_frequency %>%
-  filter(native == 1, fraction > 0.4, species != "sp.")
-
-ggplot(native_top_frequent, aes(x = year)) +
-  geom_bar(aes(fill = species)) +
-  labs(title="Top 10 Most Frequent Native Species",
-        x ="Year", y = "Number of Appearances") +
-  theme_minimal()
-```
-
