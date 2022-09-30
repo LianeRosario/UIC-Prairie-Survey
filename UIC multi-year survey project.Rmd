@@ -4826,7 +4826,26 @@ avg_c_values <- bind_rows(avg_c_1979, avg_c_1980, avg_c_1981, avg_c_1982, avg_c_
 ```{r bind-mean-wt-c-by-plot}
 mean_wt_c <- bind_rows(mean_wt_c_1979, mean_wt_c_1980, mean_wt_c_1981, mean_wt_c_1982, mean_wt_c_1984, mean_wt_c_1987, mean_wt_c_1995, mean_wt_c_2005, mean_wt_c_2020)
 
+view(mean_wt_c)
 ```
+
+```{r create-vector-of-bad-plots}
+bad_quality_plots <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15", "A16", "A17", "A18", "A19", "A20", "A21", "A22", "A23", "A24", "A25", "B1", "B23", "B24", "H1", "I1", "L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8", "L9", "L10", "L11", "L12", "L13")
+```
+
+
+
+```{r filter-edge-plots-mean-wt-c}
+best_quality_plots <- mean_wt_c %>%
+  filter(plot != "A1" & plot != "A2" & plot != "A3" & plot != "A4" & plot != "A5" & plot != "A6" & plot != "A7" & plot != "A8" & plot != "A9" & plot != "A10" & plot != "A11" & plot != "A12" & plot != "A13" & plot != "A14" & plot != "A15" & plot != "A16" & plot != "A17" & plot != "A18" & plot != "A18" & plot != "A19" & plot != "A20" & plot != "A21" & plot != "A22" & plot != "A23" & plot != "A24" & plot != "A25" & plot != "B1" & plot != "B23" & plot != "B24" & plot != "H1" & plot != "I1" & plot != "L1" & plot != "L2" & plot != "L3" & plot != "L4" & plot != "L5" & plot != "L6" & plot != "L7" & plot != "L8" & plot != "L9" & plot != "L10" & plot != "L11" & plot != "L12" & plot != "L13" & plot != "L14" & plot != "L15" & plot != "L16" & plot != "L17" & plot != "L18") %>%
+  arrange(plot)
+```
+
+```{r write-filtered-plots-file}
+best_quality_plots %>%
+  write_csv(file = "data/filtered-plots.csv")
+```
+
 
 
 -------------------------------------------------
@@ -4943,9 +4962,19 @@ nonnative_species_freq_variation %>%
 ```{r plot-mean-wt-c-all-years}
 ggplot(mean_wt_c, aes(x = year, y = mean_wt_c)) +
   geom_boxplot() +
-  scale_y_continuous(limits = c(0, 9), breaks = seq(0, 9, by = 0.5)) +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0, 10, by = 0.5)) +
   labs(title="Change in Mean Weighted Conservatism",
        subtitle = "UIC James Woodworth Prairie",
-        x ="Year", y = "Conservatism Score") +
+        x ="Year", y = "Mean Coefficient of Conservatism") +
+  theme_minimal()
+```
+
+```{r plot-mean-wt-c-best-plots-all-years}
+ggplot(best_quality_plots, aes(x = year, y = mean_wt_c)) +
+  geom_boxplot() +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0, 10, by = 0.5)) +
+  labs(title="Change in Mean Weighted Conservatism",
+       subtitle = "Low Quality Edge Plots Excluded",
+        x ="Year", y = "Mean Coefficient of Conservatism") +
   theme_minimal()
 ```
