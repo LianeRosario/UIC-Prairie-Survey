@@ -4755,6 +4755,7 @@ species_frequency_2020 <- species_frequency_2020 %>%
 -------------------------------------------------
 
 
+# Calculations
 
 ## Bind all of the variable tables into one data frame
 
@@ -4818,6 +4819,7 @@ jwp_multi_year_survey %>%
 ```
 
 
+## Bind mean weighted c from every year into one dataframe
 
 ```{r bind-mean-wt-c-by-plot}
 mean_wt_c <- bind_rows(mean_wt_c_1979, mean_wt_c_1980, mean_wt_c_1981, mean_wt_c_1982, mean_wt_c_1984, mean_wt_c_1987, mean_wt_c_1995, mean_wt_c_2005, mean_wt_c_2020)
@@ -4827,12 +4829,30 @@ view(mean_wt_c)
 
 
 
+------------------------------
+
+
+## Filtering the low quality edge plots
+
+### Filtered plots for mean weighted c
+
 ```{r filter-edge-plots-mean-wt-c}
 best_quality_plots <- mean_wt_c %>%
   filter(plot != "A1" & plot != "A2" & plot != "A3" & plot != "A4" & plot != "A5" & plot != "A6" & plot != "A7" & plot != "A8" & plot != "A9" & plot != "A10" & plot != "A11" & plot != "A12" & plot != "A13" & plot != "A14" & plot != "A15" & plot != "A16" & plot != "A17" & plot != "A18" & plot != "A18" & plot != "A19" & plot != "A20" & plot != "A21" & plot != "A22" & plot != "A23" & plot != "A24" & plot != "A25" & plot != "B1" & plot != "B23" & plot != "B24" & plot != "H1" & plot != "I1" & plot != "L1" & plot != "L2" & plot != "L3" & plot != "L4" & plot != "L5" & plot != "L6" & plot != "L7" & plot != "L8" & plot != "L9" & plot != "L10" & plot != "L11" & plot != "L12" & plot != "L13" & plot != "L14" & plot != "L15" & plot != "L16" & plot != "L17" & plot != "L18" & plot != "F19" & plot != "F21" & plot != "G19" & plot != "G20" & plot != "G21" & plot != "H9" & plot != "H10" & plot != "H11" & plot != "H12" & plot != "H13" & plot != "H14" & plot != "H15" & plot != "H16" & plot != "H19" & plot != "H20" & plot != "I9" & plot != "I10" & plot != "I11" & plot != "I12" & plot != "I13" & plot != "I14" & plot != "I15" & plot != "I19" & plot != "J9" & plot != "J10" & plot != "J11" & plot != "J13" & plot != "J19" & plot != "K10" & plot != "K11" & plot != "K12" & plot != "K13") %>%
   arrange(plot)
 
 view(best_quality_plots)
+```
+
+
+### Filtered plots for all variables
+
+```{r filter-edge-plots}
+jwp_best_quality_plots <- jwp_variables %>%
+  filter(plot != "A1" & plot != "A2" & plot != "A3" & plot != "A4" & plot != "A5" & plot != "A6" & plot != "A7" & plot != "A8" & plot != "A9" & plot != "A10" & plot != "A11" & plot != "A12" & plot != "A13" & plot != "A14" & plot != "A15" & plot != "A16" & plot != "A17" & plot != "A18" & plot != "A18" & plot != "A19" & plot != "A20" & plot != "A21" & plot != "A22" & plot != "A23" & plot != "A24" & plot != "A25" & plot != "B1" & plot != "B23" & plot != "B24" & plot != "H1" & plot != "I1" & plot != "L1" & plot != "L2" & plot != "L3" & plot != "L4" & plot != "L5" & plot != "L6" & plot != "L7" & plot != "L8" & plot != "L9" & plot != "L10" & plot != "L11" & plot != "L12" & plot != "L13" & plot != "L14" & plot != "L15" & plot != "L16" & plot != "L17" & plot != "L18" & plot != "F19" & plot != "F21" & plot != "G19" & plot != "G20" & plot != "G21" & plot != "H9" & plot != "H10" & plot != "H11" & plot != "H12" & plot != "H13" & plot != "H14" & plot != "H15" & plot != "H16" & plot != "H19" & plot != "H20" & plot != "I9" & plot != "I10" & plot != "I11" & plot != "I12" & plot != "I13" & plot != "I14" & plot != "I15" & plot != "I19" & plot != "J9" & plot != "J10" & plot != "J11" & plot != "J13" & plot != "J19" & plot != "K10" & plot != "K11" & plot != "K12" & plot != "K13") %>%
+  arrange(plot)
+
+view(jwp_best_quality_plots)
 ```
 
 ```{r write-filtered-plots-file}
@@ -4842,12 +4862,10 @@ best_quality_plots %>%
 
 
 
--------------------------------------------------
+----------------------------------------------------
 
 
-
-
-## Changes in richness for each plot between the years 1979 and 2020
+## Changes in richness for each plot between the years 1979 and 2020 (with edge plots and without edge plots)
 
 #### this code will find the difference in richness for each plot from the year 1979 to the year 2020. Years in between are not included.
 
@@ -4879,9 +4897,42 @@ richness_variations %>%
 ```
 
 
-----------------
 
-## Change in the mean c-value for each plot between the years 1979 and 2020
+### Filtered richness
+
+#### this code will find the difference in richness for each plot from the year 1979 to the year 2020. Years in between are not included.
+
+```{r filtered-total-richness-change-1979-to-2020}
+filtered_richness_variations <- jwp_best_quality_plots %>%
+  group_by(plot) %>%
+  filter(year == 1979 | year == 2020) %>%
+  mutate(richness_change = total_richness - lag(total_richness)) %>%
+  arrange(desc(richness_change))
+```
+
+#### NA values appear because there is no data before 1979 to compare to so it shows as an NA for change in richness column. There are also NA values for 2020 plots because for some reason, some plots either did not exist or were not included in the 1979 survey.
+
+```{r filtered-remove-na-rows}
+filtered_richness_variations <- filtered_richness_variations %>%
+  na.omit()
+```
+
+#### The code below finds the overall mean for the change in richness column. This would be the overall change in mean over all plots from 1979 to 2020
+
+```{r find-filtered-mean-richness-change}
+mean(filtered_richness_variations$richness_change)
+```
+
+#### Writing the change in richness into a csv file
+
+```{r write-filtered-richness-change-file}
+filtered_richness_variations %>%
+  write_csv(file = "data/filtered_richness_variations.csv")
+```
+
+--------------------------------------
+
+## Change in the mean c-value for each plot between the years 1979 and 2020 (with and without edge plots)
 
 ```{r change-mean-wt-c-1979-to-2020}
 c_value_variations <- jwp_variables %>%
@@ -4911,6 +4962,36 @@ c_value_variations %>%
   write_csv(file = "data/c_value_variations.csv")
 ```
 
+
+## Filtered mean weighted c
+
+```{r change-mean-wt-c-1979-to-2020-filtered}
+filtered_c_value_variations <- jwp_best_quality_plots %>%
+  group_by(plot) %>%
+  filter(year == 1979 | year == 2020) %>%
+  mutate(change_in_c = mean_wt_c - lag(mean_wt_c)) %>%
+  arrange(desc(change_in_c))
+```
+
+#### NA values appear because there is no data before 1979 to compare to so it shows as an NA for change in c-value column. There are also NA values for 2020 plots because for some reason, some plots either did not exist or were not included in the 1979 survey.
+
+```{r remove-na-rows-c-value-filtered}
+filtered_c_value_variations <- filtered_c_value_variations %>%
+  na.omit()
+```
+
+#### The code below finds the overall mean for the change in c-value column. This would be the overall change in mean over all plots from 1979 to 2020
+
+```{r find-mean-c-value-change-filtered}
+mean(filtered_c_value_variations$change_in_c)
+```
+
+#### Writing the change in c-value into a csv file
+
+```{r write-mean-c-change-file-filtered}
+filtered_c_value_variations %>%
+  write_csv(file = "data/c_value_variations.csv")
+```
 
 ------------------
 
@@ -4965,10 +5046,11 @@ ggplot(mean_wt_c, aes(x = year, y = mean_wt_c)) +
 
 ```{r plot-mean-wt-c-best-plots-all-years}
 ggplot(best_quality_plots, aes(x = year, y = mean_wt_c)) +
-  geom_boxplot() +
+  geom_boxplot(width = 0.5) +
   scale_y_continuous(limits = c(0, 10), breaks = seq(0, 10, by = 0.5)) +
   labs(title="Change in Mean Weighted Conservatism",
        subtitle = "Low Quality Edge Plots Excluded",
-        x ="Year", y = "Mean Coefficient of Conservatism") +
+        x ="Year", y = "Mean Coefficient of Conservatism",
+       size = 3) +
   theme_minimal()
 ```
