@@ -4730,7 +4730,7 @@ print(total_cover_2020)
 
 ```{r calculate-species-frequency-2020}
 species_frequency_2020 <- survey_2020 %>%
-  group_by(genus, species, plot) %>%
+  group_by(genus, species, native) %>%
   count(species) %>%
   mutate(fraction = sum(n / 228)) %>%
   arrange(desc(fraction))
@@ -4849,7 +4849,7 @@ view(best_quality_plots)
 
 ```{r filter-edge-plots}
 jwp_best_quality_plots <- jwp_variables %>%
-  filter(plot != "A1" & plot != "A2" & plot != "A3" & plot != "A4" & plot != "A5" & plot != "A6" & plot != "A7" & plot != "A8" & plot != "A9" & plot != "A10" & plot != "A11" & plot != "A12" & plot != "A13" & plot != "A14" & plot != "A15" & plot != "A16" & plot != "A17" & plot != "A18" & plot != "A18" & plot != "A19" & plot != "A20" & plot != "A21" & plot != "A22" & plot != "A23" & plot != "A24" & plot != "A25" & plot != "B1" & plot != "B23" & plot != "B24" & plot != "H1" & plot != "I1" & plot != "L1" & plot != "L2" & plot != "L3" & plot != "L4" & plot != "L5" & plot != "L6" & plot != "L7" & plot != "L8" & plot != "L9" & plot != "L10" & plot != "L11" & plot != "L12" & plot != "L13" & plot != "L14" & plot != "L15" & plot != "L16" & plot != "L17" & plot != "L18" & plot != "F19" & plot != "F21" & plot != "G19" & plot != "G20" & plot != "G21" & plot != "H9" & plot != "H10" & plot != "H11" & plot != "H12" & plot != "H13" & plot != "H14" & plot != "H15" & plot != "H16" & plot != "H19" & plot != "H20" & plot != "I9" & plot != "I10" & plot != "I11" & plot != "I12" & plot != "I13" & plot != "I14" & plot != "I15" & plot != "I19" & plot != "J9" & plot != "J10" & plot != "J11" & plot != "J13" & plot != "J19" & plot != "K10" & plot != "K11" & plot != "K12" & plot != "K13") %>%
+  filter(plot != "A1" & plot != "A2" & plot != "A3" & plot != "A4" & plot != "A5" & plot != "A6" & plot != "A7" & plot != "A8" & plot != "A9" & plot != "A10" & plot != "A11" & plot != "A12" & plot != "A13" & plot != "A14" & plot != "A15" & plot != "A16" & plot != "A17" & plot != "A18" & plot != "A18" & plot != "A19" & plot != "A20" & plot != "A21" & plot != "A22" & plot != "A23" & plot != "A24" & plot != "A25" & plot != "B1" & plot != "B23" & plot != "B24" & plot != "H1" & plot != "I1" & plot != "L1" & plot != "L2" & plot != "L3" & plot != "L4" & plot != "L5" & plot != "L6" & plot != "L7" & plot != "L8" & plot != "L9" & plot != "L10" & plot != "L11" & plot != "L12" & plot != "L13" & plot != "L14" & plot != "L15" & plot != "L16" & plot != "L17" & plot != "L18") %>%
   arrange(plot)
 
 view(jwp_best_quality_plots)
@@ -4995,10 +4995,14 @@ filtered_c_value_variations %>%
 
 ------------------
 
+```{r bind-species-freq-1979-2020}
+species_freq_variations <- bind_rows(species_frequency_1979, species_frequency_2020)
+```
 
 ```{r change-in-species-freq-year-to-year}
-species_freq_variations <- jwp_species_frequency %>%
+species_freq_variations <- species_freq_variations %>%
   group_by(genus, species) %>%
+  filter(year == 1979 | year == 2020) %>%
   arrange(genus, species, year) %>%
   mutate(change_species_freq = fraction- lag(fraction))
 ```
@@ -5027,6 +5031,72 @@ native_species_freq_variation %>%
 ```{r write-nonnative-species-freq-file}
 nonnative_species_freq_variation %>%
   write_csv(file = "data/nonnative_species_freq_variation.csv")
+```
+
+
+------------------------------
+
+## this code is to find which species were lost by 2020 by telling r to take a list of species from 1979 and find what is different about it when compared to the list of species in 2020.
+
+```{r species-freq-lost}
+species_lost_in_2020 <- species_frequency_1979 %>%
+  anti_join(species_frequency_2020, by = "genus")
+
+view(species_lost_in_2020)
+```
+
+
+### this code will filter the species lost in 2020 by non-native indicator
+
+```{r nonnative-species-freq-lost}
+nonnative_species_lost_in_2020 <- species_frequency_1979 %>%
+  anti_join(species_frequency_2020, by = "genus") %>%
+  filter(native == 0)
+
+view(nonnative_species_lost_in_2020)
+```
+
+
+### the species gained in 2020 are now filtered by native indicator
+
+```{r native-species-freq-lost}
+native_species_lost_in_2020 <- species_frequency_1979 %>%
+  anti_join(species_frequency_2020, by = "genus") %>%
+  filter(native == 1)
+
+view(native_species_lost_in_2020)
+```
+
+----
+## this code is to find which species appeared in 2020 by telling r to take a list of species from 2020 and find what is different about it when compared to the list of species in 1979.
+
+```{r species-freq-gained}
+species_gained_in_2020 <- species_frequency_2020 %>%
+  anti_join(species_frequency_1979, by = "genus")
+
+view(species_gained_in_2020)
+```
+
+
+### this code will filter the species gained in 2020 by non-native indicator
+
+```{r nonnative-species-freq-gained}
+nonnative_species_gained_in_2020 <- species_frequency_2020 %>%
+  anti_join(species_frequency_1979, by = "genus") %>%
+  filter(native == 0)
+
+view(nonnative_species_gained_in_2020)
+```
+
+
+### the species gained in 2020 are now filtered by native indicator
+
+```{r native-species-freq-gained}
+native_species_gained_in_2020 <- species_frequency_2020 %>%
+  anti_join(species_frequency_1979, by = "genus") %>%
+  filter(native == 1)
+
+view(native_species_gained_in_2020)
 ```
 
 -----------------------------------
